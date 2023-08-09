@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" /> -->
+    <title>TKG</title>
+    <link href="../../static/css/ui.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../static/js/common.js"></script>
+    <script type="text/javascript" src="../../static/js/ui.js"></script>
+    <!--[if lt IE 9]>
+      <script type="text/javascript">
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('footer');
+      </script>
+    <![endif]-->
+    <style>
+      /* 요기서만 쓰는 테스트용 */
+      .bgBox { padding:1rem; border-radius:.4rem; border:1px solid var(--point-color); background:rgba(21,155,151,0.3);}
+    </style>
+
+    <!-- 가이드 전용 -->
+    <link rel="stylesheet" href="../../static/css/a11y-dark.min.css">
+    <script src="../../static/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <!--
+      <pre><code class="language-xml"></code></pre>
+    -->
+    <!-- //가이드 전용 -->
+  </head>
+  <body>
+    <div id="tkg-wrap">
+      <!-- 헤더영역 -->
+      <header id="tkg-header-wrap" data-include="../include/header.html"></header>
+      <!-- //헤더영역 -->
+  
+      <!-- 컨텐츠 영역 -->
+      <section id="tkg-container">
+        <div class="left-nav" data-include="../include/nav.html"></div>
+        <div class="tkg-content">
+          <div class="page-tit">
+            <h1>Grid 영역</h1>
+            <div class="ml-a">
+              버튼?
+            </div>
+          </div>
+
+          <h2 class="tit-h2"><strong class="guide-line">Flex</strong></h2>
+          <h3 class="tit-h3">.col-숫자 : 1 ~ 10</h3>
+          <div class="line-box flex">
+            <div class="bgBox col-2">.col-2</div>
+            <div class="bgBox col-2">.col-2</div>
+          </div>
+          <div class="line-box flex">
+            <div class="bgBox col-3">.col-3</div>
+            <div class="bgBox col-3">.col-3</div>
+            <div class="bgBox col-3">.col-3</div>
+          </div>
+          <div class="line-box flex">
+            <div class="bgBox col-4">.col-4</div>
+            <div class="bgBox col-4 ml-a">.col-4, .ml-a</div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot; flex&quot;&gt;
+  &lt;div class=&quot;col-2 ~ 4&quot;&gt;.col-2&lt;/div&gt;
+  &lt;div class=&quot;col-2 ~ 4&quot;&gt;.col-2&lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+
+          <h3 class="tit-h3">2줄 만드는 방법 : flex 활용</h3>
+          <div class="line-box">
+            <div class="flex">
+              <div class="bgBox col-2">.col-2</div>
+              <div class="bgBox col-2">.col-2</div>
+            </div>
+            <div class="flex">
+              <div class="bgBox col-4">.col-4</div>
+              <div class="bgBox col-4">.col-4</div>
+              <div class="bgBox col-4">.col-4</div>
+              <div class="bgBox col-4">.col-4</div>
+            </div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;flex&quot;&gt;
+  &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+  &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex&quot;&gt;
+  &lt;div class=&quot;col-4&quot;&gt;.col-4&lt;/div&gt;
+  &lt;div class=&quot;col-4&quot;&gt;.col-4&lt;/div&gt;
+  &lt;div class=&quot;col-4&quot;&gt;.col-4&lt;/div&gt;
+  &lt;div class=&quot;col-4&quot;&gt;.col-4&lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+
+          <div class="line-box">
+            <div class="flex flex-wrap">
+              <div class="bgBox col-2">.col-2</div>
+              <div class="bgBox col-2">.col-2</div>
+              <div class="bgBox col-4">.col-4</div>
+              <div class="bgBox col-2">.col-2</div>
+              <div class="bgBox col-4">.col-4</div>
+            </div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;flex flex-wrap&quot;&gt;
+  &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+  &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+  &lt;div class=&quot;col-4&quot;&gt;.col-4&lt;/div&gt;
+  &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+  &lt;div class=&quot;col-4&quot;&gt;.col-4&lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+
+          <h3 class="tit-h3">.grap-숫자 : 간격 0 ~ 50</h3>
+          <div class="line-box">
+            <p class="mb-5">.grap-5</p>
+            <div class="flex grap-5">
+              <div class="bgBox col-2">.col-2</div>
+              <div class="bgBox col-2">.col-2</div>
+            </div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;flex grap-5&quot;&gt;
+  &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+  &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+
+          <div class="line-box">
+            <p class="mb-5">.grap-10</p>
+            <div class="flex flex-wrap grap-10">
+              <div class="bgBox col-2">.col-2</div>
+              <div class="bgBox col-2">.col-2</div>
+              <div class="bgBox col-4">.col-4</div>
+              <div class="bgBox col-2">.col-2</div>
+              <div class="bgBox col-4">.col-4</div>
+            </div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;flex flex-wrap grap-10&quot;&gt;
+  &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+  &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+  &lt;div class=&quot;col-4&quot;&gt;.col-4&lt;/div&gt;
+  &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+  &lt;div class=&quot;col-4&quot;&gt;.col-4&lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+
+          <h3 class="tit-h3">기타 flex 클래스 정의</h3>
+          <p>.flex { display:flex;}</p>
+          <p>.inline-flex { display:inline-flex;}</p>
+          <p>.align-normal { align-items: normal;}</p>
+          <p>.align-start { align-items: flex-start;}</p>
+          <p>.align-center { align-items: center;}</p>
+          <p>.align-end { align-items: flex-end;}</p>
+          <p>.align-self-center { align-self: center;}</p>
+          <p>.align-self-start { align-self: flex-start;}</p>
+          <p>.align-self-end { align-self: flex-end;}</p>
+          <p>.justify-start { justify-content:flex-start;}</p>
+          <p>.justify-center { justify-content: center;}</p>
+          <p>.justify-end { justify-content:flex-end;}</p>
+          <p>.justify-self-center { justify-self:center;}</p>
+          <p>.justify-self-start { justify-self:flex-start;}</p>
+          <p>.justify-self-end { justify-self:flex-end;}</p>
+          <p>.space-evenly { justify-content:space-evenly;}</p>
+          <p>.space-between { justify-content:space-between;}</p>
+          <p>.space-around { justify-content:space-around;}</p>
+          <p>.flex-11 { flex:1 1 auto;}</p>
+          <p>.flex-10 { flex:1 0 auto;}</p>
+          <p>.flex-01 { flex:0 1 auto;}</p>
+          <p>.flex-00 { flex:0 0 auto;}</p>
+          <p>.flex-wrap { flex-flow: wrap;}</p>
+          <p>.flex-column { flex-flow: column;}</p>
+        </div>
+      </section>
+      <!-- //컨텐츠 영역 -->
+  
+      <!-- 하단 영역 -->
+      <footer id="tkg-footer-wrap" data-include="../include/footer.html"></footer>
+      <!-- //하단 영역 -->
+    </div>
+  </body>
+
+  <script>
+   
+  </script>
+</html>

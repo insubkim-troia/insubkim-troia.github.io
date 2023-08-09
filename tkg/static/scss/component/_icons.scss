@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+/* 아이콘 모음 */
+[class^=ico] {display:inline-block; font-size:0; vertical-align: middle;}
+
+.icoArrow { width:.5rem; height:.5rem; border: 1px solid #444; border-width:1px 1px 0 0; transform: translateY(-50%) rotate(135deg); transition: all .3s ease;}
+
+.icoGnb1 { width:4rem; height:3.4rem; background:url('../images/common/ico-gnb1-1.png') no-repeat center center / 100%;}
+.icoGnb2 { width:4rem; height:3.4rem; background:url('../images/common/ico-gnb1-2.png') no-repeat center center / 100%;}
+.icoGnb3 { width:4rem; height:3.4rem; background:url('../images/common/ico-gnb1-3.png') no-repeat center center / 100%;}
+.icoGnb4 { width:4rem; height:3.4rem; background:url('../images/common/ico-gnb1-4.png') no-repeat center center / 100%;}
+.icoGnb5 { width:4rem; height:3.4rem; background:url('../images/common/ico-gnb2-1.png') no-repeat center center / 100%;}
+.icoGnb6 { width:4rem; height:3.4rem; background:url('../images/common/ico-gnb2-2.png') no-repeat center center / 100%;}
+.icoGnb7 { width:4rem; height:3.4rem; background:url('../images/common/ico-gnb1-5.png') no-repeat center center / 100%;}

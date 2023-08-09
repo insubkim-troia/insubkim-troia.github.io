@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" /> -->
+    <title>TKG</title>
+    <link href="../../static/css/ui.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../static/js/common.js"></script>
+    <script type="text/javascript" src="../../static/js/ui.js"></script>
+    <!--[if lt IE 9]>
+      <script type="text/javascript">
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('footer');
+      </script>
+    <![endif]-->
+
+    <!-- 가이드 전용 -->
+    <link rel="stylesheet" href="../../static/css/a11y-dark.min.css">
+    <script src="../../static/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <!--
+      <pre><code class="language-xml"></code></pre>
+    -->
+    <!-- //가이드 전용 -->
+  </head>
+  <body>
+    <div id="tkg-wrap">
+      <!-- 헤더영역 -->
+      <header id="tkg-header-wrap" data-include="../include/header.html"></header>
+      <!-- //헤더영역 -->
+  
+      <!-- 컨텐츠 영역 -->
+      <section id="tkg-container">
+        <div class="left-nav" data-include="../include/nav.html"></div>
+        <div class="tkg-content">
+          <div class="page-tit">
+            <h1>텍스트 리스트 타입</h1>
+            <div class="ml-a">
+              버튼?
+            </div>
+          </div>
+          <h2 class="tit-h2"><strong class="guide-line">dot 스타일</strong></h2>
+
+          <h3 class="tit-h3">- 일반태그</h3>
+          <div class="line-box">
+            <p class="dot-text">.dot-text : 일반태그에 사용하는 dot 스타일 텍스트</p>
+            <p class="dot-text">.dot-text : 일반태그에 사용하는 dot 스타일 텍스트</p>
+          </div>
+          <pre><code class="language-xml">
+&lt;p class=&quot;dot-text&quot;&gt;.dot-text : 일반태그에 사용하는 dot 스타일 텍스트&lt;/p&gt;
+&lt;p class=&quot;dot-text&quot;&gt;.dot-text : 일반태그에 사용하는 dot 스타일 텍스트&lt;/p&gt;
+          </code></pre>
+          
+          <h3 class="tit-h3">- ul,ol 태그</h3>
+          <div class="line-box">
+            <ul class="dot-list">
+              <li>.dot-list : ul태그에 사용하는 dot 스타일 텍스트</li>
+              <li>.dot-list : ul태그에 사용하는 dot 스타일 텍스트</li>
+            </ul>
+          </div>
+          <pre><code class="language-xml">
+&lt;ul class=&quot;dot-list&quot;&gt;
+  &lt;li&gt;.dot-list : ul태그에 사용하는 dot 스타일 텍스트&lt;/li&gt;
+  &lt;li&gt;.dot-list : ul태그에 사용하는 dot 스타일 텍스트&lt;/li&gt;
+&lt;/ul&gt;
+          </code></pre>
+
+          <h2 class="tit-h2 mt-30"><strong class="guide-line">dash 스타일</strong></h2>
+          <h3 class="tit-h3">- 일반태그</h3>
+          <div class="line-box">
+            <p class="dash-text">.dash-text : 일반태그에 사용하는 dash 스타일 텍스트</p>
+            <p class="dash-text">.dash-text : 일반태그에 사용하는 dash 스타일 텍스트</p>
+          </div>
+          <pre><code class="language-xml">
+&lt;p class=&quot;dash-text&quot;&gt;.dash-text : 일반태그에 사용하는 dash 스타일 텍스트&lt;/p&gt;
+&lt;p class=&quot;dash-text&quot;&gt;.dash-text : 일반태그에 사용하는 dash 스타일 텍스트&lt;/p&gt;
+          </code></pre>
+          
+          <h3 class="tit-h3">- ul,ol 태그</h3>
+          <div class="line-box">
+            <ul class="dash-list">
+              <li>.dash-list : ul태그에 사용하는 dash 스타일 텍스트</li>
+              <li>.dash-list : ul태그에 사용하는 dash 스타일 텍스트</li>
+            </ul>
+          </div>
+          <pre><code class="language-xml">
+&lt;ul class=&quot;dash-list&quot;&gt;
+  &lt;li&gt;.dash-list : ul태그에 사용하는 dash 스타일 텍스트&lt;/li&gt;
+  &lt;li&gt;.dash-list : ul태그에 사용하는 dash 스타일 텍스트&lt;/li&gt;
+&lt;/ul&gt;
+          </code></pre>
+
+          <h2 class="tit-h2 mt-30"><strong class="guide-line">bullet 스타일</strong></h2>
+          <h3 class="tit-h3">- 일반태그</h3>
+          <div class="line-box">
+            <p class="bullet-text">.bullet-text : 일반태그에 사용하는 bullet 스타일 텍스트</p>
+            <p class="bullet-text">.bullet-text : 일반태그에 사용하는 bullet 스타일 텍스트</p>
+          </div>
+          <pre><code class="language-xml">
+&lt;p class=&quot;bullet-text&quot;&gt;.bullet-text : 일반태그에 사용하는 bullet 스타일 텍스트&lt;/p&gt;
+&lt;p class=&quot;bullet-text&quot;&gt;.bullet-text : 일반태그에 사용하는 bullet 스타일 텍스트&lt;/p&gt;
+          </code></pre>
+          
+          <h3 class="tit-h3">- ul,ol 태그</h3>
+          <div class="line-box">
+            <ul class="bullet-list">
+              <li>.bullet-list : ul태그에 사용하는 bullet 스타일 텍스트</li>
+              <li>.bullet-list : ul태그에 사용하는 bullet 스타일 텍스트</li>
+            </ul>
+          </div>
+          <pre><code class="language-xml">
+&lt;ul class=&quot;bullet-list&quot;&gt;
+  &lt;li&gt;.bullet-list : ul태그에 사용하는 bullet 스타일 텍스트&lt;/li&gt;
+  &lt;li&gt;.bullet-list : ul태그에 사용하는 bullet 스타일 텍스트&lt;/li&gt;
+&lt;/ul&gt;
+          </code></pre>
+          
+        </div>
+      </section>
+      <!-- //컨텐츠 영역 -->
+  
+      <!-- 하단 영역 -->
+      <footer id="tkg-footer-wrap" data-include="../include/footer.html"></footer>
+      <!-- //하단 영역 -->
+    </div>
+  </body>
+</html>

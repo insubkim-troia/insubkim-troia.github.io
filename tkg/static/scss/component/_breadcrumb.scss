@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+/* breadcrumb */
+.breadcrumb {
+    ul {
+        li {
+            display: inline-block; font-size: 1.4rem; color: #aaaaaa;
+            a {
+                color: #aaaaaa;
+                &:hover {
+                    color: #444444;
+                }
+            }
+            i {
+                &:before {
+                    font-size: 1.4rem; color: #dddddd;
+                }
+            }            
+        }
+    }
+}

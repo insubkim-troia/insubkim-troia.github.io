@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" /> -->
+    <title>TKG</title>
+    <link href="../../static/css/ui.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../static/js/common.js"></script>
+    <script type="text/javascript" src="../../static/js/ui.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+      
+    <!--[if lt IE 9]>
+      <script type="text/javascript">
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('footer');
+      </script>
+    <![endif]-->
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        const datepicker = document.querySelectorAll('.flatpickr');
+        datepicker.forEach(element => {
+          flatpickr(element,{
+            wrap: true
+          });
+        });
+      });
+    </script>
+
+    <!-- 가이드 전용 -->
+    <link rel="stylesheet" href="../../static/css/a11y-dark.min.css">
+    <script src="../../static/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <!--
+      <pre><code class="language-xml"></code></pre>
+    -->
+    <!-- //가이드 전용 -->
+  </head>
+  <body>
+    <div id="tkg-wrap">
+      <!-- 헤더영역 -->
+      <header id="tkg-header-wrap" data-include="../include/header.html"></header>
+      <!-- //헤더영역 -->
+  
+      <!-- 컨텐츠 영역 -->
+      <section id="tkg-container">
+        <div class="left-nav" data-include="../include/nav.html"></div>
+        <div class="tkg-content">
+          <div class="page-tit">
+            <h1>폼요소</h1>
+            <div class="ml-a">
+              버튼?
+            </div>
+          </div>
+
+          <h2 class="tit-h2"><strong class="guide-line">input</strong></h2>
+          <div class="line-box">
+            <div class="input-box"><input type="text" value="기본" /></div>
+
+            <p class="mt-15 mb-5">placeholder</p>
+            <div class="input-box"><input type="text" placeholder="placeholder 속성" /></div>
+
+            <p class="mt-15 mb-5">disabled</p>
+            <div class="input-box"><input type="text" value="내용입니다" disabled /></div>
+
+            <p class="mt-15 mb-5">에러 및 성공</p>
+            <div class="flex grap-5 mb-10">
+              <button class="button errorBtn">에러 버튼</button>
+              <button class="button successBtn">성공 버튼</button>
+            </div>
+            <div class="form-box">
+              <div class="input-box"><input type="text" id="errorTest1" value="에러 및 성공"></div>
+            </div>
+          </div>
+          <script>
+            $(function(){
+              $(document).on('click','.errorBtn',function(){
+                ui.FM.error('#errorTest1', '에러메시지 입니다.');
+                return false;
+              });
+              $(document).on('click','.successBtn',function(){
+                ui.FM.success('#errorTest1', '성공메시지 입니다.');
+                return false;
+              });
+            });
+          </script>
+          <pre><code class="language-xml">
+&lt;div class=&quot;input-box&quot;&gt;&lt;input type=&quot;text&quot; value=&quot;기본&quot; /&gt;&lt;/div&gt;
+
+&lt;div class=&quot;input-box&quot;&gt;&lt;input type=&quot;text&quot; placeholder=&quot;placeholder 속성&quot; /&gt;&lt;/div&gt;
+
+&lt;div class=&quot;input-box&quot;&gt;&lt;input type=&quot;text&quot; value=&quot;내용입니다&quot; disabled /&gt;&lt;/div&gt;
+
+&lt;div class=&quot;form-box&quot;&gt;
+  &lt;div class=&quot;input-box&quot;&gt;&lt;input type=&quot;text&quot; id=&quot;errorTest1&quot; value=&quot;에러 및 성공&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+
+          <pre class="mt-10"><code class="language-javascript">
+/* javascript */
+$(document).on('click','.errorBtn',function(){
+  ui.FM.error('#errorTest1', '에러메시지 입니다.');
+  return false;
+});
+$(document).on('click','.successBtn',function(){
+  ui.FM.success('#errorTest1', '성공메시지 입니다.');
+  return false;
+});
+          </code></pre>
+
+          <div class="line-box">
+            <p class="mb-5">단위 표시</p>
+            <div class="flex">
+              <div class="input-box">
+                <input type="text" value="내용입니다" />
+                <p class="util">단위</p>
+              </div>
+              <div class="input-box ml-10 right">
+                <input type="text" value="1,000" />
+                <p class="util">원</p>
+              </div>
+            </div>
+
+            <div class="flex mt-10">
+              <div class="input-box">
+                <p class="util">단위</p>
+                <input type="text" value="내용입니다" />
+              </div>
+              <div class="input-box ml-10 right">
+                <p class="util">원</p>
+                <input type="text" value="1,000" />
+              </div>
+            </div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;input-box&quot;&gt;
+  &lt;input type=&quot;text&quot; value=&quot;내용입니다&quot; /&gt;
+  &lt;p class=&quot;util&quot;&gt;단위&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input-box right&quot;&gt;
+  &lt;input type=&quot;text&quot; value=&quot;1,000&quot; /&gt;
+  &lt;p class=&quot;util&quot;&gt;원&lt;/p&gt;
+&lt;/div&gt;
+          </code></pre>
+
+          <h2 class="tit-h2 mt-20"><strong class="guide-line">달력</strong></h2>
+          <div class="line-box">
+            <div class="input-box flatpickr"><input type="text" data-input /><i class="icon-calendar" data-toggle></i></div>
+
+            <div class="flex grap-5 align-center mt-10">
+              <div class="input-box flatpickr"><input type="text" data-input /><i class="icon-calendar" data-toggle></i></div>
+              <span>~</span>
+              <div class="input-box flatpickr"><input type="text" data-input /><i class="icon-calendar" data-toggle></i></div>
+            </div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;input-box flatpickr&quot;&gt;&lt;input type=&quot;text&quot; data-input /&gt;&lt;i class=&quot;icon-calendar&quot; data-toggle&gt;&lt;/i&gt;&lt;/div&gt;
+
+&lt;div class=&quot;flex grap-5 align-center mt-10&quot;&gt;
+  &lt;div class=&quot;input-box flatpickr&quot;&gt;&lt;input type=&quot;text&quot; data-input /&gt;&lt;i class=&quot;icon-calendar&quot; data-toggle&gt;&lt;/i&gt;&lt;/div&gt;
+  &lt;span&gt;~&lt;/span&gt;
+  &lt;div class=&quot;input-box flatpickr&quot;&gt;&lt;input type=&quot;text&quot; data-input /&gt;&lt;i class=&quot;icon-calendar&quot; data-toggle&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+
+          <h2 class="tit-h2 mt-20"><strong class="guide-line">파일첨부</strong></h2>
+          <div class="line-box">
+            <div class="input-box file-box">
+              <input type="file" />
+              <input type="text" />
+              <button class="button new-btn">파일첨부</button>
+            </div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;input-box file-box&quot;&gt;
+  &lt;input type=&quot;file&quot; /&gt;
+  &lt;input type=&quot;text&quot; /&gt;
+  &lt;button class=&quot;button new-btn&quot;&gt;파일첨부&lt;/button&gt;
+&lt;/div&gt;
+          </code></pre>
+
+          <h2 class="tit-h2 mt-20"><strong class="guide-line">select</strong></h2>
+          <div class="line-box">
+            <div class="form-box">
+              <div class="select-box">
+                <select title="날짜 선택">
+                  <option value="">날짜 선택</option>
+                  <option value="1">1일</option>
+                  <option value="2">2일</option>
+                  <option value="3">3일</option>
+                </select>
+              </div>
+            </div>
+
+            <p class="mt-15 mb-5">disabled</p>
+            <div class="form-box">
+              <div class="select-box">
+                <select title="날짜 선택">
+                  <option value="">날짜 선택</option>
+                  <option value="1">1일</option>
+                  <option value="2">2일</option>
+                  <option value="3">3일</option>
+                </select>
+              </div>
+            </div>
+
+            <p class="mt-15 mb-5">에러 및 성공</p>
+            <div class="flex grap-5 mb-10">
+              <button class="button errorBtn2">에러 버튼</button>
+              <button class="button successBtn2">성공 버튼</button>
+            </div>
+            <div class="form-box">
+              <div class="select-box">
+                <select title="날짜 선택"  id="errorTest2">
+                  <option value="">날짜 선택</option>
+                  <option value="1">1일</option>
+                  <option value="2">2일</option>
+                  <option value="3">3일</option>
+                </select>
+              </div>
+            </div>
+            <script>
+              $(function(){
+                $(document).on('click','.errorBtn2',function(){
+                  ui.FM.error('#errorTest2', '에러메시지 입니다.');
+                  return false;
+                });
+                $(document).on('click','.successBtn2',function(){
+                  ui.FM.success('#errorTest2', '성공메시지 입니다.');
+                  return false;
+                });
+              });
+            </script>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;select-box&quot;&gt;
+  &lt;select title=&quot;날짜 선택&quot;&gt;
+    &lt;option value=&quot;&quot;&gt;날짜 선택&lt;/option&gt;
+    &lt;option value=&quot;1&quot;&gt;1일&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;2일&lt;/option&gt;
+    &lt;option value=&quot;3&quot;&gt;3일&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-box&quot;&gt;
+  &lt;div class=&quot;select-box&quot;&gt;
+    &lt;select title=&quot;날짜 선택&quot;  id=&quot;errorTest2&quot;&gt;
+      &lt;option value=&quot;&quot;&gt;날짜 선택&lt;/option&gt;
+      &lt;option value=&quot;1&quot;&gt;1일&lt;/option&gt;
+      &lt;option value=&quot;2&quot;&gt;2일&lt;/option&gt;
+      &lt;option value=&quot;3&quot;&gt;3일&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+          <pre class="mt-10"><code class="language-javascript">
+/* javascript */
+$(function(){
+  $(document).on('click','.errorBtn2',function(){
+    ui.FM.error('#errorTest2', '에러메시지 입니다.');
+    return false;
+  });
+  $(document).on('click','.successBtn2',function(){
+    ui.FM.success('#errorTest2', '성공메시지 입니다.');
+    return false;
+  });
+});
+          </code></pre>
+
+          <h2 class="tit-h2 mt-20"><strong class="guide-line">textarea</strong></h2>
+          <div class="line-box">
+            <div class="formBox">
+              <div class="textarea"><textarea></textarea></div>
+            </div>
+    
+            <p class="mt-15 mb-5">높이값 auto</p> 
+            <div class="formBox">
+              <div class="textarea auto"><textarea placeholder="플레스홀더"></textarea></div>
+            </div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;formBox&quot;&gt;
+  &lt;div class=&quot;textarea&quot;&gt;&lt;textarea&gt;&lt;/textarea&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;formBox&quot;&gt;
+  &lt;div class=&quot;textarea auto&quot;&gt;&lt;textarea placeholder=&quot;플레스홀더&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+
+          <h2 class="tit-h2 mt-20"><strong class="guide-line">checkbox</strong></h2>
+          <div class="line-box">
+            <div class="formBox">
+              <div class="checkbox">
+                <input type="checkbox" id="check1" /><label for="check1"><i></i>체크박스</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="check2" checked /><label for="check2"><i></i>체크박스</label>
+              </div>
+            </div>
+            <div class="formBox mt-5">
+              <div class="checkbox">
+                <input type="checkbox" id="check3" disabled /><label for="check3"><i></i>체크박스</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="check4" disabled checked /><label for="check4"><i></i>체크박스</label>
+              </div>
+            </div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; /&gt;&lt;label for=&quot;check1&quot;&gt;&lt;i&gt;&lt;/i&gt;체크박스&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;check2&quot; checked /&gt;&lt;label for=&quot;check2&quot;&gt;&lt;i&gt;&lt;/i&gt;체크박스&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;check3&quot; disabled /&gt;&lt;label for=&quot;check3&quot;&gt;&lt;i&gt;&lt;/i&gt;체크박스&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;check4&quot; disabled checked /&gt;&lt;label for=&quot;check4&quot;&gt;&lt;i&gt;&lt;/i&gt;체크박스&lt;/label&gt;
+&lt;/div&gt;
+          </code></pre>
+          
+          <h2 class="tit-h2 mt-20"><strong class="guide-line">radio</strong></h2>
+          <div class="line-box">
+            <div class="formBox">
+              <div class="radio">
+                <input type="radio" id="radio1" name="radioG1" /><label for="radio1"><i></i>라디오박스</label>
+              </div>
+              <div class="radio">
+                <input type="radio" id="radio2" name="radioG1" checked /><label for="radio2"><i></i>라디오박스</label>
+              </div>
+            </div>
+            <div class="formBox mt-5">
+              <div class="radio">
+                <input type="radio" id="radio3" name="radioG2" disabled /><label for="radio3"><i></i>라디오박스</label>
+              </div>
+              <div class="radio">
+                <input type="radio" id="radio4" name="radioG2" disabled checked /><label for="radio4"><i></i>라디오박스</label>
+              </div>
+            </div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;radio&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;radio1&quot; name=&quot;radioG1&quot; /&gt;&lt;label for=&quot;radio1&quot;&gt;&lt;i&gt;&lt;/i&gt;라디오박스&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;radio&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;radio2&quot; name=&quot;radioG1&quot; checked /&gt;&lt;label for=&quot;radio2&quot;&gt;&lt;i&gt;&lt;/i&gt;라디오박스&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;radio&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;radio3&quot; name=&quot;radioG2&quot; disabled /&gt;&lt;label for=&quot;radio3&quot;&gt;&lt;i&gt;&lt;/i&gt;라디오박스&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;radio&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;radio4&quot; name=&quot;radioG2&quot; disabled checked /&gt;&lt;label for=&quot;radio4&quot;&gt;&lt;i&gt;&lt;/i&gt;라디오박스&lt;/label&gt;
+&lt;/div&gt;
+          </code></pre>
+          
+          <h2 class="tit-h2 mt-20"><strong class="guide-line">toggle</strong></h2>
+          <div class="line-box">
+            <div class="togglebox">
+              <input type="checkbox" id="check7" /><label for="check7"><i></i>선택</label>
+            </div>
+
+            <div class="toggle-radio mt-20">
+              <input type="radio" id="radio7" name="radioG4" />
+              <label for="radio7"><i></i>라디오박스</label>
+              <input type="radio" id="radio8" name="radioG4" checked />
+              <label for="radio8"><i></i>라디오박스</label>
+            </div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;togglebox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;check7&quot; /&gt;&lt;label for=&quot;check7&quot;&gt;&lt;i&gt;&lt;/i&gt;선택&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;toggle-radio mt-20&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;radio7&quot; name=&quot;radioG4&quot; /&gt;
+  &lt;label for=&quot;radio7&quot;&gt;&lt;i&gt;&lt;/i&gt;라디오박스&lt;/label&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;radio8&quot; name=&quot;radioG4&quot; checked /&gt;
+  &lt;label for=&quot;radio8&quot;&gt;&lt;i&gt;&lt;/i&gt;라디오박스&lt;/label&gt;
+&lt;/div&gt;
+          </code></pre>
+          
+          <h2 class="tit-h2 mt-20"><strong class="guide-line">전체 체크박스</strong></h2>
+          <div class="line-box">
+            <div class="padding-10 border">
+              <div class="checkbox" data-check-all="all1">
+                <input type="checkbox" id="checkAll" /><label for="checkAll"><i></i>체크박스</label>
+              </div>
+            </div>
+            <p class="mt-10">자식 체크 박스 : data-check-child="부모타겟"</p>
+            <div class="padding-10 border">
+              <div class="checkbox" data-check-child="all1">
+                <input type="checkbox" id="checkChildren1-1" /><label for="checkChildren1-1"><i></i>체크박스1</label>
+              </div>
+              <div class="checkbox" data-check-child="all1">
+                <input type="checkbox" id="checkChildren1-2" /><label for="checkChildren1-2"><i></i>체크박스2</label>
+              </div>
+              <div class="checkbox" data-check-child="all1" data-check-all="all2">
+                <input type="checkbox" id="checkChildren1-3" /><label for="checkChildren1-3"><i></i>체크박스3</label>
+              </div>
+            </div>
+            <div class="padding-10 mt-10 border">
+              <div class="checkbox" data-check-child="all2">
+                <input type="checkbox" id="checkChildren2-1" /><label for="checkChildren2-1"><i></i>체크박스3-1</label>
+              </div>
+              <div class="checkbox" data-check-child="all2" data-check-all="all3">
+                <input type="checkbox" id="checkChildren2-2" /><label for="checkChildren2-2"><i></i>체크박스3-2</label>
+              </div>
+            </div>
+            <div class="padding-10 mt-10 border">
+              <div class="checkbox" data-check-child="all3">
+                <input type="checkbox" id="checkChildren3-1" /><label for="checkChildren3-1"><i></i>체크박스3-1</label>
+              </div>
+              <div class="checkbox" data-check-child="all3">
+                <input type="checkbox" id="checkChildren3-2" /><label for="checkChildren3-2"><i></i>체크박스3-2</label>
+              </div>
+            </div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;padding-10 border&quot;&gt;
+  &lt;div class=&quot;checkbox&quot; data-check-all=&quot;all1&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkAll&quot; /&gt;&lt;label for=&quot;checkAll&quot;&gt;&lt;i&gt;&lt;/i&gt;체크박스&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;padding-10 border&quot;&gt;
+  &lt;div class=&quot;checkbox&quot; data-check-child=&quot;all1&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkChildren1-1&quot; /&gt;&lt;label for=&quot;checkChildren1-1&quot;&gt;&lt;i&gt;&lt;/i&gt;체크박스1&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;checkbox&quot; data-check-child=&quot;all1&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkChildren1-2&quot; /&gt;&lt;label for=&quot;checkChildren1-2&quot;&gt;&lt;i&gt;&lt;/i&gt;체크박스2&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;checkbox&quot; data-check-child=&quot;all1&quot; data-check-all=&quot;all2&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkChildren1-3&quot; /&gt;&lt;label for=&quot;checkChildren1-3&quot;&gt;&lt;i&gt;&lt;/i&gt;체크박스3&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;padding-10 mt-10 border&quot;&gt;
+  &lt;div class=&quot;checkbox&quot; data-check-child=&quot;all2&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkChildren2-1&quot; /&gt;&lt;label for=&quot;checkChildren2-1&quot;&gt;&lt;i&gt;&lt;/i&gt;체크박스3-1&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;checkbox&quot; data-check-child=&quot;all2&quot; data-check-all=&quot;all3&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkChildren2-2&quot; /&gt;&lt;label for=&quot;checkChildren2-2&quot;&gt;&lt;i&gt;&lt;/i&gt;체크박스3-2&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;padding-10 mt-10 border&quot;&gt;
+  &lt;div class=&quot;checkbox&quot; data-check-child=&quot;all3&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkChildren3-1&quot; /&gt;&lt;label for=&quot;checkChildren3-1&quot;&gt;&lt;i&gt;&lt;/i&gt;체크박스3-1&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;checkbox&quot; data-check-child=&quot;all3&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkChildren3-2&quot; /&gt;&lt;label for=&quot;checkChildren3-2&quot;&gt;&lt;i&gt;&lt;/i&gt;체크박스3-2&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+
+          <h2 class="tit-h2 mt-20"><strong class="guide-line">max-length</strong></h2>
+          <div class="line-box">
+            <div class="formBox">
+              <div class="input-box max-check">
+                <input type="text" maxlength="10" />
+                <p class="number"><span class="num"></span>/<span class="max"></span></p>
+              </div>
+            </div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;formBox&quot;&gt;
+  &lt;div class=&quot;input-box max-check&quot;&gt;
+    &lt;input type=&quot;text&quot; maxlength=&quot;10&quot; /&gt;
+    &lt;p class=&quot;number&quot;&gt;&lt;span class=&quot;num&quot;&gt;&lt;/span&gt;/&lt;span class=&quot;max&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+          
+        </div>
+      </section>
+      <!-- //컨텐츠 영역 -->
+      
+      <!-- 하단 영역 -->
+      <footer id="tkg-footer-wrap" data-include="../include/footer.html"></footer>
+      <!-- //하단 영역 -->
+    </div>
+  </body>
+</html>
+ 

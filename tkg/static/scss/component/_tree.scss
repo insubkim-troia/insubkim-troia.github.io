@@ -1,0 +1,39 @@
+.tree-wrap {
+    > ul {
+        ul { display:none;}
+        li { position:relative; padding-left:2.9rem;
+            &:before { content:''; display:block; position:absolute; top:0; left:1.2rem; bottom:0; width:.1rem; background:#ddd;}
+            &:after { content:''; display:block; position:absolute; top:1.7rem; left:1.2rem; width:1.7rem; height:.1rem; background:#ddd;}
+
+            &:last-child { 
+                &:before { bottom:1.5rem;}
+            }
+            &:first-child:last-child {
+                &:before { bottom:auto; height:1.7rem;}
+            }
+        }
+        > li { padding-left:0;
+            &:after { display:none;}
+
+            &:first-child {
+                &:before { top:1.5rem;}
+            }
+            &:last-child { 
+                &:before { bottom:auto; height:1.5rem;}
+            }
+        }
+
+    }
+    .info { display:flex; align-items: center; padding:.5rem 0;
+        .tree-action { display:block; position:relative; width:2.4rem; height:2.4rem; border:1px solid #eee; font-size:0; background:#fff;
+            &:before { content:''; display:block; position:absolute; top:50%; left:50%; width:50%; height:.2rem; background:#000; transform: translate(-50%, -50%);}
+            &:after { content:''; display:block; position:absolute; top:50%; left:50%; width:50%; height:.2rem; background:#000; transform: translate(-50%, -50%) rotate(90deg); transition: all .3s ease;}
+
+            &.on {
+                &:after { transform: translate(-50%, -50%) rotate(0deg);}
+            }
+        }
+        .checkbox { margin-left:.5rem;}
+        a { margin-left:.5rem;}
+    }
+} 

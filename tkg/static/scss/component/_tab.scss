@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+.tab-list { overflow:auto hidden; display:flex;
+    a { display:inline-flex; flex:1 0 auto; position:relative; height:5.3rem; border-bottom:.3rem solid #e6e6e6; font-size:1.5rem; color:#666666; text-align:center; transition:all .3s ease; line-height:1.06; justify-content: center; align-items: center; background:#fff; transition: all .3s ease;
+        &:after { content:''; display:block; position:absolute; bottom:-0.3rem; left:50%; width:00%; height:.3rem; background:#111; opacity: 0; transition: all .3s ease;}
+
+        &.on { color:#262626; font-weight:bold; transition: all .3s ease;
+            &:after { left:0; width:100%; opacity: 1;}
+        }
+    }
+
+    &.full a { max-width:initial}
+
+    &.line-type { position:relative;
+        a:after { display:none;}
+        .tab-line { position:absolute; bottom:0; left:0; width:0%; height:.3rem; background:#4d4d4d; transition: all .3s ease;
+            &.off { transition: none;}
+        }
+    }
+
+    &.swiper-tab { overflow: hidden;
+        a { max-width:11.4rem;}
+        a + a { margin-left:0.25rem;}
+        &:before { content:''; display:block; visibility: visible; position:absolute; top:0; left:0; z-index:2; width:2rem; height:100%; background:linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);; transition: all .3s ease; opacity: 1;}
+        &:after { content:''; display:block; visibility: visible; position:absolute; top:0; right:0; z-index:2; width:2rem; height:100%; background:linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);; transition: all .3s ease; opacity: 1;}
+
+        &.first {
+            &:before { visibility: hidden; opacity: 0;}
+        }
+        &.last {
+            &:after { visibility: hidden; opacity: 0;}
+        }
+    }
+
+    &.type-button {
+        a {border:1px solid #d1d4db;
+            &:after { display:none;}
+            + a { margin-left:-1px;}
+
+            &.on { z-index:1; color:#1c69d3; border-color:#1c69d3;}
+        }
+    }
+}
+
+[data-tab-cont=swiper] {overflow:hidden;}
+
+.tab-list-view { display:none;}

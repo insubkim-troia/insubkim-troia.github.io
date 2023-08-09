@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+@import "guide";
+@import "font";
+@import "fontello";
+@import "box";
+@import "motion";
+@import "layerpop";
+@import "icons";
+@import "form";
+@import "button";
+@import "tab";
+@import "table";
+@import "accodion";
+@import "image";
+@import "tree";
+@import "badge";
+@import "breadcrumb";
+
+body.scrollLock { overflow:hidden;}
+
+
+// #tkg-container { position:relative; width:100%; min-width:1600px; padding-left:20rem; min-height:calc(100vh - 9.25rem); transition: padding-left .3s ease;
+//     &.lnb-close { padding-left:0;}
+    
+//     &.right-box { padding-right:20rem;}
+// }
+
+
+/* 아마도 ? */
+html,body { height:100%;}
+#tkg-wrap { overflow: hidden auto; min-width:1600px; height:100%; display: flex; flex-flow: column; background: url(../images/common/bg.png) no-repeat center; background-size: cover;}
+#tkg-wrap #tkg-header-wrap { height:auto;}
+#tkg-wrap #tkg-container { overflow: hidden; display:flex; flex:1 1 auto; padding: 0 3.2rem 3.2rem;}
+#tkg-wrap #tkg-container .tkg-content-body {overflow:auto; flex:1 1 auto; margin-left: 3.2rem;}
+#tkg-wrap #tkg-container .tkg-content { padding: 2.4rem 2.7rem; background: #fff; border-radius: 2.4rem; box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);}
+
+.pc-none { display:none !important;}
+.mo-none { display:block !important;}
+
+// @media screen and (max-width:1024px) {
+//     #tkg-container { padding-left:0;}
+// }
+

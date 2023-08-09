@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" /> -->
+    <title>TKG</title>
+    <link href="../../static/css/ui.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../static/js/common.js"></script>
+    <script type="text/javascript" src="../../static/js/ui.js"></script>
+    <!--[if lt IE 9]>
+      <script type="text/javascript">
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('footer');
+      </script>
+    <![endif]-->
+
+    <!-- 가이드 전용 -->
+    <link rel="stylesheet" href="../../static/css/a11y-dark.min.css">
+    <script src="../../static/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <!--
+      <pre><code class="language-xml"></code></pre>
+    -->
+    <!-- //가이드 전용 -->
+  </head>
+  <body>
+    <div id="tkg-wrap">
+      <!-- 헤더영역 -->
+      <header id="tkg-header-wrap" data-include="../include/header.html"></header>
+      <!-- //헤더영역 -->
+  
+      <!-- 컨텐츠 영역 --> 
+      <section id="tkg-container">
+        <div class="left-nav" data-include="../include/nav.html"></div>
+        <div class="tkg-content">
+          <div class="page-tit">
+            <h1>테이블</h1>
+            <div class="ml-a">
+              버튼?
+            </div>
+          </div>
+
+          <h2 class="tit-h2"><strong class="guide-line">목록 테이블</strong></h2> 
+          <div class="line-box">
+            <div class="table-list">
+              <table>
+                <colgroup>
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">내용</th>
+                    <th scope="col">전시기간</th>
+                    <th scope="col">상태</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Theme</td>
+                    <td class="tl">Insider Trends @kmall24</td>
+                    <td>2021.10.01 ~ 2021.10.31</td>
+                    <td class="fcPoint">진행중</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;table-list&quot;&gt;
+  &lt;table&gt;
+    &lt;colgroup&gt;
+      &lt;col /&gt;
+      &lt;col /&gt;
+      &lt;col /&gt;
+      &lt;col /&gt;
+    &lt;/colgroup&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th scope=&quot;col&quot;&gt;구분&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;내용&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;전시기간&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;상태&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Theme&lt;/td&gt;
+        &lt;td class=&quot;tl&quot;&gt;Insider Trends @kmall24&lt;/td&gt;
+        &lt;td&gt;2021.10.01 ~ 2021.10.31&lt;/td&gt;
+        &lt;td class=&quot;fcPoint&quot;&gt;진행중&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+          </code></pre>
+
+          <h2 class="tit-h2 mt-30"><strong class="guide-line">상세 테이블</strong></h2> 
+          <div class="line-box">
+            <div class="table-view">
+              <table>
+                <colgroup>
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">상세</th>
+                    <td class="tl">
+                      <div class="form-box">
+                        <div class="input-box"><input type="text" value="기본" /></div>
+                      </div>
+                    </td>
+                    <th scope="row">상세</th>
+                    <td class="fc-point">진행중</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;table-view&quot;&gt;
+  &lt;table&gt;
+    &lt;colgroup&gt;
+      &lt;col /&gt;
+      &lt;col /&gt;
+      &lt;col /&gt;
+      &lt;col /&gt;
+    &lt;/colgroup&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;th scope=&quot;row&quot;&gt;상세&lt;/th&gt;
+        &lt;td class=&quot;tl&quot;&gt;
+          &lt;div class=&quot;form-box&quot;&gt;
+            &lt;div class=&quot;input-box&quot;&gt;&lt;input type=&quot;text&quot; value=&quot;기본&quot; /&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/td&gt;
+        &lt;th scope=&quot;row&quot;&gt;상세&lt;/th&gt;
+        &lt;td class=&quot;fc-point&quot;&gt;진행중&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+          </code></pre>
+
+          <h2 class="tit-h2 mt-30"><strong class="guide-line">dl 형태 테이블</strong></h2>
+          <h3 class="tit-h3">기본</h3>
+          <div class="line-box">
+            <div class="dl-info-box">
+              <dl>
+                <dt>체험 프로그램</dt>
+                <dd>TestDrive</dd>
+              </dl>
+              <dl>
+                <dt>체험 차량</dt>
+                <dd>BMW 32Oi M Sport Package</dd>
+              </dl>
+            </div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;dl-info-box&quot;&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;체험 프로그램&lt;/dt&gt;
+    &lt;dd&gt;TestDrive&lt;/dd&gt;
+  &lt;/dl&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;체험 차량&lt;/dt&gt;
+    &lt;dd&gt;BMW 32Oi M Sport Package&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/div&gt;
+          </code></pre>
+
+          <h3 class="tit-h3">grid</h3>
+          <div class="line-box">
+            <div class="dl-info-box grid">
+              <div class="left">
+                <h2>
+                  주니어<br />
+                  캠퍼스<br />
+                  <strong>실험실</strong>
+                </h2>
+              </div>
+              <dl>
+                <dt>일반(10,000원x1)</dt>
+                <dd>10,000원</dd>
+              </dl>
+              <dl>
+                <dt>과학동아기자단(8,000원x1)</dt>
+                <dd>8,000원</dd>
+              </dl>
+              <dl>
+                <dt>유가족(유공자/의사자)(5,000원x1)</dt>
+                <dd>5,000원</dd>
+              </dl>
+              <dl>
+                <dt><strong class="fc262626">프로그램 이용료 합계</strong></dt>
+                <dd><strong class="fc262626">23,000원</strong></dd>
+              </dl>
+              <dl class="sum">
+                <dt>결제 예정 금액</dt>
+                <dd>18,000원</dd>
+              </dl>
+            </div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;dl-info-box grid&quot;&gt;
+  &lt;div class=&quot;left&quot;&gt;
+    &lt;h2&gt;
+      주니어&lt;br /&gt;
+      캠퍼스&lt;br /&gt;
+      &lt;strong&gt;실험실&lt;/strong&gt;
+    &lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;일반(10,000원x1)&lt;/dt&gt;
+    &lt;dd&gt;10,000원&lt;/dd&gt;
+  &lt;/dl&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;과학동아기자단(8,000원x1)&lt;/dt&gt;
+    &lt;dd&gt;8,000원&lt;/dd&gt;
+  &lt;/dl&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;유가족(유공자/의사자)(5,000원x1)&lt;/dt&gt;
+    &lt;dd&gt;5,000원&lt;/dd&gt;
+  &lt;/dl&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;&lt;strong class=&quot;fc262626&quot;&gt;프로그램 이용료 합계&lt;/strong&gt;&lt;/dt&gt;
+    &lt;dd&gt;&lt;strong class=&quot;fc262626&quot;&gt;23,000원&lt;/strong&gt;&lt;/dd&gt;
+  &lt;/dl&gt;
+  &lt;dl class=&quot;sum&quot;&gt;
+    &lt;dt&gt;결제 예정 금액&lt;/dt&gt;
+    &lt;dd&gt;18,000원&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/div&gt;
+          </code></pre>
+
+          <h2 class="tit-h2 mt-30"><strong class="guide-line">페이징</strong></h2>
+          <div class="line-box">
+            <div class="paging">
+              <a href="#" class="btn-prev">이전</a>
+              <strong>1</strong>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#" class="btn-next">다음</a>
+            </div>
+          </div>
+          <pre><code class="language-xml">
+&lt;div class=&quot;paging&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;btn-prev&quot;&gt;이전&lt;/a&gt;
+  &lt;strong&gt;1&lt;/strong&gt;
+  &lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;btn-next&quot;&gt;다음&lt;/a&gt;
+&lt;/div&gt;
+          </code></pre>
+
+        </div>
+      </section>
+      <!-- //컨텐츠 영역 -->
+      
+      <!-- 하단 영역 -->
+      <footer id="tkg-footer-wrap" data-include="../include/footer.html"></footer>
+      <!-- //하단 영역 -->
+    </div>
+  </body>
+</html>
+ 
