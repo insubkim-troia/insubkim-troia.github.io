@@ -162,20 +162,20 @@
 
 /* ========== scrollbar ========== */
 @media screen and (min-width:800px) {
-    ::-webkit-scrollbar{width:14px;/* height:8px;*/}
-    // ::-webkit-scrollbar-corner{background:transparent; border-right:1px solid #e6e6e6; border-bottom:1px solid #e6e6e6;}
+    ::-webkit-scrollbar{width:8px; height:8px;}
+    ::-webkit-scrollbar-corner{background:transparent; border-right:1px solid #e6e6e6; border-bottom:1px solid #e6e6e6;}
     ::-webkit-scrollbar-track
     {
-        background-color: transparent;
-        // background-color:#f2f2f2; background-image:-moz-linear-gradient(left, #f2f2f2 0%, #fff 100%);
+        background-color:transparent; 
+        // background-image:-moz-linear-gradient(left, #f2f2f2 0%, #fff 100%);
         // background-image: linear-gradient(left, #f2f2f2 0%, #fff 100%);
         // background-image: -webkit-linear-gradient(left, #f2f2f2 0%, #fff 100%);
         // background-image: -o-linear-gradient(left, #f2f2f2 0%, #fff 100%);
         // background-image: -ms-linear-gradient(left, #f2f2f2 0%, #fff 100%);
-        // border: 1px solid transparent;
+       // border: 1px solid #e6e6e6;
     }
-    ::-webkit-scrollbar-thumb{background:#c8c8c8; border:3px solid transparent; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:8px; background-clip: padding-box;}
-    // ::-webkit-scrollbar-thumb:hover{background:#8a8a8a; border:3px solid transparent;}
+    ::-webkit-scrollbar-thumb{background:#c8c8c8; border:2px solid transparent; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:8px; background-clip: padding-box;}
+    // ::-webkit-scrollbar-thumb:hover{background:#8a8a8a; border:1px solid #737373;}
 }
 
 
