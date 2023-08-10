@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" /> -->
+    <title>TKG</title>
+    <link href="../../static/css/ui.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../static/js/common.js"></script>
+    <script type="text/javascript" src="../../static/js/ui.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+      
+    <!--[if lt IE 9]>
+      <script type="text/javascript">
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('footer');
+      </script>
+    <![endif]-->
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        const datepicker = document.querySelectorAll('.flatpickr');
+        datepicker.forEach(element => {
+          flatpickr(element,{
+            wrap: true
+          });
+        });
+      });
+    </script>
+
+    <!-- 가이드 전용 -->
+    <link rel="stylesheet" href="../../static/css/a11y-dark.min.css">
+    <script src="../../static/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <!--
+      <pre><code class="language-xml"></code></pre>
+    -->
+    <!-- //가이드 전용 -->
+  </head>
+  <body>
+    <div id="tkg-wrap">
+      <!-- 헤더영역 -->
+      <header id="tkg-header-wrap" data-include="../include/header.html"></header>
+      <!-- //헤더영역 -->
+  
+      <!-- 컨텐츠 영역 -->
+      <section id="tkg-container">
+        <div class="left-nav" data-include="../include/nav.html"></div>
+        <div class="tkg-content-body">
+          <div class="tkg-content">
+            <div class="page-tit">
+              <h1>Text Field</h1>
+              <div class="ml-a">
+                버튼?
+              </div>
+            </div>
+  
+            <h2 class="tit-h2"><strong class="guide-line">input</strong></h2>
+            <div class="line-box">
+              <div class="input-box"><input type="text" value="기본" /></div>
+  
+              <p class="mt-15 mb-5">placeholder</p>
+              <div class="input-box"><input type="text" placeholder="placeholder 속성" /></div>
+  
+              <p class="mt-15 mb-5">disabled</p>
+              <div class="input-box"><input type="text" value="내용입니다" disabled /></div>
+  
+              <p class="mt-15 mb-5">에러 및 성공</p>
+              <div class="flex grap-5 mb-10">
+                <button class="button errorBtn">에러 버튼</button>
+                <button class="button successBtn">성공 버튼</button>
+              </div>
+              <div class="form-box">
+                <div class="input-box"><input type="text" id="errorTest1" value="에러 및 성공"></div>
+              </div>
+            </div>
+            <script>
+              $(function(){
+                $(document).on('click','.errorBtn',function(){
+                  ui.FM.error('#errorTest1', '에러메시지 입니다.');
+                  return false;
+                });
+                $(document).on('click','.successBtn',function(){
+                  ui.FM.success('#errorTest1', '성공메시지 입니다.');
+                  return false;
+                });
+              });
+            </script>
+            <pre><code class="language-xml">
+  &lt;div class=&quot;input-box&quot;&gt;&lt;input type=&quot;text&quot; value=&quot;기본&quot; /&gt;&lt;/div&gt;
+  
+  &lt;div class=&quot;input-box&quot;&gt;&lt;input type=&quot;text&quot; placeholder=&quot;placeholder 속성&quot; /&gt;&lt;/div&gt;
+  
+  &lt;div class=&quot;input-box&quot;&gt;&lt;input type=&quot;text&quot; value=&quot;내용입니다&quot; disabled /&gt;&lt;/div&gt;
+  
+  &lt;div class=&quot;form-box&quot;&gt;
+    &lt;div class=&quot;input-box&quot;&gt;&lt;input type=&quot;text&quot; id=&quot;errorTest1&quot; value=&quot;에러 및 성공&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+            </code></pre>
+  
+            <pre class="mt-10"><code class="language-javascript">
+  /* javascript */
+  $(document).on('click','.errorBtn',function(){
+    ui.FM.error('#errorTest1', '에러메시지 입니다.');
+    return false;
+  });
+  $(document).on('click','.successBtn',function(){
+    ui.FM.success('#errorTest1', '성공메시지 입니다.');
+    return false;
+  });
+            </code></pre>
+  
+            <div class="line-box">
+              <p class="mb-5">단위 표시</p>
+              <div class="flex">
+                <div class="input-box">
+                  <input type="text" value="내용입니다" />
+                  <p class="util">단위</p>
+                </div>
+                <div class="input-box ml-10 right">
+                  <input type="text" value="1,000" />
+                  <p class="util">원</p>
+                </div>
+              </div>
+  
+              <div class="flex mt-10">
+                <div class="input-box">
+                  <p class="util">단위</p>
+                  <input type="text" value="내용입니다" />
+                </div>
+                <div class="input-box ml-10 right">
+                  <p class="util">원</p>
+                  <input type="text" value="1,000" />
+                </div>
+              </div>
+            </div>
+            <pre><code class="language-xml">
+  &lt;div class=&quot;input-box&quot;&gt;
+    &lt;input type=&quot;text&quot; value=&quot;내용입니다&quot; /&gt;
+    &lt;p class=&quot;util&quot;&gt;단위&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;input-box right&quot;&gt;
+    &lt;input type=&quot;text&quot; value=&quot;1,000&quot; /&gt;
+    &lt;p class=&quot;util&quot;&gt;원&lt;/p&gt;
+  &lt;/div&gt;
+            </code></pre>           
+  
+            <h2 class="tit-h2 mt-20"><strong class="guide-line">파일첨부</strong></h2>
+            <div class="line-box">
+              <div class="input-box file-box">
+                <input type="file" />
+                <input type="text" />
+                <button class="button new-btn">파일첨부</button>
+              </div>
+            </div>
+            <pre><code class="language-xml">
+  &lt;div class=&quot;input-box file-box&quot;&gt;
+    &lt;input type=&quot;file&quot; /&gt;
+    &lt;input type=&quot;text&quot; /&gt;
+    &lt;button class=&quot;button new-btn&quot;&gt;파일첨부&lt;/button&gt;
+  &lt;/div&gt;
+            </code></pre>
+            <h2 class="tit-h2 mt-20"><strong class="guide-line">textarea</strong></h2>
+            <div class="line-box">
+              <div class="formBox">
+                <div class="textarea"><textarea></textarea></div>
+              </div>
+      
+              <p class="mt-15 mb-5">높이값 auto</p> 
+              <div class="formBox">
+                <div class="textarea auto"><textarea placeholder="플레스홀더"></textarea></div>
+              </div>
+            </div>
+            <pre><code class="language-xml">
+  &lt;div class=&quot;formBox&quot;&gt;
+    &lt;div class=&quot;textarea&quot;&gt;&lt;textarea&gt;&lt;/textarea&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;formBox&quot;&gt;
+    &lt;div class=&quot;textarea auto&quot;&gt;&lt;textarea placeholder=&quot;플레스홀더&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;
+  &lt;/div&gt;
+            </code></pre>
+
+            <h2 class="tit-h2 mt-20"><strong class="guide-line">max-length</strong></h2>
+            <div class="line-box">
+              <div class="formBox">
+                <div class="input-box max-check">
+                  <input type="text" maxlength="10" />
+                  <p class="number"><span class="num"></span>/<span class="max"></span></p>
+                </div>
+              </div>
+            </div>
+            <pre><code class="language-xml">
+  &lt;div class=&quot;formBox&quot;&gt;
+    &lt;div class=&quot;input-box max-check&quot;&gt;
+      &lt;input type=&quot;text&quot; maxlength=&quot;10&quot; /&gt;
+      &lt;p class=&quot;number&quot;&gt;&lt;span class=&quot;num&quot;&gt;&lt;/span&gt;/&lt;span class=&quot;max&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+            </code></pre>
+          </div>
+        </div>        
+      </section>
+      <!-- //컨텐츠 영역 -->
+      
+      <!-- 하단 영역 -->
+      <footer id="tkg-footer-wrap" data-include="../include/footer.html"></footer>
+      <!-- //하단 영역 -->
+    </div>
+  </body>
+</html>
+ 

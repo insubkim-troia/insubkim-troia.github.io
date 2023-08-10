@@ -39,21 +39,13 @@
         <div class="tkg-content-body">
           <div class="tkg-content">
             <div class="page-tit">
-              <h1>팝업</h1>
+              <h1>Dialog</h1>
               <div class="ml-a">
                 버튼?
               </div>
             </div>
-  
-            <h2 class="tit-h2"><strong class="guide-line">레이어팝업</strong></h2>
-            <div class="line-box">
-              <p><a href="#pop1" class="button pop-open">레이어팝업호출(a태그형태)</a></p>
-              <p class="mt-10"><button data-href="#pop1" class="button pop-open">레이어팝업호출(button태그형태)</button></p>
-              <p class="mt-10"><a href="#pop1" class="button pop-open" data-pop-style="full">레이어팝업 - 풀팝업</a></p>
-              <p class="mt-10"><a href="#pop1" class="button pop-open" data-pop-style="bottom">레이어팝업 - 버튼 팝업</a></p>
-            </div>
             
-            <h2 class="tit-h2 mt-30"><strong class="guide-line">메시지 팝업 - 디자인팝업</strong></h2>
+            <h2 class="tit-h2 mt-30"><strong class="guide-line">메시지 팝업(Alert)</strong></h2>
             <div class="line-box">
               <p><a href="#pop2" class="pop2 button">팝업타이틀, 내용 메시지</a></p>
               <p class="mt-10"><a href="#pop3" class="pop3 button">내용 메시지</a></p>
@@ -115,88 +107,14 @@
               });
             </script>
   
-            <h2 class="tit-h2 mt-30"><strong class="guide-line">로딩팝업</strong></h2>
-            <div class="line-box">
-              <p><a href="#loading" class="loading-pop button line2">로딩팝업(텍스트 x)</a></p>
-              <p class="mt-10"><a href="#loading2" class="loading-pop2 button line2">로딩팝업(텍스트 O)</a></p>
-            </div>
-  
-            <script>
-              /* 로딩 팝업 */
-              $(document).on('click', '.loading-pop', function () {
-                /* 로딩 노출 */
-                ui.loading.open();
-    
-                setTimeout(function () {
-                  /* 로딩 삭제 */
-                  ui.loading.close();
-                }, 3000);
-    
-                return false;
-              });
-              $(document).on('click', '.loading-pop2', function () {
-                /* 로딩 노출 */
-                ui.loading.open('로딩과 관련된 문구가 <br />출력됩니다.');
-    
-                setTimeout(function () {
-                  /* 로딩 삭제 */
-                  ui.loading.close();
-                }, 3000);
-    
-                return false;
-              });
-            </script>
-  
-            <h2 class="tit-h2 mt-30"><strong class="guide-line">토스트 팝업</strong></h2>
-            <div class="line-box">
-              <p><a href="#tost" class="button tost-pop-open">토스트팝업</a></p>
-            </div>
-            <script>
-              $(function () {
-                $('.tost-pop-open').on('click', function () {
-                  //ui.tostpop.open('내용',딜레이 : 기본 2000);
-                  ui.tostpop.open('토스트 팝업 내용입니다.', 2000);
-                  return false;
-                });
-              });
-            </script>
-  
           </div>
         </div>
       </section>
       <!-- //컨텐츠 영역 -->
-
-      <!-- 팝업 -->
-      <div id="pop1" class="layer-pop-wrap">
-        <div class="bg"></div>
-        <div class="layer-pop-cont" tabindex="0">
-          <h1>비회원 주문 비밀번호 찾기</h1>
-          <div class="pop-cont">
-            팝업내용<br />팝업내용<br />팝업내용<br />팝업내용<br />팝업내용<br />팝업내용<br />팝업내용<br />팝업내용<br />팝업내용<br />
-            <p><a href="#pop2" class="pop-open button">팝업타이틀, 내용 메시지</a></p>
-          </div>
-          <a href="#" class="btn-close btn-pop-close">팝업닫기</a>
-        </div>
-      </div>
-      <!-- //팝업 -->
-
-      <!-- 팝업 -->
-      <div id="pop2" class="layer-pop-wrap">
-        <div class="bg"></div>
-        <div class="layer-pop-cont" tabindex="0">
-          <h1>비회원 주문 비밀번호 찾기</h1>
-          <div class="pop-cont">
-            팝업내용22
-          </div>
-          <a href="#" class="btn-close btn-pop-close">팝업닫기</a>
-        </div>
-      </div>
-      <!-- //팝업 -->
-      
+  
       <!-- 하단 영역 -->
       <footer id="tkg-footer-wrap" data-include="../include/footer.html"></footer>
       <!-- //하단 영역 -->
     </div>
   </body>
 </html>
- 

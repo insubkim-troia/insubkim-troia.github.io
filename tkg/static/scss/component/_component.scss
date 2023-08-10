@@ -32,8 +32,8 @@ html,body { height:100%;}
 #tkg-wrap { overflow: hidden auto; min-width:1600px; height:100%; display: flex; flex-flow: column; background: url(../images/common/bg.png) no-repeat center; background-size: cover;}
 #tkg-wrap #tkg-header-wrap { height:auto;}
 #tkg-wrap #tkg-container { overflow: hidden; display:flex; flex:1 1 auto; padding: 0 3.2rem 3.2rem;}
-#tkg-wrap #tkg-container .tkg-content-body {overflow:auto; flex:1 1 auto; margin-left: 3.2rem;}
-#tkg-wrap #tkg-container .tkg-content { padding: 2.4rem 2.7rem; background: #fff; border-radius: 2.4rem; box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);}
+#tkg-wrap #tkg-container .tkg-content-body {flex:1 1 auto; margin-left: 3.2rem;}
+#tkg-wrap #tkg-container .tkg-content {overflow:auto; height: 100%; padding: 2.4rem 2.7rem; background: #fff; border-radius: 2.4rem; box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);}
 
 .pc-none { display:none !important;}
 .mo-none { display:block !important;}

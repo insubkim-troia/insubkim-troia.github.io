@@ -70,7 +70,7 @@
 * left-nav
 * ============================== */
 //.left-nav { position:fixed; top:9.25rem; left:0; z-index:10; overflow-y: auto; flex:0 0 auto; width:20rem; height:calc(100vh - 9.25rem); background:#f9f9f9; transition: left .3s ease;
-.left-nav { position: relative; overflow-y: auto; flex:0 0 auto; width:32rem; height:100%; background:#fff; border-radius: 2.4rem; box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08); transition: width .3s ease;
+.left-nav { position: relative; overflow-y: auto; flex:0 0 auto; width:32rem; height:100%; padding-bottom: 2.4rem; background:#fff; border-radius: 2.4rem; box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08); transition: width .3s ease;
     .lnb-wrap {padding: 2.4rem 0;
         .lnb-depth {
             .lnb-link { display:block; position:relative; padding:2.4rem 3.2rem; 
@@ -111,7 +111,7 @@
         }
     }
 
-    .lnb-sidebar-btn {position: absolute; bottom: 2.4rem; left: 3.2rem; display: flex; align-items: center; 
+    .lnb-sidebar-btn {position: fixed; bottom: 5.6rem; left: 6.4rem; display: flex; align-items: center; 
         i {position: relative; display: inline-block; width: 3.2rem; height: 3.2rem; background: #F8F8F8; border-radius: .6rem;
             &:before {content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 2rem; height: 2rem; background: url(../images/common/icon_menu.png) no-repeat; background-size: cover;}
         }

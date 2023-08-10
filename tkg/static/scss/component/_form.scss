@@ -196,7 +196,7 @@
 
 .checkbox { line-height:0;
     > * { vertical-align: middle;}
-    input { position:absolute; opacity:0;
+    input { position:absolute; top: 0; left: 0; width: 0; height: 0; opacity:0;
         &:checked + label i { border-color:var(--point-color); background:var(--point-color);
             &:after { border-color:transparent transparent #fff #fff; transform:translate(-50%, -50%) rotate(-45deg) scale(1);}
         }

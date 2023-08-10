@@ -28,94 +28,96 @@
       <section id="tkg-container">
         <div class="left-nav" data-include="../include/nav.html"></div>
         
-        <div class="tkg-content">
-          <div class="page-tit">
-            <h1>사이즈, 간격 정의 - class 정의</h1>
-            <div class="ml-a">
-              버튼?
+        <div class="tkg-content-body">
+          <div class="tkg-content">
+            <div class="page-tit">
+              <h1>사이즈, 간격 정의 - class 정의</h1>
+              <div class="ml-a">
+                버튼?
+              </div>
+            </div>
+  
+            <h2 class="tit-h2"><strong class="guide-line">width 간격 정의</strong></h2>
+            <div class="line-box">
+              <p>.w-숫자 : 1 ~ 100 (1픽셀단위로 설정가능)</p>
+              <p>.w-숫자 : 10 ~ 500 (5픽셀단위로 설정가능)</p>
+            </div>
+            <div class="line-box">
+              <p>.w-p-숫자 : 1 ~ 100 (퍼센트 단위로 설정)</p>
+              <p>예) .w-p-33 : width:33%;</p>
+            </div>
+            <div class="line-box">
+              <p>.w-c-숫자 : 1 ~ 10 <br />
+                전체 100%중 10등분으로 구분
+              </p>
+              <p>예) .w-c-33 : width:33.333%; (100/3)</p>
+            </div>
+            <div class="line-box">
+              <p>그외에 설정</p>
+              <p>.w-a : auto 설정</p>
+            </div>
+  
+            <h2 class="tit-h2 mt-30"><strong class="guide-line">height 간격 정의</strong></h2>
+            <div class="line-box">
+              <p>.h-숫자 : 1 ~ 100 (1픽셀 단위로 설정 가능)</p>
+              <p>.h-숫자 : 10 ~ 500 (5픽셀 단위로 설정 가능)</p>
+            </div>
+            <div class="line-box">
+              <p>.h-p-숫자 : 1 ~ 100 (퍼센트 단위로 설정)</p>
+              <p>예) .h-p-33 : height:33%;</p>
+            </div>
+            <div class="line-box">
+              <p>.h-c-숫자 : 1 ~ 10 <br />
+                전체 100%중 10등분으로 구분
+              </p>
+              <p>예) .h-c-33 : height:33.333%;</p>
+            </div>
+            <div class="line-box">
+              <p>그외에 설정</p>
+              <p>.h-a : auto 설정</p>
+            </div>
+            
+            <h2 class="tit-h2 mt-30"><strong class="guide-line">padding 간격 정의</strong></h2>
+            <div class="line-box">
+              - padding 간격입니다
+              <p>숫자 : 0 ~ 99 (1픽셀 단위로 설정 가능)</p>
+              <p>숫자 : 100 ~ 200 (5픽셀 단위로 설정 가능)</p>
+              <p class="line-box pt-20">.pt-숫자 : padding-top</p>  
+              <p class="line-box pb-20">.pb-숫자 : padding-bottom</p>
+              <p class="line-box pl-20">.pl-숫자 : padding-left</p>
+              <p class="line-box pr-20">.pr-숫자 : padding-right</p>
+              <p class="line-box ptb-20">.ptb-숫자 : padding-top, padding-bottom</p>
+              <p class="line-box plr-20">.plr-숫자 : padding-left, padding-right</p>
+              <p class="line-box padding-30">.padding-숫자 : top, left, right, bottom</p>
+            </div>
+            
+            <h2 class="tit-h2 mt-30"><strong class="guide-line">margin 간격 정의</strong></h2>
+            <div class="line-box">
+              - margin 간격입니다
+              <p>숫자 : 0 ~ 99 (1픽셀 단위로 설정 가능)</p>
+              <p>숫자 : 100 ~ 200 (5픽셀 단위로 설정 가능)</p>
+              <p class="line-box mt-20">.mt-숫자 : margin-top</p>
+              <p class="line-box mb-20">.mb-숫자 : margin-bottom</p>
+              <p class="line-box ml-20">.ml-숫자 : margin-left</p>
+              <p class="line-box mr-20">.mr-숫자 : margin-right</p>
+              <p class="line-box mtb-20">.mtb-숫자 : margin-top, margin-bottom</p>
+              <p class="line-box mlr-20">.mlr-숫자 : margin-left, margin-right</p>
+              <p class="line-box margin-30">.margin-숫자 : top, left, right, bottom</p>
+              <p class="line-box ml-a">
+                .ml-a : margin-left:auto<br />
+                .mr-a : margin-right:auto<br />
+                .mt-a : margin-top:auto<br />
+                .mb-a : margin-bottom:auto
+              </p>
+            </div>
+  
+            <h2 class="tit-h2 mt-30"><strong class="guide-line">flex</strong></h2>
+            <div class="line-box flex">
+              <div class="w-p-50">flex1</div>
+              <div class="w-p-50">flex2</div>
             </div>
           </div>
-
-          <h2 class="tit-h2"><strong class="guide-line">width 간격 정의</strong></h2>
-          <div class="line-box">
-            <p>.w-숫자 : 1 ~ 100 (1픽셀단위로 설정가능)</p>
-            <p>.w-숫자 : 10 ~ 500 (5픽셀단위로 설정가능)</p>
-          </div>
-          <div class="line-box">
-            <p>.w-p-숫자 : 1 ~ 100 (퍼센트 단위로 설정)</p>
-            <p>예) .w-p-33 : width:33%;</p>
-          </div>
-          <div class="line-box">
-            <p>.w-c-숫자 : 1 ~ 10 <br />
-              전체 100%중 10등분으로 구분
-            </p>
-            <p>예) .w-c-33 : width:33.333%; (100/3)</p>
-          </div>
-          <div class="line-box">
-            <p>그외에 설정</p>
-            <p>.w-a : auto 설정</p>
-          </div>
-
-          <h2 class="tit-h2 mt-30"><strong class="guide-line">height 간격 정의</strong></h2>
-          <div class="line-box">
-            <p>.h-숫자 : 1 ~ 100 (1픽셀 단위로 설정 가능)</p>
-            <p>.h-숫자 : 10 ~ 500 (5픽셀 단위로 설정 가능)</p>
-          </div>
-          <div class="line-box">
-            <p>.h-p-숫자 : 1 ~ 100 (퍼센트 단위로 설정)</p>
-            <p>예) .h-p-33 : height:33%;</p>
-          </div>
-          <div class="line-box">
-            <p>.h-c-숫자 : 1 ~ 10 <br />
-              전체 100%중 10등분으로 구분
-            </p>
-            <p>예) .h-c-33 : height:33.333%;</p>
-          </div>
-          <div class="line-box">
-            <p>그외에 설정</p>
-            <p>.h-a : auto 설정</p>
-          </div>
-          
-          <h2 class="tit-h2 mt-30"><strong class="guide-line">padding 간격 정의</strong></h2>
-          <div class="line-box">
-            - padding 간격입니다
-            <p>숫자 : 0 ~ 99 (1픽셀 단위로 설정 가능)</p>
-            <p>숫자 : 100 ~ 200 (5픽셀 단위로 설정 가능)</p>
-            <p class="line-box pt-20">.pt-숫자 : padding-top</p>  
-            <p class="line-box pb-20">.pb-숫자 : padding-bottom</p>
-            <p class="line-box pl-20">.pl-숫자 : padding-left</p>
-            <p class="line-box pr-20">.pr-숫자 : padding-right</p>
-            <p class="line-box ptb-20">.ptb-숫자 : padding-top, padding-bottom</p>
-            <p class="line-box plr-20">.plr-숫자 : padding-left, padding-right</p>
-            <p class="line-box padding-30">.padding-숫자 : top, left, right, bottom</p>
-          </div>
-          
-          <h2 class="tit-h2 mt-30"><strong class="guide-line">margin 간격 정의</strong></h2>
-          <div class="line-box">
-            - margin 간격입니다
-            <p>숫자 : 0 ~ 99 (1픽셀 단위로 설정 가능)</p>
-            <p>숫자 : 100 ~ 200 (5픽셀 단위로 설정 가능)</p>
-            <p class="line-box mt-20">.mt-숫자 : margin-top</p>
-            <p class="line-box mb-20">.mb-숫자 : margin-bottom</p>
-            <p class="line-box ml-20">.ml-숫자 : margin-left</p>
-            <p class="line-box mr-20">.mr-숫자 : margin-right</p>
-            <p class="line-box mtb-20">.mtb-숫자 : margin-top, margin-bottom</p>
-            <p class="line-box mlr-20">.mlr-숫자 : margin-left, margin-right</p>
-            <p class="line-box margin-30">.margin-숫자 : top, left, right, bottom</p>
-            <p class="line-box ml-a">
-              .ml-a : margin-left:auto<br />
-              .mr-a : margin-right:auto<br />
-              .mt-a : margin-top:auto<br />
-              .mb-a : margin-bottom:auto
-            </p>
-          </div>
-
-          <h2 class="tit-h2 mt-30"><strong class="guide-line">flex</strong></h2>
-          <div class="line-box flex">
-            <div class="w-p-50">flex1</div>
-            <div class="w-p-50">flex2</div>
-          </div>
-        </div>
+        </div>        
       </section>
       <!-- //컨텐츠 영역 -->
   
