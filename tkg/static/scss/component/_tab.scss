@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.tab-list { overflow:auto hidden; display:flex;
+.tab-list { overflow:auto; display:flex;
     a { display:inline-flex; flex:1 0 auto; position:relative; height:5.3rem; border-bottom:.3rem solid #e6e6e6; font-size:1.5rem; color:#666666; text-align:center; transition:all .3s ease; line-height:1.06; justify-content: center; align-items: center; background:#fff; transition: all .3s ease;
         &:after { content:''; display:block; position:absolute; bottom:-0.3rem; left:50%; width:00%; height:.3rem; background:#111; opacity: 0; transition: all .3s ease;}
 
