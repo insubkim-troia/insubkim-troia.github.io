@@ -106,3 +106,31 @@
 
 .hover-motion1.on { overflow:hidden; position:relative; animation:clickMotionM .45s;}
 .hover-motion2.on { overflow:hidden; position:relative; animation:clickMotionM2 .45s;}
+
+/* chips */
+.chip {display: inline-flex; align-items: center; padding: .3rem 1.2rem; height: 2.8rem; border-radius: 2.4rem; border: .1rem solid var(--point-color); background: var(--point-color); color: #fff; font-size: 1.2rem; font-weight: 500; box-sizing: border-box;
+    a {color: #fff;}
+    .btn-delete {width: 2rem; height: 2rem; margin-left: .4rem;
+        i {font-size: 2rem;}
+    }
+    &:hover {border: .1rem solid #05697A; background: var(--point-color);}
+    &:active {background: #05697A;}
+    &.disabled {background: #eee; color: #aaa; border-color: transparent;
+        * {cursor: default;}
+        a {color: #AAA;}
+    }
+    
+    &.line {border: .1rem solid #eee; background: #fff; color: #444;
+        a {color: #444;}
+        &:hover {border-color: #000;}
+        &:active {border-color: var(--point-color); color: var(--point-color);
+            a { color: var(--point-color);}
+        }
+        &.disabled {background: #fff; border-color: #ddd; color: #aaa;
+            * {cursor: default;}
+            a {color: #aaa;}
+        }
+    }  
+    
+    &.small {height: 2.2rem; padding: .2rem .8rem;}
+}
