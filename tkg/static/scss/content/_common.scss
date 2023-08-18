@@ -8,13 +8,14 @@
 * header
 * ============================== */
 #tkg-header-wrap { position:sticky; top:0; left:0; z-index:2000; width:100%; min-width:1600px; height:100%;
-    .header-top { display:flex; height:9.5rem; padding:0 3.2rem; align-items: center;
-        h1 { flex:0 0 auto; width:12.8rem; height:4.7rem; font-size:0; background:url('../images/common/logo_w.png') no-repeat center center / 100%;}
+    .header-top { display:flex; height: 5.5rem; padding: 0 3rem 0 3.2rem; align-items: center;
+        h1 { flex:0 0 auto; width:6.58rem; height:2.34rem; font-size:0; background:url('../images/common/logo.png') no-repeat center center / 100%;}
         .header-info { display:flex; margin-left:auto; align-items: center;
             .user { display: flex; align-items: center;
-                .img {display: inline-block; position: relative; width: 4.8rem; height: 4.8rem; background: #aaa; border-radius: 50%; 
+                a {line-height: 0;}
+                .img {display: inline-block; position: relative; width: 2.4rem; height: 2.4rem; background: #aaa; border-radius: 50%; 
                     &:before {
-                        content: 'TK';
+                        content: '';
                         position: absolute;
                         top: 50%;
                         left: 50%;
@@ -23,7 +24,7 @@
                         font-size: 1.6rem;
                     }
                 }
-                .name {padding-left: 0.8rem; font-size: 2rem; color: #fff;}
+                .name {padding-left: 0.8rem; font-size: 1.2rem; color: #777; font-weight: 700;}
             }
             .lang-select {position: relative; margin-left: 1.6rem; padding-left: 1.6rem; 
                 &:before {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 0.1rem; height: 2rem; background: rgba(255, 255, 255, 0.20);;}
@@ -70,42 +71,33 @@
 * left-nav
 * ============================== */
 //.left-nav { position:fixed; top:9.25rem; left:0; z-index:10; overflow-y: auto; flex:0 0 auto; width:20rem; height:calc(100vh - 9.25rem); background:#f9f9f9; transition: left .3s ease;
-.left-nav { position: relative; overflow-y: auto; flex:0 0 auto; width:32rem; height:100%; padding-bottom: 2.4rem; background:#fff; border-radius: 2.4rem; box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08); transition: width .3s ease;
-    .lnb-wrap {padding: 2.4rem 0;
+.left-nav { position: relative; overflow-y: auto; flex:0 0 auto; width:30rem; height:100%; padding-bottom: 2.4rem; background: linear-gradient(135deg, #159B97 0%, #05697A 32.81%); border-top-right-radius: 2.4rem; box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.14); transition: width .3s ease;
+    .lnb-wrap {padding: 2rem 3.2rem;
         .lnb-depth {
-            .lnb-link { display:block; position:relative; padding:2.4rem 3.2rem; 
-                &:after { content: ''; display: block; position: absolute; right: 3.2rem; top: 50%; width: 1.4rem; height: .9rem; transform: translateY(-50%) rotate(180deg); transition: 0.3s; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='43px' height='27px'%3E%3Cpath fill-rule='evenodd' stroke='rgb(54, 49, 44)' stroke-width='6px' stroke-linecap='round' stroke-linejoin='miter' fill='none' d='M4.143,2.941 L21.497,21.283 L38.851,2.941 '/%3E%3C/svg%3E") no-repeat center center; background-size: contain;}
-
+            .lnb-link { display:block; position:relative; padding: 1.2rem 0; font-size: 2.4rem; font-weight: 700; color: #fff; opacity: .5;
+                &:after {content: ''; display: block; position: absolute; top: 50%; right: 0; width: 2rem; height: .4rem; background: #fff; transform: translateY(-50%) rotate(0); border-radius: .2rem;  transition: all .3s ease;}
                 &.close {
-                    &:after { transform: translateY(-50%) rotate(0deg);}
-                }
-                span {padding-left: 1.2rem; font-weight: 500; font-size: 2rem;}
-                .icon {position: relative; width: 3.2rem; height: 3.2rem; background:#aaa; border-radius: 0.6rem;
-                    &:before {
-                        content: ''; display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 20px; height: 20px; background: url(../images/common/icon_home.png) no-repeat; background-size: cover;
-                    }
+                    &:before {content: ''; display: block; position: absolute; top: 50%; right: 0; width: 2rem; height: .4rem; background: #fff; transform: translateY(-50%); border-radius: .2rem;}
+                    &:after {content: ''; display: block; position: absolute; top: 50%; right: 0; width: 2rem; height: .4rem; background: #fff; transform: translateY(-50%) rotate(90deg); border-radius: .2rem; }
                 }
             }
-            ul { padding:1rem 3.2rem; border-top: .1rem solid #eee;
+            ul {position: relative; 
+                &:before {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 1px; background: #fff; opacity: .3;}
+                &:after {content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1px; background: #fff; opacity: .3;}
                 li {
-                    a  { display:block; position: relative; padding:.5rem 4.1rem; font-size: 2rem; font-weight: 500; color: #aaa;
-                        &:before {content: ''; position: absolute; top:14px; left: 1.6rem; width: 1.4rem; height: 1.3rem; background: url(../images/common/icon_depth_off.png) no-repeat; background-size: cover;}
+                    a  { display:block; position: relative; padding: 1.6rem 2.4rem; font-size: 2rem; font-weight: 700; color: #fff; line-height: 1;
+                       &:after {content: ''; position: absolute; top: 50%; right: 2.4rem; width: .6rem; height: 1.2rem; transform: translateY(-50%); background: url(../images/common/arr_off.png) no-repeat; background-size: contain;} 
                     }
-                    &.active {background: var(--point-color); border-radius: .6rem;
-                        a { color: #fff; font-size: 2rem;
-                            &:before {
-                                background: url(../images/common/icon_depth_on.png) no-repeat;
-                            }
+                    &.active {background: #fff; border-radius: 1.2rem;
+                        a { color: #085D70;
+                            &:after {background: url(../images/common/arr_on.png) no-repeat; background-size: contain;}
                         } 
                     }
                 }
             }
-            + .lnb-depth { border-top: .1rem solid #eee;}
-
             &.active {
                 .lnb-link {
-                    span {font-weight: 800;}
-                    .icon {background: var(--point-color)}
+                    opacity: 1;
                 }
             }
         }

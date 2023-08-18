@@ -1065,7 +1065,7 @@ const ui = {
         $('.tooltip-pop').not($(this).siblings('.tooltip-pop')).fadeOut('fast');
         $(this)
           .siblings('.tooltip-pop')
-          .css({ width: tipW, left: tipLeft, '--tip-left': tipW - tipLeft - tipW + 6 + 'px' });
+          .css({ width: tipW, left: tipLeft, '--tip-left': tipW - tipLeft - tipW + 7 + 'px' });
         $(this).siblings('.tooltip-pop').fadeToggle('fast');
         return false;
       });
