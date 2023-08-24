@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" /> -->
+    <title>TKG</title>
+    <link href="../../static/css/ui.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../static/js/common.js"></script>
+    <script type="text/javascript" src="../../static/js/ui.js"></script>
+    <!--[if lt IE 9]>
+      <script type="text/javascript">
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('footer');
+      </script>
+    <![endif]-->
+
+    <!-- 가이드 전용 -->
+    <link rel="stylesheet" href="../../static/css/a11y-dark.min.css">
+    <script src="../../static/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <!--
+      <pre><code class="language-xml"></code></pre>
+    -->
+    <!-- //가이드 전용 -->
+  </head>
+  <body>
+    <div id="tkg-wrap">
+      <!-- 헤더영역 -->
+      <header id="tkg-header-wrap" data-include="../include/header.html"></header>
+      <!-- //헤더영역 -->
+  
+      <!-- 컨텐츠 영역 -->
+      <section id="tkg-container">
+        <div class="left-nav" data-include="../include/nav.html"></div>
+        <div class="tkg-content-body">
+          <div class="tkg-content">
+            <div class="page-tit">
+              <h1>팝업</h1>
+              <div class="ml-a">
+                버튼?
+              </div>
+            </div>
+  
+            <h2 class="tit-h2"><strong class="guide-line">레이어팝업</strong></h2>
+            <div class="line-box">
+              <p><a href="#pop1" class="button pop-open">레이어팝업호출(a태그형태)</a></p>
+              <p class="mt-10"><button data-href="#pop1" class="button pop-open">레이어팝업호출(button태그형태)</button></p>
+              <p class="mt-10"><a href="#pop1" class="button pop-open" data-pop-style="full">레이어팝업 - 풀팝업</a></p>
+              <p class="mt-10"><a href="#pop1" class="button pop-open" data-pop-style="bottom">레이어팝업 - 버튼 팝업</a></p>
+            </div>
+              
+            <h2 class="tit-h2 mt-30"><strong class="guide-line">로딩팝업</strong></h2>
+            <div class="line-box">
+              <p><a href="#loading" class="loading-pop button line2">로딩팝업(텍스트 x)</a></p>
+              <p class="mt-10"><a href="#loading2" class="loading-pop2 button line2">로딩팝업(텍스트 O)</a></p>
+            </div>
+  
+            <script>
+              /* 로딩 팝업 */
+              $(document).on('click', '.loading-pop', function () {
+                /* 로딩 노출 */
+                ui.loading.open();
+    
+                setTimeout(function () {
+                  /* 로딩 삭제 */
+                  ui.loading.close();
+                }, 3000);
+    
+                return false;
+              });
+              $(document).on('click', '.loading-pop2', function () {
+                /* 로딩 노출 */
+                ui.loading.open('로딩과 관련된 문구가 <br />출력됩니다.');
+    
+                setTimeout(function () {
+                  /* 로딩 삭제 */
+                  ui.loading.close();
+                }, 3000);
+    
+                return false;
+              });
+            </script>
+  
+            <h2 class="tit-h2 mt-30"><strong class="guide-line">토스트 팝업</strong></h2>
+            <div class="line-box">
+              <p><a href="#tost" class="button tost-pop-open">토스트팝업</a></p>
+            </div>
+            <script>
+              $(function () {
+                $('.tost-pop-open').on('click', function () {
+                  //ui.tostpop.open('내용',딜레이 : 기본 2000);
+                  ui.tostpop.open('토스트 팝업 내용입니다.', 2000);
+                  return false;
+                });
+              });
+            </script>
+  
+          </div>
+        </div>
+      </section>
+      <!-- //컨텐츠 영역 -->
+
+      <!-- 팝업 -->
+      <div id="pop1" class="layer-pop-wrap">
+        <div class="bg"></div>
+        <div class="layer-pop-cont" tabindex="0">
+          <h1>비회원 주문 비밀번호 찾기</h1>
+          <div class="pop-cont">
+            팝업내용<br />팝업내용<br />팝업내용<br />팝업내용<br />팝업내용<br />팝업내용<br />팝업내용<br />팝업내용<br />팝업내용<br />
+            <p><a href="#pop2" class="pop-open button">팝업타이틀, 내용 메시지</a></p>
+          </div>
+          <a href="#" class="btn-close btn-pop-close">팝업닫기</a>
+        </div>
+      </div>
+      <!-- //팝업 -->
+
+      <!-- 팝업 -->
+      <div id="pop2" class="layer-pop-wrap">
+        <div class="bg"></div>
+        <div class="layer-pop-cont" tabindex="0">
+          <h1>비회원 주문 비밀번호 찾기</h1>
+          <div class="pop-cont">
+            팝업내용22
+          </div>
+          <a href="#" class="btn-close btn-pop-close">팝업닫기</a>
+        </div>
+      </div>
+      <!-- //팝업 -->
+  
+      <!-- 하단 영역 -->
+      <footer id="tkg-footer-wrap" data-include="../include/footer.html"></footer>
+      <!-- //하단 영역 -->
+    </div>
+  </body>
+</html>
