@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" /> -->
+     <title>TKG 퍼블리싱 가이드</title>
+    <link href="../../static/css/ui.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../static/js/common.js"></script>
+    <script type="text/javascript" src="../../static/js/ui.js"></script>
+    <!--[if lt IE 9]>
+      <script type="text/javascript">
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('footer');
+      </script>
+    <![endif]-->
+    <script type="text/javascript">
+
+        $(document).ready(function()
+        {
+        
+            //table hover
+            $("tr").not(':first').hover(
+                  function () {
+                    $(this).css({"background":"#eee"});
+                  },
+                  function () {
+                    $(this).css({"background":""});
+                  });
+        });
+        
+        
+        
+        </script>
+        <style type="text/css">
+            body{width:100%;font-family:"맑은 고딕","나눔고딕","돋움",Dotum;font-size:14px;color:#666; background:#f7f7f7;}
+            a,a:hover{color:#666;text-decoration:none;cursor:pointer}
+            a:focus{outline:none}
+            #wrapper{min-width:980px;}
+            #sidebar{left:0;top:0;z-index:2;width:100%;background-color:#fff;box-sizing:border-box}
+            #sidebar h1{padding:0.8em 0;font-size:20px;text-align:center;line-height:1;color:#000}
+            #sidebar .tab{right:15px;top:13px}
+            #sidebar .tab button{float:left;margin-left:5px;padding:2px 4px;border:1px solid #999;font-family:"맑은 고딕","나눔고딕","돋움",Dotum}
+            #sidebar .total{left:15px;top:15px;font-size:1.4rem;}
+            #sidebar .total strong{color:#333}
+            #sidebar .total > span span{margin:0 4px;color:#333}
+            #sidebar .total > span em{font-style:normal;font-size:14px;color:#666}
+            #sidebar .menu{zoom:1;padding:1.2em 1.3em;background:#05697A; margin-top: 10px;}
+            #sidebar .menu:after{content:"";display:block;clear:both}
+            #sidebar .menu a{font-size:16px;font-weight:600;color:#fff}
+            #sidebar .menu a.on{color:yellow}
+            #sidebar .menu h2{float:left;margin-right:20px; margin-top: -8px;}
+            #sidebar .menu h2 a{text-decoration:underline}
+            #sidebar .menu ul{float:left}
+            #sidebar .menu li{float:left;margin-right:1em}
+            #contents{padding:0 17px}
+            #contents .site{position:relative;padding:20px 0 10px}
+            #contents .site:first-child,
+            #contents .site.drop{padding-top:40px}
+            #contents .site:hover{background-color:#fff}
+            #contents .site h2{padding-bottom:10px;border-bottom:1px solid #999;font-size:19px;font-weight:bold;color:#333}
+            #contents .site.off h2{background-color:#6f6f6f}
+            #contents .site.off h2 strong,
+            #contents .site.off h2 > span{color:#bbb}
+            #contents .site h2 > span span{margin:0 5px}
+            #contents .site h2 > span em{position:relative;top:-2px;font-style:normal;font-size:13px;font-weight:normal;color:#666}
+            #contents .site.nocount h2 span{display:none}
+            #contents .site .gotop{position:absolute;right:10px;bottom:20px;background-color: #ddd;border-radius: 30px; padding: 8px; font-size:10px;color:#333}
+            #contents .site .cont{padding:0.5em 0em 1em;border-top:1px solid #eee;font-size:12px;line-height:1.7em}
+            #contents .site .cont h3{border-bottom:#555 1px solid;padding-bottom:0.5em;margin-bottom:0.5em;font-size:1.5em}
+            #contents .site .cont h3 strong{float:left}
+            #contents .site .cont h3 a{float:right;padding-right:1em;font-size:0.7em}
+            #contents .site .cont .tit,
+            #contents .site .cont .url,
+            #contents .site .cont .date,
+            #contents .site .cont .txt{display:-moz-inline-stack;display:inline-block;zoom:1;*display:inline;padding-left:1em;vertical-align:top}
+            #contents .site .cont .tit{padding-left:0}
+            #contents .site .cont .url{width:33%}
+            #contents .site .cont .url a:hover{text-decoration:underline}
+            #contents .site .cont .date{width:12%;font-size:11px}
+            #contents .site .cont .txt{width:22%}
+            #contents .site .cont .txt li{font-size:11px;line-height:1.5;color:#666}
+            #contents .site .cont .txt ul.on li{list-style:decimal}
+            #contents .site .cont .txt li span{float:left;margin-right:5px}
+            #contents .site .cont .txt li p{overflow:hidden;word-wrap:break-word}
+            #contents .site .cont ul{line-height:20px}
+            #contents .site .cont li{margin:10px 0;color:#333;font-size:1.4rem;}
+            #contents .site .cont li.on{background-color:#ebf8bd}
+            #contents .site .cont li.on > ul{background-color:#fff}
+            #contents .site .cont li.del a,
+            #contents .site .cont li.del li,
+            #contents .site .cont li.del div,
+            #contents .site .cont li.del div.tit:before{color:#ccc !important}
+            #contents .site .cont li.del div{text-decoration:line-through}
+            #contents .site .cont li li{margin:3px 0}
+            #contents .site .cont li div.tit{width:26%;*padding-left:1.25%;;font-weight:bold}
+            #contents .site .cont li div.tit:before{content:"";display:inline-block;padding-left:5px}
+            #contents .site .cont li li div.tit{width:25%;padding-left:1%;*padding-left:2.25%;font-weight:normal}
+            #contents .site .cont li li div.tit:before{content:"└ ";display:inline;color:#999}
+            #contents .site .cont li li li div.tit{width:24%;padding-left:2%;*padding-left:3.2%}
+            #contents .site .cont li li li li div.tit{width:23%;padding-left:3%;*padding-left:4.22%}
+            #contents .site .cont li li li li li div.tit{width:22%;padding-left:4%;*padding-left:5.2%}
+            #contents .site .date strong{float:left;width:68px;padding-top:1px;font-weight:normal}
+            #contents .site .date.today strong{font-weight:bold;color:#e90000}
+            #contents .site .date a{font-weight:bold;font-size:12px;cursor:help}
+            #contents .site .date a:hover{color:#e90000}
+        
+            .total {display: flex; font-size: 1.4rem;}
+            .total div span{position: absolute; right: 3rem; font-size: 1.4rem;}
+        
+        </style>
+        
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  </head>
+  <body>
+    <div id="tkg-wrap">
+      <!-- 헤더영역 -->
+      <header id="tkg-header-wrap" data-include="../include/header.html"></header>
+      <!-- //헤더영역 -->
+  
+      <!-- 컨텐츠 영역 -->
+      <section id="tkg-container">
+        <div class="left-nav" data-include="../include/nav.html"></div>
+        <div class="tkg-content-body">
+          <div class="tkg-content">
+            <div class="page-tit">
+              <h1>MDM 퍼블리싱 리스트</h1>
+            </div>
+  
+            <!--<h2 class="tit-h2"><strong class="guide-line">MDM 퍼블리싱 리스트</strong></h2> //-->
+            <div>
+                <div id="wrapper">
+                    <div id="sidebar">
+
+                        <div class="total">
+                            <strong>전체 :</strong><span></span>
+                            <div>
+                                <span>● : 완료 / ○ : 미완료</span>
+                            </div>
+                        </div>
+                        <div class="menu">
+                            <h2><a href="#contents" class="on">All_WSG</a></h2>
+                            <ul>
+                                <li><a href="#">0.가이드</a></li>
+                                <li><a href="#">01.Site</a></li>
+                                <li><a href="#">02.Model</a></li>
+                                <li><a href="#">03.Reference</a></li>
+                                <li><a href="#">04.Time</a></li>
+                                <li><a href="#">05.Partner</a></li>
+                                <li><a href="#">06.Governance</a></li>
+                                <li><a href="#">07.Mypage</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="contents">
+                        <!-- site -->
+                        <div class="site">
+                            <h2><strong>00.가이드</strong><span></span></h2>
+                            <div class="cont">
+                                <ul>
+                                    <li>
+                                        <div class="tit">페이지 가이드</div>
+                                        <div class="url">
+                                            <span>/sample/page1.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //site -->
+                        <!-- site -->
+                        <div class="site">
+                            <h2><strong>01.Site</strong><span></span></h2>
+                            <a class="gotop" href="#wrapper">TOP</a>
+                            <div class="cont">
+                                <ul>                
+                                    <li>
+                                        <div class="tit">company</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_A0101000000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : </p></li>
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tit">company > 저장 (Popup)</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_P0101000001.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : </p></li>
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tit">company > 확정 (Popup)</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_P0101000002.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : </p></li>
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>    
+                                <ul>
+                                    <li class="del">
+                                        <div class="tit">Factory</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_A0102000000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>김 : </p></li>
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Factory > 저장 (Popup)</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_P0102000001.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : </p></li>
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Factory > 확정 (Popup)</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_P0102000002.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : </p></li>
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="del">
+                                        <div class="tit">Plant</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_A0103000000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Plant > 등록 (Popup)</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_P0103000001.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : </p></li>
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Plant > 저장 (Popup)</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_P0103000002.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : </p></li>
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Plant > 확정 (Popup)</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_P0103000003.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : </p></li>
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Plant > 저장 (Popup)</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_P0103000004.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : </p></li>
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Plant > 확정 (Popup)</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_P0103000005.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : </p></li>
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="del">
+                                        <div class="tit">Operation</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_A0104000000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Operation > 저장 (Popup)</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_P0104000001.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Operation > 확정 (Popup)</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_P0104000002.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="del">
+                                        <div class="tit">Line</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_A0105000000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Line > 등록 (Popup)</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_P0105000001.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Line > 저장 (Popup)</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_P0105000002.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Line > 확정 (Popup)</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_P0105000003.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="del">
+                                        <div class="tit">Site Move</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_A0106000000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Site Move > 저장 (Popup)</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_P0106000001.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 :                 
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Site Move > 확정 (Popup)</div>
+                                        <div class="url">
+                                            <span>/site/MDM_SBD_P0106000002.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 :                 
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                        <!-- //site -->
+                
+                
+                
+                        <!-- site -->
+                        <div class="site">
+                            <h2><strong>02.Model</strong><span></span></h2>
+                            <a class="gotop" href="#wrapper">TOP</a>
+                            <div class="cont">
+                                <ul>
+                                    <li>
+                                        <div class="tit">pagelist</div>
+                                        <div class="url">
+                                            <span>/pub/page/sub.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //site -->
+                
+                        <!-- Reference -->
+                        <div class="site">
+                            <h2><strong>03.Reference</strong><span></span></h2>
+                            <a class="gotop" href="#wrapper">TOP</a>
+                            <div class="cont">
+                                <ul>
+                                    <li class="del">
+                                        <div class="tit">Part</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_A0301000000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Part > 저장 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0301000001.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Part > 확정 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0301000002.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="del">
+                                        <div class="tit">Size</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_A0302000000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Size > 저장 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0302000001.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Size > 확정 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0302000002.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="del">
+                                        <div class="tit">Gender</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_A0303000000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Gender > 저장 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0303000001.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Gender > 확정 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0303000002.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="del">
+                                        <div class="tit">UOM</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_A0304000000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">UOM > 저장 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0304000001.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">UOM > 확정 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0304000002.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="del">
+                                        <div class="tit">Color</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_A0305000000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Color > 저장 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0305000001.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Color > 확정 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0305000002.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="del">
+                                        <div class="tit">Defect</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_A0306000000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>   
+                                    <li class="del">
+                                        <div class="tit">Defect > 불량코드</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_A0306010000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Defect > 불량코드 > 저장 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0306010001.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Defect > 불량코드 > 확정 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0306010002.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>  
+                                    <li class="del">
+                                        <div class="tit">Defect > 불량코드 그룹</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_A0306020000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Defect > 불량코드 그룹 > 저장 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0306020001.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>                               
+                                <ul>
+                                    <li class="del">
+                                        <div class="tit">MCS</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_A0307000000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">MCS > FO코드세팅 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0307000001.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">MCS > FO코드세팅 등록/추가 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0307000002.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">MCS > 저장 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0307000003.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">MCS > 확정 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0307000004.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="del">
+                                        <div class="tit">Last</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_A0308000000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Last > 전사관리</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_A0308010000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Last > 전사관리 > 저장 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0308010001.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Last > 전사관리 > 확정 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0308010002.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Last > 법인관리</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_A0308020000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Last > 법인관리 > 저장 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0308020001.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Last > 모델관리</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_A0308030000.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Last > 모델관리 > 모델명검색 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0308030001.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Last > 모델관리 > 저장 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0308030002.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="del">
+                                        <div class="tit">Last > 모델관리 > 확정 (Popup)</div>
+                                        <div class="url">
+                                            <span>/ref/MDM_SBD_P0308030003.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>    
+                            </div>
+                        </div>
+                        <!-- //Reference -->
+                
+                        <!-- site -->
+                        <div class="site">
+                            <h2><strong>04.Time</strong><span></span></h2>
+                            <a class="gotop" href="#wrapper">TOP</a>
+                            <div class="cont">
+                                <ul>
+                                    <li>
+                                        <div class="tit">pagelist</div>
+                                        <div class="url">
+                                            <span>/pub/page/sub.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //site -->
+
+                        <!-- site -->
+                        <div class="site">
+                            <h2><strong>05.Partner</strong><span></span></h2>
+                            <a class="gotop" href="#wrapper">TOP</a>
+                            <div class="cont">
+                                <ul>
+                                    <li>
+                                        <div class="tit">pagelist</div>
+                                        <div class="url">
+                                            <span>/pub/page/sub.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //site -->
+
+                         <!-- site -->
+                         <div class="site">
+                            <h2><strong>06.Governance</strong><span></span></h2>
+                            <a class="gotop" href="#wrapper">TOP</a>
+                            <div class="cont">
+                                <ul>
+                                    <li>
+                                        <div class="tit">pagelist</div>
+                                        <div class="url">
+                                            <span>/pub/page/sub.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //site -->
+
+                        <!-- site -->
+                        <div class="site">
+                            <h2><strong>07.Mypage</strong><span></span></h2>
+                            <a class="gotop" href="#wrapper">TOP</a>
+                            <div class="cont">
+                                <ul>
+                                    <li>
+                                        <div class="tit">pagelist</div>
+                                        <div class="url">
+                                            <span>/pub/page/sub.html</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>2023-09-01</span>
+                
+                                        </div>
+                                        <div class="txt">
+                                            <ul>
+                                                <li><span>[23.09.01]</span><p>황보현 : 
+                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //site -->
+
+                       
+                
+                    </div>
+                </div>
+                
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        $('.menu a').click(function(){
+                            $(this).parents('.menu').find('a').removeClass('on');
+                            $(this).addClass('on');
+                        });
+                        $('.menu li a').click(function(){
+                            var viewBox = $(this).attr('href');
+                            $('.site').hide();
+                            $('.site').addClass('drop');
+                            $('.site' + viewBox).show();
+                        });
+                        $('.menu h2 a').click(function(){
+                            $('.site').show();
+                            $('.site').removeClass('drop');
+                        });
+                        $('.menu li').each(function(){
+                            if($(this).find('a').attr('href') == "#" || $(this).find("a").attr("href") == ""){
+                                var index = $('.menu ul li').index($(this)[0]);
+                                $(this).find('> a').attr('href','#menu' + index);
+                            }
+                        });
+                        $('.site').each(function() {
+                            var index = $('.site').index($(this)[0]);
+                            $(this).attr('id','menu' + index);
+                        });
+                        $('.url span').each(function(){
+                            var link = $(this).text(),
+                                str = "";
+                            if(link != null && link !=""){
+                                str += "<a href=\"../../mdm" + link + "\" target=\"_blank\">" + link + "</a>";
+                                $(this).empty().html(str);
+                            }
+                        });
+                    
+                        var now=new Date();
+                        var year=now.getFullYear();
+                        var month=now.getMonth()+1;
+                        if (month<10) {
+                            month="0"+month;
+                        }
+                        var date=now.getDate();
+                        if (date<10) {
+                            date="0"+date;
+                        }
+                        //alert(now+': '+year+', '+month+', '+date);
+                        $('.date').each(function() {
+                            var $date = $('> span', this),
+                                str = "";
+                            str += "<strong>" + $date.filter(':last').text() + "</strong>";
+                            $date.filter(':not(:last)').each(function() {
+                                str += "<a data-date=\"" + $(this).text() + "\">○</a>";
+                            });
+                            $date.filter(':last').each(function() {
+                                str += "<a data-date=\"" + $(this).text() + "\">●</a>";
+                            });
+                            if($date.filter(':first').text() != "") {
+                                $(this).empty().html(str);
+                            }
+                            var chkDay=$date.filter(':last').text().split(" ");
+                            var chkDay2=chkDay[0].split("-");
+                            //console.log(chkDay2[0]);
+                            if ((chkDay2[0]==year)&&(chkDay2[1]==month)&&(chkDay2[2]==date)) {
+                                $(this).addClass('today');
+                            }
+                        });
+                        $('.url a').click(function(){
+                            var $active = $(this);
+                            $('span > a').removeAttr('style');
+                            $active.css({"font-weight":"bold","text-decoration":"underline","color":"#c00000"});
+                        });
+                        $('li > div').hover(function(){
+                            $(this).parent('li').addClass('on');
+                        }, function(){
+                            $(this).parent('li').removeClass('on');
+                        });
+                    
+                        $('body').on('mouseenter', ".date a", function(){
+                            $(this).parent().find('strong').text($(this).attr('data-date'));
+                        });
+                        $("body").on('mouseleave', ".date a", function(){
+                            $(this).parent().find('strong').text($(this).parent().find('a:last').attr('data-date'));
+                        });
+                    
+                        $('.total').each(function(){
+                            var sum=0;
+                            var sumG=0;
+                            var sumMinus=0;
+                            var sumMinusG=0;
+                            var count=0;
+                            var countG=0;
+                            $('#contents').find('.url').each(function(){
+                                if ($(this).find('span').html()!="") {
+                                    sum++;
+                                } else {
+                                    sumMinus++;
+                                }
+                            });
+                            $('#contents').find('.nocount .url, .del .url').each(function(){
+                                if ($(this).find('span').html()!="") {
+                                    sumG++;
+                                } else {
+                                    sumMinusG++;
+                                }
+                            });
+                            $('#contents').find('.date').each(function(){
+                                if ($(this).find('span').html()=="") {
+                                    count++;
+                                }
+                            });
+                            $('#contents').find('.nocount .date, .del .date').each(function(){
+                                if ($(this).find('span').html()=="") {
+                                    countG++;
+                                }
+                            });
+                            count=(sum-sumG)+(sumMinus-sumMinusG)-(count-countG);
+                            sum=(sum-sumG);
+                            str = "";
+                            str += "<span>"+count+"/"+sum+"pages"+"</span>"+"<em>"+"(진행율 "+parseInt(count/sum*100)+"%"+")"+"</em>";
+                            $(this).find('> span').html(str);
+                        });
+                        $('.site').each(function(){
+                            var sum=0;
+                            var sumG=0;
+                            var sumMinus=0;
+                            var sumMinusG=0;
+                            var count=0;
+                            var countG=0;
+                            $(this).find('.url').each(function(){
+                                if ($(this).find('span').html()!="") {
+                                    sum++;
+                                } else {
+                                    sumMinus++;
+                                }
+                            });
+                            $(this).find('.del .url').each(function(){
+                                if ($(this).find('span').html()!="") {
+                                    sumG++;
+                                } else {
+                                    sumMinusG++;
+                                }
+                            });
+                            $(this).find('.date').each(function(){
+                                if ($(this).find('span').html()=="") {
+                                    count++;
+                                }
+                            });
+                            $(this).find('.del .date').each(function(){
+                                if ($(this).find('span').html()=="") {
+                                    countG++;
+                                }
+                            });
+                            count=(sum-sumG)+(sumMinus-sumMinusG)-(count-countG);
+                            sum=(sum-sumG);
+                            str = "";
+                            str += " ("+count+"/"+sum+")"+"<em>"+" : 진행율 "+parseInt(count/sum*100)+"%"+"</em>";
+                            $(this).find('h2 > span').html(str);
+                        });
+                    });
+                    </script>
+                 
+            </div>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+      <!-- //컨텐츠 영역 -->
+  
+      <!-- 하단 영역 -->
+      <footer id="tkg-footer-wrap" data-include="../include/footer.html"></footer>
+      <!-- //하단 영역 -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" /> -->
+    <title>TKG All Wrap Frame</title>
+    <link href="../../static/css/mdm.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../static/js/common.js"></script>
+    <script type="text/javascript" src="../../static/js/ui.js"></script>
+    <!--[if lt IE 9]>
+      <script type="text/javascript">
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('footer');
+      </script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const datepicker = document.querySelectorAll('.flatpickr');
+            datepicker.forEach(element => {
+            flatpickr(element,{
+                wrap: true
+            });
+            });
+        });
+        </script>
+
+    <!--스플리트-->    
+    <script src="https://unpkg.com/jquery.splitter/js/jquery.splitter.js"></script>
+    <!--[if IE]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+      
+
+    <!-- RealGrid 개발시 삭제 -->
+    <link href="../../static/realgrid/realgrid-style.css" rel="stylesheet" />
+    <script src="../../static/realgrid/realgrid-lic.js"></script>
+    <script src="../../static/realgrid/realgrid.2.6.3.min.js"></script>
+    <script src="../../static/realgrid/libs/jszip.min.js"></script>
+
+    <!-- RealGrid Custom 개발시 삭제 -->
+    <script src="../../static/realgrid/index.js"></script>
+  </head>
+  <body>
+  
+  <div id="tkg-wrap">
+
+    <!-- all wrap -->
+    <section id="tkg-all-wrap">
+      <!-- 상단 : GNB영역-->
+      <div class="tkg-nav">
+        <div class="lnb-wrap">
+          <div class="header-top">
+            <h1>TKG</h1>
+            <div class="header-info">
+                <div class="lang-select">
+                  <span class="img"></span>
+                  <button style="margin-left:1.0rem;"><i class=" icon-down-open">close</i></button>
+                </div>
+                <div class="user">
+                    <a href="#none"><span class="img"></span></a>
+                    <a href="#none"><span class="name">홍 길동 님</span></a> 
+                </div>
+            </div>
+          </div> 
+        </div>
+         <!--GNB show & hide-->      
+         <button type="button" class="lnb-sidebar-btn" style="z-index: 1;">
+          <i></i>
+        </button>  
+      </div>
+
+       <nav id="tkg-nav-wrap">
+        <!-- 네비영역 -->
+        <div class="nav-gnb">
+          <nav style="position: relative;  margin: 0 auto; z-index: 999999;">
+            <ul class="gnb" >
+              <li style="border-bottom:1px solide  red;">
+                <a href="#" style="color:#000;font-weight: 600; ">Site</a>
+              </li> 
+              <li>
+                <a href="#" style="color:#ddd;font-weight: 600;">Model</a>
+              </li>
+              <li><a href="#" style="color:#ddd;font-weight: 600;">Reference</a></li>
+              <li><a href="#" style="color:#ddd;font-weight: 600;">Time</a></li>
+              <li><a href="#" style="color:#ddd;font-weight: 600;">Partner</a></li>
+              <li><a href="#" style="color:#ddd;font-weight: 600;">Governance</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- //네비영역 -->
+      </nav>
+      <!-- //상단 : GNB영역-->
+
+      <!-- 컨텐츠 :  내가 클릭한 메뉴 열기탭 -->
+      <div id="tkg-footer">
+        <div id="footer">
+          <div class="tab-menu" data-tab-tit>
+            <button class="arrow_left"><i class="icon-caret-prev"></i></button>
+            <a href="#tabCont3-1" class="on">Company</a><button class="btn-delete"><i class="material-icons-round">close</i></button>
+            <a href="#tabCont3-2">Model Parmpppppppp</a><button class="btn-delete"><i class="material-icons-round">close</i></button>
+            <a href="#tabCont3-3">Part</a><button class="btn-delete"><i class="material-icons-round">close</i></button>
+            <a href="#tabCont3-4">UOM</a><button class="btn-delete"><i class="material-icons-round">close</i></button>
+            <a href="#tabCont3-5">Operation</a><button class="btn-delete"><i class="material-icons-round">close</i></button>
+            <button class="arrow_right"><i class="icon-caret-next"></i></button>
+          </div>
+          <div>
+            <div id="tabCont3-1" class="tab-cont">
+             <!-- 내용 : splitter영역 (검색 + 그리드 영역)-->
+
+             <!-- 컨텐츠 :  영역 -->
+            <div id="tkg-container">
+              <div id="splitter_l">
+                <!-- 검색영역 left-nav-->
+                <div class="left-search">
+                
+                  <div class="lnb-wrap">
+                    <div class="lnb-depth">
+                          <!-- 공통검색 start -->
+                          <div class="search-box">
+                            <div class="input-box">
+                            <label class="label" for="inp1">Search</label>
+                            <input type="text" id="inp1" value="Search" />
+                            <button class="btn-search">
+                                <span class="material-icons-round">search</span>
+                            </button>
+                            </div>              
+                        </div> 
+                        <!-- 공통검색 end -->
+
+                        <!-- 검색조건 start -->
+                        <div class="flex-search mt-25">
+                            <p>Company</p>
+                            <div>
+                              <div class="select-box">
+                                <select title="날짜 선택">
+                                  <option value="">날짜 선택</option>
+                                  <option value="1">1일</option>
+                                  <option value="2">2일</option>
+                                  <option value="3">3일</option>
+                                </select>
+                              </div> 
+                            </div>
+                                                                
+                        </div>
+
+                        <div class="flex-search mt-25">
+                            <p>사용여부</p>
+                            <div class="flex grap-4">
+                              <div class="radio">
+                                <input type="radio" id="radio1" name="radioG1"><label for="radio1"><i></i>All</label>
+                              </div>
+                              <div class="radio">
+                                <input type="radio" id="radio2" name="radioG1"><label for="radio2"><i></i>Y</label>
+                              </div>
+                              <div class="radio">
+                                <input type="radio" id="radio3" name="radioG1" disabled  checked><label for="radio3"><i></i>N</label>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="flex-search mt-25">
+                            <p>체크박스</p>
+                            <div class="flex grap-4">
+                              <div class="checkbox">
+                                <input type="checkbox" id="check1" name="radioG1" checked/><label for="check1"><i></i>All</label>
+                              </div>
+                              <div class="checkbox">
+                                <input type="checkbox" id="check2" name="radioG1"/><label for="check2"><i></i>A</label>
+                              </div>
+                              <div class="checkbox">
+                                <input type="checkbox" id="check3" name="radioG1"/><label for="check3"><i></i>P</label>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="flex-search mt-25">
+                          <p>input + 검색</p>
+                          <div class="flex grap-4">
+                            <div class="input-box"><input type="text" value="" /></div>
+                            <button class="button small" style="width: 8rem;">검색</button>
+                            
+                          </div>
+                      </div>
+
+                      <!-- 검색조건 end -->
+                      <div class="flex-search-btn t-c">
+                          <button class="button small line">조회</button>
+                      </div>
+                    </div>                    
+                  </div> 
+      
+                </div>
+                <!--//검색영역 end-->
+
+              </div> 
+              <div id="splitter_r">
+                <div class="tkg-content-body">
+                  <div class="tkg-content">
+                    <!-- 컨텐츠 영역 -->
+                    <div class="page-tit">
+                      <h1>Tree Grid</h1>
+                      <div class="ml-a">
+                        <!-- 경로 -->
+                        <div class="breadcrumb">
+                          <ul>
+                            <li>
+                              <span>Home</span>
+                            </li>
+                            <li>
+                              <i class="material-icons-round">chevron_right</i><span>Site</span>
+                            </li>
+                            <li>
+                              <i class="material-icons-round">chevron_right</i>
+                              <a href="#none"><span>Plant</span></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="treegrid">
+                        <!--div 2column : left-->
+                        <div class="left">
+                            <!-- 트리 영역 -->
+                            <div class="gridwrap">
+                                <!-- 리얼그리드 소타이틀-->
+                                <div class="flex">
+                                    <div class="tree-wrap">
+                                        <ul class="depth1">
+                                          <li>
+                                            <div class="info">
+                                              <button class="tree-action">열림/닫기</button>
+                                              <a href="#">텍스트1 - 링크</a>
+                                            </div>
+                                            <ul class="depth2">
+                                              <li>
+                                                <div class="info">
+                                                  <button class="tree-action">열림/닫기</button>
+                                                  <a href="#">텍스트1-1 - 링크</a>
+                                                </div>
+                            
+                                                <ul class="depth3">
+                                                  <li>
+                                                    <div class="info">
+                                                      <a href="#">텍스트1-1-1 - 링크</a>
+                                                    </div>
+                                                  </li>
+                                                  <li>
+                                                    <div class="info">
+                                                      <a href="#">텍스트1-1-2 - 링크</a>
+                                                    </div>
+                                                  </li>
+                                                </ul>
+                                              </li>
+                                              <li>
+                                                <div class="info">
+                                                  <a href="#">텍스트1-2 - 링크</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <div class="info">
+                                              <button class="tree-action">열림/닫기</button>
+                                              <a href="#">텍스트2 - 링크</a>
+                                            </div>
+                                            <ul class="depth2">
+                                              <li>
+                                                <div class="info">
+                                                  <button class="tree-action">열림/닫기</button>
+                                                  <a href="#">텍스트2-1 - 링크</a>
+                                                </div>
+                            
+                                                <ul class="depth3">
+                                                  <li>
+                                                    <div class="info">
+                                                      <a href="#">텍스트2-1-1 - 링크</a>
+                                                    </div>
+                                                  </li>
+                                                  <li>
+                                                    <div class="info">
+                                                      <a href="#">텍스트2-1-2 - 링크</a>
+                                                    </div>
+                                                  </li>
+                                                </ul>
+                                              </li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--div 2column : right-->
+                        <div class="right">
+                            <!-- 그리드 영역 -->
+                            <div class="gridwrap">
+                                <!-- 리얼그리드 소타이틀-->
+                                <div class="flex">
+                                <div class="col-2">
+                                    <div class="w-p-50">
+                                    <h2 class="tit-h2"><strong class="guide-line">Result</strong></h2>
+                                    <p class="inlin-block ml-10">총 <span class="grid_total_number">3</span> 개</p>
+                                    </div>
+                                </div>
+                                <div class="ml-a">
+                                    <a href="#" class="button small2 line blac">SQL Viewer</a>
+                                    <a href="#" class="button small2 line blac">엑셀 다운로드</a>
+                                </div>
+                                </div>
+
+                            
+                                <!--리얼그리드 영역-->
+                                <div id="realgrid"  class="readgridwrap"></div>
+
+                                <div class="flex mt-24">
+                                <div class="ml-a">
+                                    <a href="#" class="button gridbtn gray">등록</a>
+                                    <a href="#" class="button gridbtn gray">삭제</a>
+                                    <a href="#" class="button gridbtn gray">저장</a>
+                                    <a href="#" class="button gridbtn gray-box">확정</a>
+                                </div>
+                                </div>
+                                <!-- 그리드 페이징
+                                <div class="paging mt-24">
+                                <a href="#" class="btn-prev">이전</a>
+                                <strong>1</strong>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#" class="btn-next">다음</a>
+                                </div>-->
+                            </div>
+                        </div>
+                      </div>
+                    <!-- //컨텐츠 영역 -->
+
+
+                
+                  </div>
+                </div>
+                
+              </div>
+            </div> <!-- end of #spiltter -->
+            <div id="debug"></div>
+             <!-- //내용 : splitter영역 (검색 + 그리드 영역)-->
+            </div>
+            <div id="tabCont3-2" class="tab-cont">내가 클릭한 메뉴2 내용</div>
+            <div id="tabCont3-3" class="tab-cont">내가 클릭한 메뉴3 내용</div>
+            <div id="tabCont3-4" class="tab-cont">내가 클릭한 메뉴4 내용</div>
+            <div id="tabCont3-5" class="tab-cont">내가 클릭한 메뉴5 내용</div>
+          </div>
+            
+          </div>
+        </div>    
+      </div>      
+      <!-- //컨텐츠 :  내가 클릭한 메뉴 열기탭 -->
+    </section>
+  </div>
+
+</body>
+</html>

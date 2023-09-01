@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+[class*=gdH] { margin:25px 0;}
+[class*=gdH]:before { content:'#'}
+[class*=gdH]:after { content:''; display:block; height:0.4em; margin-top:-0.4em;}
+.gdH1 { font-size:30px; color:#d00;}
+.gdH1:after { background:rgba(221,0,0,0.1)}
+.gdH2 { font-size:20px; color:#157941;}
+.gdH2:after { background:rgba(21,121,65,0.1)}
+.gdH1 ~ .gdH1 { margin-top:6rem;}
+
+.gdWrap { padding-bottom:100px !important;}
+.gdWrap [class*=gdH] ~ p { margin:10px 0; font-size:1.5rem;}
+.gdWrap pre { margin:20px 0;}
+.gdWrap [class*=gdH] ~ div + div { margin-top:10px;}
+
+.guideTitle { padding: 4rem 0; font-size: 4rem; text-align: center; font-weight: bold; background: #f2f4f6;}
+
+.gdWrap .boxBlack { padding:1rem; background:#000;}

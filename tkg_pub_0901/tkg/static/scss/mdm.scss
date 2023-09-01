@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/* 요기는 mdm 스타일 넣는 구간 */
+@import "reset/reset";
+@import "reset/font";
+@import "reset/root";
+@import "reset/swiper";
+@import "reset/jqueryUI";
+
+@import "reset/animated";
+
+@import "component/tkg";
+
+@import "content/tkg_common";
+@import "content/tkg_content";
+
+
+
+
+
+/* 반응형 */
+@media screen and (max-width:1320px) {
+    
+}
+
+@media screen and (max-width:1024px) {
+    
+}
+
+@media screen and (max-width:767px) {
+
+}
