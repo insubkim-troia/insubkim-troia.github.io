@@ -28,11 +28,17 @@
 
 
 /* ========== //컨텐츠 공통 (검색영역 공통에 대한 재정의) ============ */
-
-.search-box {display: flex; align-items: center; justify-content: center; border-bottom: .2rem solid #D9D9D9;  height: 4.2rem; 
-  .input-box {padding: 0 0rem; border-radius: 1.6rem; background-color: transparent; border: 0;
+.search-box {display: flex; align-items: center; justify-content: center; border-bottom: .2rem solid #5FA6A9;  height: 4.2rem;
+   
+  .input-box {padding: 0 0rem; border-radius: 1.6rem; background-color: transparent; border: 0; justify-content:left;
       .label {margin-left: 0; font-size: 0rem; color:#fff;} 
       input {height: 4.4rem;font-size: 2.0rem;font-weight: 600; padding: 0 .8rem;margin-left: 2.0rem; color: #fff;}
+      /* 타이틀 */
+       p {font-size: 2.2rem;letter-spacing: -0.02rem; font-weight: 400;color:#fff; text-align: left; 
+        /**/
+        &:before { content: "\E902";padding-right:1.0rem; vertical-align: middle; color:#fff;font-family: icomoon!important; speak: never;font-style: normal;font-weight: 400;font-variant: normal;text-transform: none;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; }
+        
+        }
   }
   .btn-search {width: 2.4rem; height: 2.4rem; color:#fff; position: absolute; left:0;
       span {font-size: 2.4rem;}
@@ -51,21 +57,21 @@
       /* 검색영역내 라디오 박스 재정의 영역*/
       .radio { padding-bottom: 1px;
           input { position:absolute; opacity:0; align-items: center;
-              &:checked + label i { border-color:transparent; background:var(--point-color); align-items: center;
-                  &:after { width:.8rem; height:.8rem; background:#fff;}
+              &:checked + label i { border-color:transparent;border:3px solid #fff; background:transparent; align-items: center;
+                  &:after { width:.6rem; height:.6rem; background:#fff;}
               }
-              &:checked + label:hover i { border-color:rgba(5, 105, 122, 1)}
+              &:checked + label:hover i { border-color:rgba(255, 255, 255, 1)}
       
-              &:disabled + label i { border-color:#ccc; background:#f8f8f8;}
+              &:disabled + label i { border-color:#378795; background:transparent;}
               &:disabled:checked + label i { border-color:transparent; background:rgba(34,34,34,0.3);}
           }
           label { display:inline-block; position:relative; padding-top:.1rem; padding-left:3.2rem; margin-right:2rem; font-size:1.6rem; font-weight: 200; color:var(--color-white); cursor: pointer; line-height:2.4rem;
-              i { display:block; position: absolute; top:0; left:0; width:2.0rem; height:2.0rem; border-radius:50%; border:1px solid #cccccc; background:#fff; transition: all .3s ease;;
-                  &:after { content:''; position:absolute; top:50%; left:50%; width:0; height:0; border-radius:50%; background:#ccc; transition: all .3s ease; transform: translate(-50%,-50%);}
+              i { display:block; position: absolute; top:0; left:0; width:2.0rem; height:2.0rem; border-radius:50%; border:3px solid #71BCBD; background:transparent; transition: all .3s ease;
+                  &:after { content:''; position:absolute; top:50%; left:50%; width:0; height:0; border-radius:50%; background:#fff; transition: all .3s ease; transform: translate(-50%,-50%);}
               }
 
               &:hover {
-                  i { border-color:rgba(170, 170, 170, 1);}
+                  i { border-color:rgba(255, 255, 255, 1);}
               }
           }
       }
@@ -73,21 +79,21 @@
       .checkbox { padding-bottom: 1px;padding-top: 1px;
           > * { vertical-align: middle;}
           input { position:absolute; top: 0; left: 0; width: 0; height: 0; opacity:0;
-              &:checked + label i { border-color:var(--point-color); background:var(--point-color);
-                  &:after { border-color:transparent transparent #fff #fff; transform:translate(-50%, -50%) rotate(-45deg) scale(1);}
+              &:checked + label i { border-color:#fff; background:#fff;
+                  &:after { border-color:transparent transparent #05697A #05697A; transform:translate(-50%, -50%) rotate(-45deg) scale(1);}
               }
-              &:checked + label:hover i { border-color:rgba(5, 105, 122, 1)}
-      
-              &:disabled + label i { border-color:#ddd; background:#f8f8f8;}
-              &:disabled:checked + label i { border-color:transparent; background:rgba(221, 221, 221, 1);}
+              &:checked + label:hover i { border-color:rgba(255, 255, 255, 1)}
+       
+              &:disabled + label i { border-color:#378795; background:transparent;}
+              &:disabled:checked + label i { border-color:#82B4BD; background:rgba(225, 225, 225, 1);}
           }
           label { position:relative; display:inline-block; min-height:2.4rem; margin-right:2rem; padding-left:3.2rem; font-size:1.6rem; color:var(--color-white); font-weight: 200; cursor: pointer; line-height:2.4rem;
-              i { display:block; position: absolute; top:0; left:0; width:2.0rem; height:2.0rem; border-radius:0.2rem; border:1px solid rgba(238, 238, 238, 1); background:#fff; transition: all .3s ease;
-                  &:after { content:''; position:absolute; top:50%; left:50%; width:1rem; height:0.4rem; margin-top:-0.3rem; border:2px solid #fff; border-color:transparent transparent #cccccc #cccccc; transform:translate(-50%, -50%) rotate(0deg) scale(0); transition: all .3s ease;;}
+              i { display:block; position: absolute; top:0; left:0; width:2.0rem; height:2.0rem; border-radius:0.4rem; border:3px solid #71BCBD; background:transparent; transition: all .3s ease;
+                  &:after { content:''; position:absolute; top:50%; left:50%; width:.8rem; height:0.3rem; margin-top:-0.2rem; border:3px solid #fff; border-color:transparent transparent #fff #fff; transform:translate(-50%, -50%) rotate(0deg) scale(0); transition: all .3s ease;;}
               }
 
               &:hover {
-                  i { border-color:rgba(170, 170, 170, 1);}
+                  i { border-color:rgba(255, 255, 255, 1);}
               }
           }
           
@@ -220,7 +226,7 @@
       }
      
   
-      &.line { color:var(--color-white); background:transparent; border:2px solid #fff;
+      &.line { color:var(--color-white); background:transparent; border:.2rem solid #fff;
           &.disabled,
           &:disabled { color:#ddd !important; border-color:#ddd !important; background:transparent !important;}   
          
@@ -228,9 +234,9 @@
 
       /* 사이즈 */
       &.large { height:5.6rem; font-size:1.6rem; --font-size:calc(1.6rem * 1.5); }
-      &.small { height:4.8rem; border-radius: 20rem; padding: 0 4rem; font-size:1.8rem; --font-size:calc(1.4rem * 1.5); 
+      &.small { height:4.8rem; border-radius: 20rem; background-color: var(--color-secondary-02); padding: 0 4rem; font-size:1.8rem; --font-size:calc(1.4rem * 1.5); 
           &:hover { 
-              border-color:var(--point-color-blue); color: var(--color-white); } 
+              border-color:var(--select-btn-br);color:#fff; background-color: var(--select-btn-bg);box-shadow: 0 10px 15px 0 rgba(37, 38, 38, 0.2);} 
           }    
       &.full { width:100%;}
   }
@@ -256,11 +262,7 @@
 * You should have received a copy of the GNU Lesser General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-.splitter_panel {position: relative; transition: width .3s ease;
-
-
- 
-}
+.splitter_panel {position: relative; transition: width .3s ease;}
 
 
 
@@ -273,10 +275,10 @@
 }
 
 .splitter_panel .hsplitter {
-  background-color: transparent;
+ background: url(../images/common/icon-hor-split.png) no-repeat center center; 
   cursor: row-resize;
   z-index: 800;
-  height: 7px;
+  height: 10px;
 }
 .splitter_panel .vsplitter.splitter-invisible,
 .splitter_panel .hsplitter.splitter-invisible {
@@ -306,7 +308,8 @@ height: 88vh;
 .splitter_panel .horizontal_panel {
 width: 100%;
 }
-.splitter_panel .top_panel,
+
+
 .splitter_panel .left_panel,
 .splitter_panel .vsplitter,
 .splitter_panel .vertical_panel {
@@ -323,6 +326,19 @@ width: 100%;
  background: linear-gradient(210deg, #05697A 0%, #033e48 100%); 
  border-top-right-radius: 2.4rem; */
 }
+
+.splitter_panel .top_panel {
+ top: 0;
+ cursor: e-resize;
+ min-height: 20px;
+/*   border-top-right-radius: 2.4rem;*/
+
+ /*
+ background: url(../images/common/icon_splitter.png) no-repeat 180px -20px #05697A;
+ background: linear-gradient(210deg, #05697A 0%, #033e48 100%); 
+ border-top-right-radius: 2.4rem; */
+}
+
 .splitter_panel .top_panel,
 .splitter_panel .bottom_panel,
 .splitter_panel .left_panel,
@@ -344,6 +360,9 @@ right: 0;
 bottom: 0;
 z-index: 1000;
 }
+
+
+/*2중*/
 
 
 

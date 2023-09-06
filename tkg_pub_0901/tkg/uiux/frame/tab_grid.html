@@ -40,7 +40,7 @@
 
       
 
-    <!-- RealGrid 개발시 삭제 (샘플용) -->
+    <!-- RealGrid 개발시 삭제 -->
     <link href="../../static/realgrid/realgrid-style.css" rel="stylesheet" />
     <script src="../../static/realgrid/realgrid-lic.js"></script>
     <script src="../../static/realgrid/realgrid.2.6.3.min.js"></script>
@@ -52,19 +52,20 @@
     <script src="../../static/js/header_ui.js"></script>
     <script src="../../static/js/header_template.js"></script>
   </head>
+  <body>
+  
+  <div id="tkg-wrap">
 
-<body>
-
-<div id="tkg-wrap">
     <!-- all wrap -->
     <section id="tkg-all-wrap">
+     <!-- 상단 : GNB영역-->
+     <div class="tkg-nav" data-include="../include/guide_gnb.html">
+    </div>
 
-      <!--상단 영역 -->
-      <div data-include="../../uiux/include/mdm_header.html"></div> 
+     <div class="tkgheader" data-include="../include/guide_menu.html">
+    </div>
+    <!-- //상단 : GNB영역-->
 
-
-
-      
       <!-- 컨텐츠 :  내가 클릭한 메뉴 열기탭 -->
       <div id="tkg-footer">
         <div id="footer">
@@ -80,7 +81,6 @@
           <div>
             <div id="tabCont3-1" class="tab-cont">
              <!-- 내용 : splitter영역 (검색 + 그리드 영역)-->
-              <!--+++++++++++++++++++++++++++++++++++++++실제작업영역(황프로님)++++++++++++++++++++++++++++++++++++++++++++++-->
              <!-- 컨텐츠 :  영역 -->
             <div id="tkg-container">
               <div id="splitter_l">
@@ -92,12 +92,8 @@
                       <!-- 공통검색 start -->
                       <div class="search-box">
                         <div class="input-box">
-                        <label class="label" for="inp1">Search</label>
-                        <input type="text" id="inp1" value="Search" />
-                        <button class="btn-search">
-                            <span class="material-icons-round">search</span>
-                        </button>
-                        </div>              
+                            <p>Search</p>
+                          </div>                          
                       </div> 
                       <!-- 공통검색 end -->
 
@@ -142,7 +138,7 @@
                             <input type="checkbox" id="check2" name="radioG1"/><label for="check2"><i></i>A</label>
                           </div>
                           <div class="checkbox">
-                            <input type="checkbox" id="check3" name="radioG1"/><label for="check3"><i></i>P</label>
+                            <input type="checkbox" id="check3" name="radioG1" disabled/><label for="check3"><i></i>P</label>
                           </div>
                         </div>
                       </div>
@@ -158,7 +154,7 @@
 
                       <!-- 검색조건 end -->
                       <div class="flex-search-btn t-c">
-                      <button class="button small line">Apply</button>
+                      <button class="button small line">조회</button>
                       </div>
 
                     </div>
@@ -167,6 +163,7 @@
       
                 </div>
                 <!--//검색영역 end-->
+
               </div> 
               <div id="splitter_r">
                 <div class="tkg-content-body">
@@ -190,7 +187,7 @@
                             </li>
                             <li>
                               <!-- 버튼 선택시 icon-line-star on 추가-->
-                              <button><i class="icon-line-star on"></i></button>
+                              <button><i class="icon-line-star"></i></button>
                             </li>
                           </ul>
                         </div>
@@ -199,42 +196,73 @@
 
                     <!-- 그리드 영역 -->
                     <div class="gridwrap">
-                      <!-- 리얼그리드 소타이틀-->
-                      <div class="flex">
-                        <div class="col-2">
-                          <div class="w-p-50">
-                            <h2 class="tit-h2"><strong class="guide-line">Result</strong></h2>
-                            <p class="inlin-block ml-10">총 <span class="grid_total_number">3</span> 개</p>
-                          </div>
-                        </div>
-                        <div class="ml-a">
-                          <a href="#" class="button small2 line blac">SQL Viewer</a>
-                          <a href="#" class="button small2 line blac">엑셀 다운로드</a>
-                        </div>
-                      </div>
- 
-                    
-                      <!--리얼그리드 영역-->
-                      <div id="realgrid" class="readgridwrap"></div>
 
-                      <div class="flex mt-24">
-                        <div class="ml-a">
-                          <a href="#" class="button gridbtn gray">등록</a>
-                          <a href="#" class="button gridbtn gray">삭제</a>
-                          <a href="#" class="button gridbtn gray">저장</a>
-                          <a href="#" class="button gridbtn gray-box">확정</a>
+                        <div class="tab-grid" data-tab-tit>
+                            <a href="#tabCont1-1" class="on">Company</a>
+                            <a href="#tabCont1-2">Factory</a>
                         </div>
-                      </div>
-                      <!-- 그리드 페이징
-                      <div class="paging mt-24">
-                        <a href="#" class="btn-prev">이전</a>
-                        <strong>1</strong>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a href="#" class="btn-next">다음</a>
-                      </div>-->
+                          
+                        <div class="tab-cont-wrap">
+                        <div id="tabCont1-1" class="tab-cont" style="display: block">
+                            <!--tab grid area-->
+                            <!-- 리얼그리드 소타이틀-->
+                            <div class="flex mt-10">
+                                <div class="col-2">
+                                <div class="w-p-50">
+                                    <h2 class="tit-h2"><strong class="guide-line">Result</strong></h2>
+                                    <p class="inlin-block ml-10">총 <span class="grid_total_number">3</span> 개</p>
+                                </div>
+                                </div>
+                                <div class="ml-a">
+                                <a href="#" class="button small2 line blac">SQL Viewer</a>
+                                <a href="#" class="button small2 line blac">엑셀 다운로드</a>
+                                </div>
+                            </div>
+        
+                            
+                            <!--리얼그리드 영역-->
+                            <div id="realgrid"  class="readgridwrap"></div>
+
+                            <div class="flex mt-24">
+                                <div class="ml-a">
+                                <a href="#" class="button gridbtn gray">등록</a>
+                                <a href="#" class="button gridbtn gray">삭제</a>
+                                <a href="#" class="button gridbtn gray">저장</a>
+                                <a href="#" class="button gridbtn gray-box">확정</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tabCont1-2" class="tab-cont">
+                            <!--tab grid area-->
+                             <!-- 리얼그리드 소타이틀-->
+                             <div class="flex mt-10">
+                                <div class="col-2">
+                                <div class="w-p-50">
+                                    <h2 class="tit-h2"><strong class="guide-line">Result</strong></h2>
+                                    <p class="inlin-block ml-10">총 <span class="grid_total_number">3</span> 개</p>
+                                </div>
+                                </div>
+                            </div>
+        
+                            
+                            <!--리얼그리드 영역-->
+                            <div id="realgrid"  class="readgridwrap"></div>
+
+                            <div class="flex mt-24">
+                                <div class="ml-a">
+                                <a href="#" class="button gridbtn gray">등록</a>
+                                <a href="#" class="button gridbtn gray-box">확정</a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+                      
+ 
+                     
+
+                     
+                  
 
                      
                     </div>
@@ -247,25 +275,28 @@
                 
               </div>
             </div> <!-- end of #spiltter -->
-             <!--+++++++++++++++++++++++++++++++++++++++//실제작업영역(황프로님)++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div id="debug"></div>
+             <!-- //내용 : splitter영역 (검색 + 그리드 영역)-->
+            </div>
+            <div id="tabCont3-2" class="tab-cont">내가 클릭한 메뉴2 내용</div>
+            <div id="tabCont3-3" class="tab-cont">내가 클릭한 메뉴3 내용</div>
+            <div id="tabCont3-4" class="tab-cont">내가 클릭한 메뉴4 내용</div>
+            <div id="tabCont3-5" class="tab-cont">내가 클릭한 메뉴5 내용</div>
+          </div>
+            
+          </div>
+        </div>    
+      </div>      
+      <!-- //컨텐츠 :  내가 클릭한 메뉴 열기탭 -->
 
-      <!-- 하단 영역 -->          
-      <div id="debug"></div>
-      <!-- //내용 : splitter영역 (검색 + 그리드 영역)-->
-      </div>
-      <div id="tabCont3-2" class="tab-cont">내가 클릭한 메뉴2 내용</div>
-      <div id="tabCont3-3" class="tab-cont">내가 클릭한 메뉴3 내용</div>
-      <div id="tabCont3-4" class="tab-cont">내가 클릭한 메뉴4 내용</div>
-      <div id="tabCont3-5" class="tab-cont">내가 클릭한 메뉴5 내용</div>
-      </div>
-      <!-- //하단 영역 -->
 
-    </div>
-  </div>    
-  </div>      
-  <!-- //컨텐츠 :  내가 클릭한 메뉴 열기탭 -->   
-</section>
-</div>
+
+    </section>
+  </div>
+
+
+  
+
 
 </body>
-</html>  
+</html>

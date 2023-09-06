@@ -69,7 +69,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 0.2rem solid #D9D9D9;
+  border-bottom: 0.2rem solid #5FA6A9;
   height: 4.2rem;
 }
 .search-box .input-box {
@@ -77,6 +77,8 @@
   border-radius: 1.6rem;
   background-color: transparent;
   border: 0;
+  justify-content: left;
+  /* 타이틀 */
 }
 .search-box .input-box .label {
   margin-left: 0;
@@ -90,6 +92,29 @@
   padding: 0 0.8rem;
   margin-left: 2rem;
   color: #fff;
+}
+.search-box .input-box p {
+  font-size: 2.2rem;
+  letter-spacing: -0.02rem;
+  font-weight: 400;
+  color: #fff;
+  text-align: left;
+  /**/
+}
+.search-box .input-box p:before {
+  content: "\e902";
+  padding-right: 1rem;
+  vertical-align: middle;
+  color: #fff;
+  font-family: icomoon !important;
+  speak: never;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .search-box .btn-search {
   width: 2.4rem;
@@ -147,20 +172,21 @@
 }
 .flex-search div .radio input:checked + label i {
   border-color: transparent;
-  background: var(--point-color);
+  border: 3px solid #fff;
+  background: transparent;
   align-items: center;
 }
 .flex-search div .radio input:checked + label i:after {
-  width: 0.8rem;
-  height: 0.8rem;
+  width: 0.6rem;
+  height: 0.6rem;
   background: #fff;
 }
 .flex-search div .radio input:checked + label:hover i {
-  border-color: rgb(5, 105, 122);
+  border-color: rgb(255, 255, 255);
 }
 .flex-search div .radio input:disabled + label i {
-  border-color: #ccc;
-  background: #f8f8f8;
+  border-color: #378795;
+  background: transparent;
 }
 .flex-search div .radio input:disabled:checked + label i {
   border-color: transparent;
@@ -186,8 +212,8 @@
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  border: 1px solid #cccccc;
-  background: #fff;
+  border: 3px solid #71BCBD;
+  background: transparent;
   transition: all 0.3s ease;
 }
 .flex-search div .radio label i:after {
@@ -198,12 +224,12 @@
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: #ccc;
+  background: #fff;
   transition: all 0.3s ease;
   transform: translate(-50%, -50%);
 }
 .flex-search div .radio label:hover i {
-  border-color: rgb(170, 170, 170);
+  border-color: rgb(255, 255, 255);
 }
 .flex-search div .checkbox {
   padding-bottom: 1px;
@@ -221,23 +247,23 @@
   opacity: 0;
 }
 .flex-search div .checkbox input:checked + label i {
-  border-color: var(--point-color);
-  background: var(--point-color);
+  border-color: #fff;
+  background: #fff;
 }
 .flex-search div .checkbox input:checked + label i:after {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent #05697A #05697A;
   transform: translate(-50%, -50%) rotate(-45deg) scale(1);
 }
 .flex-search div .checkbox input:checked + label:hover i {
-  border-color: rgb(5, 105, 122);
+  border-color: rgb(255, 255, 255);
 }
 .flex-search div .checkbox input:disabled + label i {
-  border-color: #ddd;
-  background: #f8f8f8;
+  border-color: #378795;
+  background: transparent;
 }
 .flex-search div .checkbox input:disabled:checked + label i {
-  border-color: transparent;
-  background: rgb(221, 221, 221);
+  border-color: #82B4BD;
+  background: rgb(225, 225, 225);
 }
 .flex-search div .checkbox label {
   position: relative;
@@ -258,9 +284,9 @@
   left: 0;
   width: 2rem;
   height: 2rem;
-  border-radius: 0.2rem;
-  border: 1px solid rgb(238, 238, 238);
-  background: #fff;
+  border-radius: 0.4rem;
+  border: 3px solid #71BCBD;
+  background: transparent;
   transition: all 0.3s ease;
 }
 .flex-search div .checkbox label i:after {
@@ -268,16 +294,16 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 1rem;
-  height: 0.4rem;
-  margin-top: -0.3rem;
-  border: 2px solid #fff;
-  border-color: transparent transparent #cccccc #cccccc;
+  width: 0.8rem;
+  height: 0.3rem;
+  margin-top: -0.2rem;
+  border: 3px solid #fff;
+  border-color: transparent transparent #fff #fff;
   transform: translate(-50%, -50%) rotate(0deg) scale(0);
   transition: all 0.3s ease;
 }
 .flex-search div .checkbox label:hover i {
-  border-color: rgb(170, 170, 170);
+  border-color: rgb(255, 255, 255);
 }
 .flex-search div .checkbox + .checkbox {
   margin-top: 0.5rem;
@@ -628,7 +654,7 @@
 .flex-search-btn .button.line {
   color: var(--color-white);
   background: transparent;
-  border: 2px solid #fff;
+  border: 0.2rem solid #fff;
 }
 .flex-search-btn .button.line.disabled, .flex-search-btn .button.line:disabled {
   color: #ddd !important;
@@ -643,13 +669,16 @@
 .flex-search-btn .button.small {
   height: 4.8rem;
   border-radius: 20rem;
+  background-color: var(--color-secondary-02);
   padding: 0 4rem;
   font-size: 1.8rem;
   --font-size:calc(1.4rem * 1.5);
 }
 .flex-search-btn .button.small:hover {
-  border-color: var(--point-color-blue);
-  color: var(--color-white);
+  border-color: var(--select-btn-br);
+  color: #fff;
+  background-color: var(--select-btn-bg);
+  box-shadow: 0 10px 15px 0 rgba(37, 38, 38, 0.2);
 }
 .flex-search-btn .button.full {
   width: 100%;
@@ -687,10 +716,10 @@
 }
 
 .splitter_panel .hsplitter {
-  background-color: transparent;
+  background: url(../images/common/icon-hor-split.png) no-repeat center center;
   cursor: row-resize;
   z-index: 800;
-  height: 7px;
+  height: 10px;
 }
 
 .splitter_panel .vsplitter.splitter-invisible,
@@ -724,7 +753,6 @@
   width: 100%;
 }
 
-.splitter_panel .top_panel,
 .splitter_panel .left_panel,
 .splitter_panel .vsplitter,
 .splitter_panel .vertical_panel {
@@ -737,6 +765,17 @@
   /*
   background: url(../images/common/icon_splitter.png) no-repeat 180px -20px #05697A; 
 
+  background: linear-gradient(210deg, #05697A 0%, #033e48 100%); 
+  border-top-right-radius: 2.4rem; */
+}
+
+.splitter_panel .top_panel {
+  top: 0;
+  cursor: e-resize;
+  min-height: 20px;
+  /*   border-top-right-radius: 2.4rem;*/
+  /*
+  background: url(../images/common/icon_splitter.png) no-repeat 180px -20px #05697A;
   background: linear-gradient(210deg, #05697A 0%, #033e48 100%); 
   border-top-right-radius: 2.4rem; */
 }
@@ -764,4 +803,6 @@
   right: 0;
   bottom: 0;
   z-index: 1000;
-}/*# sourceMappingURL=tkg_content.css.map */
+}
+
+/*2중*//*# sourceMappingURL=tkg_content.css.map */

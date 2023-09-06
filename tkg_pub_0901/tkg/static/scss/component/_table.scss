@@ -33,7 +33,7 @@
     a,
     strong { display:inline-flex; width:3rem; height:3rem; margin:0 .4rem; font-size:1.3rem; color:#555; align-items: center; justify-content: center;}
     strong { color:#fff; background:#111;}
-    a[class*=btn] { position:relative; margin:0 .4rem; font-size:0; opacity:0.3; border:.1rem solid #111; transition: all .3s ease;
+    a[class*=btn] { position:relative; margin:0 .4rem; font-size:0; opacity:0.3; border:0rem solid #111; transition: all .3s ease;
         &:hover { opacity:1;}
         &:before { display: block; position:absolute; top:50%; left:50%; font-family: "fontello"; font-size:1.5rem; transform: translate(-50%, -50%);}
     }

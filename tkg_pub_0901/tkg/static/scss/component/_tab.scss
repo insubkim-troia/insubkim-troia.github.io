@@ -102,13 +102,23 @@
             &:after { left:0; width:100%; opacity: 1;}
         }
         & + button.btn-delete { margin-right:1rem;  width: 2.4rem; height: 4.8rem; border-radius: 20rem; border:0px solid #eee;
-            i { font-size: 1.6rem; font-weight: 600;color:#eee;line-height: 4.8rem;}
+            i { font-size: 1.6rem; font-weight: 600;color:#eee;line-height: 4.8rem;
+                &:hover {color:var( --tab-close);} 
+            }
+            
         }
     }
 
     /* 좌우 버튼 */
-    button.arrow_left {width: 6rem;float: left;height: 4.8rem; color:#ddd;}
-    button.arrow_right {width: 6rem;height: 4.8rem; float: right;color:#ddd;}
+    button{width: 6rem;height: 4.8rem;height: 4.8rem; color:#ddd; 
+        i {font-weight: 400;}
+       & + button.arrow_left{float: left;}
+       & + button.arrow_right{float: right;}       
+       & + button.tab_all_close{float: right; position: absolute; right: 4.8rem;
+            &:hover {background-color: #f7f7f7;}
+            }
+        &:hover {color:var(--color-txt-333); font-weight: 600;}
+    }
 
     &.full a { max-width:initial}
 
@@ -145,26 +155,15 @@
 [data-tab-cont=swiper] {overflow:hidden;}
 .tab-list-view { display:none;}
 
+/* 컨텐츠 페이지 내에서의 탭 */
+.tab-grid { overflow:hidden; 
+    a { display:inline-flex;border:1px solid #cbcbcb;  background-color: #f8f8f8; flex:1 0 auto; position:relative; width: 18.0rem; height:3.2rem; border-bottom:.1rem solid #e6e6e6; font-size:1.5rem; color:#666666; text-align:center; transition:all .3s ease; line-height:1.06; justify-content: center; align-items: center; transition: all .3s ease;
+        &:after { content:''; display:block; position:absolute; top:-0.1rem; left:50%; width:0%; height:.3rem; background:#111; opacity: 0; transition: all .3s ease;}
 
-/* menuopen tab test*/
-.tab-bottom { overflow:hidden;position: absolute; border-bottom-left-radius: 2.4rem;  border-bottom-right-radius: 2.4rem; width: 98.6%; bottom: 1rem;    display:inline-block; z-index: 99999999;height:4.8rem;  background-color: #fff; border-top: 1px solid #eee; 
-    a { display:inline-flex; flex:1 0 auto; line-height: 2.8rem; padding:0 4rem 0 .2rem; overflow: hidden; text-overflow:ellipsis;word-break: break-all; white-space: nowrap; position:relative; height:4.8rem; max-width: 12.0rem;  border-bottom:.3rem solid #e6e6e6; font-size:1.5rem; color:#aaa; text-align:left; transition:all .3s ease; line-height:1.06; justify-content: left; align-items: center; transition: all .3s ease;
-        &:after { content:''; display:block; position:absolute;  padding: 0 1rem; overflow: hidden; text-overflow:ellipsis;word-break: break-all; white-space: nowrap; bottom:-0.3rem; left:50%; width:00%; height:.3rem; background:#111; opacity: 0; transition: all .3s ease;}
-
-        &.on { color:#262626; font-weight:bold;  padding:0 4rem 0 0; transition: all .3s ease;  overflow: hidden; text-overflow:ellipsis;word-break: break-all; white-space: nowrap;
-            & + button.btn-delete{
-                i{color:#262626;}
-             }
+        &.on { color:#262626; font-weight:bold; transition: all .1s ease;border:1px solid #333333; background-color: #ffffff; border-bottom:.1rem solid #f9f9f9;
             &:after { left:0; width:100%; opacity: 1;}
         }
-        & + button.btn-delete { margin-right:1rem;  width: 2.4rem; height: 4.8rem; border-radius: 20rem; border:0px solid #eee;
-            i { font-size: 1.6rem; font-weight: 600;color:#eee;line-height: 4.8rem;}
-        }
     }
-
-    /* 좌우 버튼 */
-    button.arrow_left {width: 6rem;float: left;height: 4.8rem; color:#ddd;}
-    button.arrow_right {width: 6rem;height: 4.8rem; float: right;color:#ddd;}
 
     &.full a { max-width:initial}
 
@@ -198,6 +197,4 @@
         }
     }
 }
-[data-tab-cont=swiper] {overflow:hidden;}
-.tab-list-view { display:none;}
 

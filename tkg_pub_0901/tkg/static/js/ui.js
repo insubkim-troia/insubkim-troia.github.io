@@ -21,7 +21,7 @@ const common = {
   },
 
   lnb: function () {
-    const target = '.tkg-nav, .left-nav'; 
+    const target = '.hiddenbutton , .left-nav'; 
     const link = target + ' .lnb-link';
     const gnbBtn = target + ' .lnb-sidebar-btn';
 
@@ -1168,7 +1168,12 @@ const ui = {
 
 };
 
-  // 전체 splitter를 정의한다.
-jQuery(function($) {
-  $('#tkg-container').split({orientation:'vertical', position:'310px', limit:10});
-});
+  // 전체 splitter를 정의.
+  jQuery(function($) {
+    $('#tkg-container').split({orientation:'vertical', position:'310px', limit:10});
+    $('#tkg-splitter').split({orientation:'horizontal', limit:10});
+  });
+
+
+
+

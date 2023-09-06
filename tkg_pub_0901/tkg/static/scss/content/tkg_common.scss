@@ -116,9 +116,11 @@
                     .img + button {align-items: center;}    
                    
                 }
+                .lang {right: 18rem;position: absolute;}
                 .loginfo { margin-left:1rem; font-size:0;
                     button { font-size:1.2rem;}
                 }
+                .hiddenbutton {}
             }
         }
 
@@ -153,8 +155,14 @@
     }
 
     .lnb-sidebar-btn {position: fixed; top: 2.0rem; right: 4.2rem; display: flex; align-items: center; 
-        i {position: relative; display: inline-block; width: 3.2rem; height: 3.2rem; background: #dddddd; border-radius:20rem;
-            &:before {content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 2rem; height: 2rem; background: url(../images/common/icon_gnb.png) no-repeat center center;}
+        i {position: relative; display: inline-block; width: 3.2rem; height: 3.2rem; background: var(--color-eee); border-radius:20rem;
+            /* */
+            &:before {content: ''; position: absolute; top: 50%; left: 50%;  transform: translate(-50%, -50%)  rotate(180deg); width: 2rem; height: 2rem; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none'%3E%3Cg clip-path='url(%23clip0_16_1448)'%3E%3Cpath d='M7 10L12 15L17 10' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_16_1448'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") no-repeat center center / 2.4rem;} 
+            
+            /*
+            &:after{content:''; display:block; position:absolute; top: .1rem; left: .1rem; width:2.8rem; height:2.8rem; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cg clip-path='url(%23clip0_16_1448)'%3E%3Cpath d='M7 10L12 15L17 10' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_16_1448'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") no-repeat center center / 2.4rem; transition: all .3s ease;}
+            &.before { transform: rotate(180deg);}
+            */
         }
         span {padding-left: 1.2rem; font-size: 1.4rem; font-weight: 500; color: #aaa;}
     }
@@ -168,7 +176,7 @@
             ul {display: none; }
         }
         .lnb-sidebar-btn {
-            i:before {transform: translate(-50%, -50%) rotate(180deg);}
+            i:before {transform: translate(-50%, -50%) rotate(0deg);animation: 1s linear rotate;}
             span {display: none;}
         }
     }

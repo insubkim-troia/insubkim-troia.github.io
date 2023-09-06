@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" /> -->
+    <title>TKG All Wrap Frame</title>
+    <!---->
+    <link href="../../static/css/mdm.min.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="../../static/js/common.js"></script>
+    <script type="text/javascript" src="../../static/js/ui.js"></script>
+    <!--[if lt IE 9]>
+      <script type="text/javascript">
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('footer');
+      </script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const datepicker = document.querySelectorAll('.flatpickr');
+            datepicker.forEach(element => {
+            flatpickr(element,{
+                wrap: true
+            });
+            });
+        });
+        </script>
+
+    <!--스플리트-->    
+    <script src="https://unpkg.com/jquery.splitter/js/jquery.splitter.js"></script>
+    <!--[if IE]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- RealGrid 개발시 삭제 -->
+    <link href="../../static/realgrid/realgrid-style.css" rel="stylesheet" />
+    <script src="../../static/realgrid/realgrid-lic.js"></script>
+    <script src="../../static/realgrid/realgrid.2.6.3.min.js"></script>
+    <script src="../../static/realgrid/libs/jszip.min.js"></script>
+
+    <!-- RealGrid Custom 개발시 삭제 -->
+    <script src="../../static/realgrid/index.js"></script>
+
+    <script  rel="stylesheet">
+ jQuery(document).ready(function(){
+	//gnb
+	jQuery("#gnbt").hover(function(){
+		jQuery("#headert .twoDbg").stop(true, true).slideDown(200);
+		jQuery("#gnbt .twoD").stop(true, true).slideDown(200);
+		jQuery("#headert").addClass("bbshow");
+		jQuery(this).addClass("on");
+	}, function(){
+		jQuery("#headert .twoDbg").stop(true, true).slideUp(200);
+		jQuery("#gnbt .twoD").stop(true, true).slideUp(200);
+		jQuery("#headert").removeClass("bbshow");
+		jQuery(this).removeClass("on");
+	});
+
+	jQuery("#gnbt").focusin(function(){
+		jQuery("#headert .twoDbg").stop(true, true).slideDown(200);
+		jQuery("#gnbt .twoD").stop(true, true).slideDown(200);
+		jQuery("#headert").addClass("bbshow");
+		jQuery(this).addClass("on");
+	});
+
+	jQuery("#gnbt").focusout(function(){
+		jQuery("#headert .twoDbg").stop(true, true).slideUp(200);
+		jQuery("#gnbt .twoD").stop(true, true).slideUp(200);
+		jQuery("#headert").removeClass("bbshow");
+		jQuery(this).removeClass("on");
+	});
+	
+	jQuery("#gnbt .oneD").hover(function(){
+		jQuery(this).addClass("on");
+		jQuery(this).next().addClass("on");
+	}, function(){
+		jQuery(this).removeClass("on");
+		jQuery(this).next().removeClass("on");
+	});
+
+	jQuery("#gnbt .oneD").focusin(function(){
+		jQuery(this).addClass("on");
+		jQuery(this).next().addClass("on");
+	});
+
+	jQuery("#gnbt .oneD").focusout(function(){
+		jQuery(this).removeClass("on");
+		jQuery(this).next().removeClass("on");
+	});
+
+	jQuery("#gnbt .twoD").hover(function(){
+		jQuery(this).addClass("on");
+		jQuery(this).prev().addClass("on");
+	}, function(){
+		jQuery(this).removeClass("on");
+		jQuery(this).prev().removeClass("on");
+	});
+
+	jQuery("#gnbt .twoD").focusin(function(){
+		jQuery(this).addClass("on");
+		jQuery(this).prev().addClass("on");
+	});
+
+	jQuery("#gnbt .twoD").focusout(function(){
+		jQuery(this).removeClass("on");
+		jQuery(this).prev().removeClass("on");
+	});
+
+	jQuery("#gnbt .twoD a").hover(function(){
+		jQuery(this).addClass("on");
+	}, function(){
+		jQuery(this).removeClass("on");
+	});
+
+	jQuery("#gnbt .twoD a").focusin(function(){
+		jQuery(this).addClass("on");
+	});
+
+	jQuery("#gnbt .twoD a").focusout(function(){
+		jQuery(this).removeClass("on");
+	});
+
+
+
+});
+    </script>
+    
+  </head>
+  <body>
+  
+  <div id="tkg-wrap">
+
+    <!-- all wrap -->
+    <section id="tkg-all-wrap">
+     <!-- 상단 : GNB영역-->
+     <div class="tkg-nav" data-include="../include/guide_gnb.html">
+    </div>
+
+    <!-- 다른버젼 GNB-->
+    <div id="headert">
+      <div class="" id="gnbt">
+        <div class="item">
+        <a href="#" class="oneD"><span>Site</span></a>
+          <div  class="twoD">
+          <a href="#">Company</a>
+          <a href="#">Factory</a>
+          <a href="#">Plant</a>
+          <a href="#">Operation</a>
+          <a href="#">Time</a>
+          <a href="#">Site Move</a>
+          </div>
+        </div>
+
+        <div class="item">
+        <a href="#" class="oneD"><span>Model</span></a>
+          <div class="twoD two">
+          <a href="#">ISP</a>
+          <a href="#">ERP</a>
+          <a href="#">MES</a>
+          <a href="#">CMMS</a>
+          <a href="#">BIG DATA</a>
+          </div>
+        </div>
+        <div class="item">
+        <a href="#" class="oneD"><span>Reference</span></a>
+          <div  class="twoD">
+          <a href="#">Part Reference</a>
+          <a href="#">Size</a>
+          <a href="#">Gender</a>
+          <a href="#">UOM</a>
+          <a href="#">Color</a>
+          <a href="#">Defect</a>
+          <a href="#">MCS</a>
+          <a href="#">MOS</a>
+          </div>
+        </div>
+
+        <div class="item">
+          <a href="#" class="oneD"><span>Time</span></a>
+          <div  class="twoD fou">
+          <a href="#">USE CASE</a>
+          </div>
+        </div>
+
+        <div class="item">
+        <a href="#" class="oneD"><span>Partner</span></a>
+          <div  class="twoD">
+            <a href="#">USE CASE</a>
+          </div>
+        </div>
+
+        <div class="item">
+        <a href="#" class="oneD"><span>Governance</span></a>
+          <div  class="twoD">
+            <a href="#">USE CASE</a>
+            <a href="#">ERP</a>
+            <a href="#">MES</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="twoDbg"></div>
+    </div> 
+    <!-- //상단 : GNB영역-->
+
+      <!-- 컨텐츠 :  내가 클릭한 메뉴 열기탭 -->
+      <div id="tkg-footer">
+        <div id="footer">
+          <div class="tab-menu" data-tab-tit>
+            <button class="arrow_left"><i class="icon-caret-prev"></i></button>
+            <a href="#tabCont3-1" class="on">Company</a><button class="btn-delete"><i class="material-icons-round">close</i></button>
+            <a href="#tabCont3-2">Model Parmpppppppp</a><button class="btn-delete"><i class="material-icons-round">close</i></button>
+            <a href="#tabCont3-3">Part</a><button class="btn-delete"><i class="material-icons-round">close</i></button>
+            <a href="#tabCont3-4">UOM</a><button class="btn-delete"><i class="material-icons-round">close</i></button>
+            <a href="#tabCont3-5">Operation</a><button class="btn-delete"><i class="material-icons-round">close</i></button>
+            <button class="tab_all_close"><i class="icon-allclose"></i></button>
+            <button class="arrow_right"><i class="icon-caret-next"></i></button>
+          </div>
+          <div>
+            <div id="tabCont3-1" class="tab-cont">
+             <!-- 내용 : splitter영역 (검색 + 그리드 영역)-->
+
+             <!-- 컨텐츠 :  영역 -->
+            <div id="tkg-container">
+              <div id="splitter_l">
+                <!-- 검색영역 left-nav-->
+                <div class="left-search">
+                
+                  <div class="lnb-wrap">
+                    <div class="lnb-depth">
+                        <div class="tab-search" data-tab-tit>
+                            <a href="#tabCont1-1" class="on">Company</a>
+                            <a href="#tabCont1-2">Factory</a>
+                            <a href="#tabCont1-3">Plant</a>
+                        </div>
+                        
+                        <div class="tab-cont-wrap">
+                            <div id="tabCont1-1" class="tab-cont"  style="display: block">
+                                <!-- 검색조건_01 -->
+                                <div class="search-tree-wrap mt-10">
+                                    <ul class="depth1"> 
+                                    <li>
+                                        <div class="info">
+                                        <button class="tree-action">열림/닫기</button>
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="check1" /><label for="check1"><i></i>체크박스</label>
+                                        </div>
+                                        <a href="#">텍스트1 - 링크</a>
+                                        </div>
+                                        <ul class="depth2">
+                                        <li>
+                                            <div class="info">
+                                            <button class="tree-action">열림/닫기</button>
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="check1-1" /><label for="check1-1"><i></i>체크박스</label>
+                                            </div>
+                                            <a href="#">텍스트1-1 - 링크</a>
+                                            </div>
+                        
+                                            <ul class="depth3">
+                                            <li>
+                                                <div class="info">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="check1-1-1" /><label for="check1-1-1"><i></i>체크박스</label>
+                                                </div>
+                                                <a href="#">텍스트1-1-1 - 링크</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="info">
+                                                <a href="#">텍스트1-1-2 - 링크</a>
+                                                </div>
+                                            </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="info">
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="check1-2" /><label for="check1-2"><i></i>체크박스</label>
+                                            </div>
+                                            <a href="#">텍스트1-2 - 링크</a>
+                                            </div>
+                                        </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="info">
+                                        <button class="tree-action">열림/닫기</button>
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="check2" /><label for="check2"><i></i>체크박스</label>
+                                        </div>
+                                        <a href="#">텍스트2 - 링크</a>
+                                        </div>
+                                        <ul class="depth2">
+                                        <li>
+                                            <div class="info">
+                                            <button class="tree-action">열림/닫기</button>
+                                            <a href="#">텍스트2-1 - 링크</a>
+                                            </div>
+                        
+                                            <ul class="depth3">
+                                            <li>
+                                                <div class="info">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="check2-1-1" /><label for="check2-1-1"><i></i>체크박스</label>
+                                                </div>
+                                                <a href="#">텍스트2-1-1 - 링크</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="info">
+                                                <a href="#">텍스트2-1-2 - 링크</a>
+                                                </div>
+                                            </li>
+                                            </ul>
+                                        </li>
+                                        </ul>
+                                    </li>
+                                    </ul>
+                                </div>
+                                <!-- 검색조건_end -->
+
+                                <!-- 공통검색 start -->
+                                <div class="search-box2 mt-20" style="width: 240px; display: inline-block;">
+                                  <span style="display: inline-block; font-size: 2.8rem;letter-spacing: .2rem; font-weight: 600; color:#89C8C8; width: 100%; text-align: left;">Filter</span>  
+                                       
+                                </div> 
+                                <!-- 공통검색 end -->
+                                
+
+                                <!-- 검색조건 start -->
+                                <div class="flex-search mt-5">
+                                    <div style="font-size: 1.6rem; padding-bottom:5px;opacity: .8;  font-weight: 400; color: #fff;">Company</div>
+                                    <div>
+                                      <div class="select-box">
+                                        <select title="날짜 선택">
+                                          <option value="">날짜 선택</option>
+                                          <option value="1">1일</option>
+                                          <option value="2">2일</option>
+                                          <option value="3">3일</option>
+                                        </select>
+                                      </div> 
+                                    </div>                             
+                                </div>
+
+                                <div class="flex-search mt-25">
+                                  <div style="font-size: 1.6rem; padding-bottom:5px;opacity: .8; font-weight: 400; color: #fff;">사용여부</div>
+                                    <div class="flex grap-4">
+                                      <div class="radio">
+                                        <input type="radio" id="radio1" name="radioG1"><label for="radio1"><i></i>All</label>
+                                      </div>
+                                      <div class="radio">
+                                        <input type="radio" id="radio2" name="radioG1"><label for="radio2"><i></i>Y</label>
+                                      </div>
+                                      <div class="radio">
+                                        <input type="radio" id="radio3" name="radioG1" disabled  checked><label for="radio3"><i></i>N</label>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex-search mt-25">
+                                  <div style="font-size: 1.6rem; padding-bottom:5px;opacity: .8; font-weight: 400; color: #fff;">Filter Option</div>
+                                    <div class="flex grap-4">
+                                      <div class="checkbox">
+                                        <input type="checkbox" id="check1" name="radioG1" checked/><label for="check1"><i></i>All</label>
+                                      </div>
+                                      <div class="checkbox">
+                                        <input type="checkbox" id="check2" name="radioG1"/><label for="check2"><i></i>A</label>
+                                      </div>
+                                      <div class="checkbox">
+                                        <input type="checkbox" id="check3" name="radioG1"/><label for="check3"><i></i>P</label>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex-search mt-25">
+                                  <div style="font-size: 1.6rem; padding-bottom:5px;opacity: .8; font-weight: 400; color: #fff;">Factory Option</div>
+                                  <div class="flex grap-4">
+                                    <div class="input-box"><input type="text" value="" /></div>
+                                    <button class="button small" style="width: 8rem;">검색</button>                                    
+                                  </div>
+                              </div>
+
+                              <!-- 검색조건 end -->
+                              <div class="flex-search-btn t-c">
+                                  <button class="button small line">조회</button>
+                              </div>
+
+                            </div>
+                            <div id="tabCont1-2" class="tab-cont">탭메뉴2 내용</div>
+                            <div id="tabCont1-3" class="tab-cont">탭메뉴3 내용</div>
+                        </div>
+
+                    </div>
+                    
+                  </div> 
+      
+                </div>
+                <!--//검색영역 end-->
+
+              </div> 
+              <div id="splitter_r">
+                <div class="tkg-content-body">
+                  <div class="tkg-content">
+                    <!-- 컨텐츠 영역 -->
+                    <div class="page-tit">
+                      <h1>Plant</h1>
+                      <div class="ml-a">
+                        <!-- 경로 -->
+                        <div class="breadcrumb">
+                          <ul>
+                            <li>
+                              <span>Home</span>
+                            </li>
+                            <li>
+                              <i class="material-icons-round">chevron_right</i><span>Site</span>
+                            </li>
+                            <li>
+                              <i class="material-icons-round">chevron_right</i>
+                              <a href="#none"><span>Plant</span></a>
+                            </li>
+                            <li>
+                              <!-- 버튼 선택시 icon-line-star on 추가-->
+                              <button><i class="icon-line-star on"></i></button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 그리드 영역 -->
+                    <div class="gridwrap">
+                      <!-- 리얼그리드 소타이틀-->
+                      <div class="flex">
+                        <div class="col-2">
+                          <div class="w-p-50">
+                            <h2 class="tit-h2"><strong class="guide-line">Result</strong></h2>
+                            <p class="inlin-block ml-10">총 <span class="grid_total_number">3</span> 개</p>
+                          </div>
+                        </div>
+                        <div class="ml-a">
+                          <a href="#" class="button small2 line blac">SQL Viewer</a>
+                          <a href="#" class="button small2 line blac">엑셀 다운로드</a>
+                        </div>
+                      </div>
+ 
+                    
+                      <!--리얼그리드 영역-->
+                      <div id="realgrid"   class="readgridwrap"></div>
+
+                      <div class="flex mt-24">
+                        <div class="ml-a">
+                          <a href="#" class="button gridbtn gray">등록</a>
+                          <a href="#" class="button gridbtn gray">삭제</a>
+                          <a href="#" class="button gridbtn gray">저장</a>
+                          <a href="#" class="button gridbtn gray-box">확정</a>
+                        </div>
+                      </div>
+                      <!-- 그리드 페이징
+                      <div class="paging mt-24">
+                        <a href="#" class="btn-prev">이전</a>
+                        <strong>1</strong>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#" class="btn-next">다음</a>
+                      </div>-->
+
+                     
+                    </div>
+                    <!-- //컨텐츠 영역 -->
+
+
+                
+                  </div>
+                </div>
+                
+              </div>
+            </div> <!-- end of #spiltter -->
+            <div id="debug"></div>
+             <!-- //내용 : splitter영역 (검색 + 그리드 영역)-->
+            </div>
+            <div id="tabCont3-2" class="tab-cont">내가 클릭한 메뉴2 내용</div>
+            <div id="tabCont3-3" class="tab-cont">내가 클릭한 메뉴3 내용</div>
+            <div id="tabCont3-4" class="tab-cont">내가 클릭한 메뉴4 내용</div>
+            <div id="tabCont3-5" class="tab-cont">내가 클릭한 메뉴5 내용</div>
+          </div>
+            
+          </div>
+        </div>    
+      </div>      
+      <!-- //컨텐츠 :  내가 클릭한 메뉴 열기탭 -->
+    </section>
+  </div>
+
+</body>
+</html>

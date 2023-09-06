@@ -25,12 +25,12 @@
 
     }
     .info { display:flex; align-items: center; padding: .4rem 0;
-        .tree-action { display:block; position:relative; width:1.6rem; height:1.6rem; border:1px solid #000; border-radius: .4rem; font-size:0; background:#fff;
+        .tree-action { display:block; position:relative; width:1.6rem; height:1.6rem; border:.18rem solid #000; border-radius: .4rem; font-size:0; background:#fff;
             &:before { content:''; display:block; position:absolute; top:50%; left:50%; width:50%; height:.2rem; background:#000; transform: translate(-50%, -50%);}
             &:after { content:''; display:block; position:absolute; top:50%; left:50%; width:50%; height:.2rem; background:#000; transform: translate(-50%, -50%) rotate(90deg); transition: all .3s ease;}
 
-            &.on {
-                &:after { transform: translate(-50%, -50%) rotate(0deg);}
+            &.on {border:.18px solid #159B97; 
+                &:after { transform: translate(-50%, -50%) rotate(0deg);background:#159B97;}
             }
         }
         .checkbox { margin-left:.5rem;
@@ -39,7 +39,7 @@
                 i {width: 1.6rem; height: 1.6rem;}
             }
         }
-        a { margin-left:.5rem;}
+        a.link { margin-left:.5rem;}
     }
 } 
 
@@ -77,7 +77,7 @@
 
     }
     .info { display:flex; align-items: center; padding: .4rem 0;  margin-bottom: 1rem;
-        .tree-action { display:block; position:relative; width:2rem; height:2rem; border:2px solid #fff; border-radius: .6rem; font-size:0; 
+        .tree-action { display:block; position:relative; width:2rem; height:2rem; border:3px solid #fff; border-radius: .6rem; font-size:0; 
             &:before { content:''; display:block; position:absolute; top:50%; left:50%; width:50%; height:.2rem; background:#fff; transform: translate(-50%, -50%);}
             &:after { content:''; display:block; position:absolute; top:50%; left:50%; width:50%; height:.2rem; background:#fff; transform: translate(-50%, -50%) rotate(90deg); transition: all .3s ease;}
 
@@ -89,21 +89,21 @@
         .checkbox { line-height:0; margin-left:.4rem;
             > * { vertical-align: middle;}
             input { position:absolute; top: 0; left: 0; width: 0; height: 0; opacity:0;
-                &:checked + label i { border-color:var(--point-color); 
-                    &:after { border-color:transparent transparent #fff #fff; transform:translate(-50%, -50%) rotate(-45deg) scale(1);}
+                &:checked + label i { border-color:var(--color-white);  background-color: #fff;
+                    &:after { border-color:transparent transparent #05697a #05697a; transform:translate(-50%, -50%) rotate(-45deg) scale(1);}
                 }
-                &:checked + label:hover i { border-color:rgba(5, 105, 122, 1)}
+                &:checked + label:hover i { border-color:rgba(5, 105, 122, 1);}
         
                 &:disabled + label i { border-color:#ddd; background:#f8f8f8;}
                 &:disabled:checked + label i { border-color:transparent; background:rgba(221, 221, 221, 1);}
             }
             label { position:relative; display:inline-block; min-height:2rem; margin-right:.2rem; padding-left:2.6rem; font-size:0rem; color:#fff; cursor: pointer; line-height:1.5;
-                i { display:block; position: absolute; top:0; left:0; width:2rem; height:2rem; border-radius:0.6rem; border:2px solid #fff;  transition: all .3s ease;
-                    &:after { content:''; position:absolute; top:50%; left:50%; width:1rem; height:0.4rem; margin-top:-0.3rem; border:2px solid #fff; border-color:2px transparent #cccccc #cccccc; transform:translate(-50%, -50%) rotate(0deg) scale(0); transition: all .3s ease;;}
+                i { display:block; position: absolute; background-color: transparent; top:0; left:0; width:2rem; height:2rem; border-radius:0.6rem; border:3px solid #87C5C6;  transition: all .3s ease;
+                    &:after { content:''; position:absolute; top:50%; left:50%; width:1rem; height:0.4rem; margin-top:-0.3rem; border:2px solid #fff; border-color:3px transparent #fff #fff; transform:translate(-50%, -50%) rotate(0deg) scale(0); transition: all .3s ease;;}
                 }
         
                 &:hover {
-                    i { border-color:rgba(170, 170, 170, 1);}
+                    i { border-color:#fff;}
                 }
             }
             
