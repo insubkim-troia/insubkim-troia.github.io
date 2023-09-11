@@ -101,17 +101,36 @@
 
                       <!-- 검색조건 start -->
                       <div class="flex-search mt-25">
-                        <p>Company</p>
+                        <p>Part</p>
                         <div>
-                          <div class="select-box">
-                            <select title="선택">
-                              <option value="All">All</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                            </select>
-                          </div> 
+                          <div class="input-box">
+                            <input type="text" placeholder="입력">
+                          </div>
+                        </div>                                                            
+                      </div> 
+                      
+                      <div class="flex-search mt-25">
+                        <p>Part명</p>
+                        <div>
+                          <div class="input-box">
+                            <input type="text" placeholder="입력">
+                          </div>
+                        </div>                                                            
+                      </div> 
+
+                      <div class="flex-search mt-25">
+                        <p>Part그룹</p>
+                        <div class="flex grap-4">
+                          <div class="radio">
+                            <input type="radio" id="part01" name="part01"><label for="part01"><i></i>All</label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" id="part02" name="part01" checked><label for="part02"><i></i>UPART</label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" id="part03" name="part01"><label for="part03"><i></i>SPART</label>
+                          </div>
                         </div>
-                                                            
                       </div>
 
                       <div class="flex-search mt-25">
@@ -162,7 +181,7 @@
                   <div class="tkg-content">
                     <!-- 컨텐츠 영역 -->
                     <div class="page-tit">
-                      <h1>Company</h1>
+                      <h1>Part</h1>
                       <div class="ml-a">
                         <!-- 경로 -->
                         <div class="breadcrumb">
@@ -171,11 +190,11 @@
                               <span>Home</span>
                             </li>
                             <li>
-                              <i class="material-icons-round">chevron_right</i><span>SITE</span>
+                              <i class="material-icons-round">chevron_right</i><span>Reference</span>
                             </li>
                             <li>
                               <i class="material-icons-round">chevron_right</i>
-                              <a href="#none"><span>Company</span></a>
+                              <a href="#none"><span>Part</span></a>
                             </li>
                           </ul>
                         </div>
@@ -200,8 +219,6 @@
 
                       <div class="flex mt-24">
                         <div class="ml-a">
-                          <a href="#" class="button gridbtn gray">등록</a>
-                          <a href="#" class="button gridbtn gray">삭제</a>
                           <a href="#" class="button gridbtn gray">저장</a>
                           <a href="#" class="button gridbtn gray-box">확정</a>
                         </div>

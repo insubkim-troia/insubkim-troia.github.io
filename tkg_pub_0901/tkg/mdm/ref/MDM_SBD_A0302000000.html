@@ -99,21 +99,7 @@
                       </div> 
                       <!-- 공통검색 end -->
 
-                      <!-- 검색조건 start -->
-                      <div class="flex-search mt-25">
-                        <p>Company</p>
-                        <div>
-                          <div class="select-box">
-                            <select title="선택">
-                              <option value="All">All</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                            </select>
-                          </div> 
-                        </div>
-                                                            
-                      </div>
-
+                      <!-- 검색조건 start -->                      
                       <div class="flex-search mt-25">
                         <p>사용</p>
                         <div class="flex grap-4">
@@ -128,26 +114,8 @@
                           </div>
                         </div>
                       </div>
-
-                      <div class="flex-search mt-25">
-                        <p>확정</p>
-                        <div class="flex grap-4">
-                          <div class="radio">
-                            <input type="radio" id="check4" name="radioG2" checked/><label for="check4"><i></i>All</label>
-                          </div>
-                          <div class="radio">
-                            <input type="radio" id="check5" name="radioG2"/><label for="check5"><i></i>P</label>
-                          </div>
-                          <div class="radio">
-                            <input type="radio" id="check6" name="radioG2"/><label for="check6"><i></i>Y</label>
-                          </div>
-                          <div class="radio">
-                            <input type="radio" id="check7" name="radioG2"/><label for="check7"><i></i>N</label>
-                          </div>
-                        </div>
-                      </div>
-
                       <!-- 검색조건 end -->
+
                       <div class="flex-search-btn t-c">
                         <button class="button small line">조회</button>
                       </div>
@@ -162,7 +130,7 @@
                   <div class="tkg-content">
                     <!-- 컨텐츠 영역 -->
                     <div class="page-tit">
-                      <h1>Company</h1>
+                      <h1>Size</h1>
                       <div class="ml-a">
                         <!-- 경로 -->
                         <div class="breadcrumb">
@@ -171,11 +139,11 @@
                               <span>Home</span>
                             </li>
                             <li>
-                              <i class="material-icons-round">chevron_right</i><span>SITE</span>
+                              <i class="material-icons-round">chevron_right</i><span>Reference</span>
                             </li>
                             <li>
                               <i class="material-icons-round">chevron_right</i>
-                              <a href="#none"><span>Company</span></a>
+                              <a href="#none"><span>Size</span></a>
                             </li>
                           </ul>
                         </div>
@@ -192,16 +160,13 @@
                             <p class="inlin-block ml-10">총 <span class="grid_total_number">3</span> 개</p>
                           </div>
                         </div>
-                      </div>
- 
+                      </div> 
                     
                       <!--리얼그리드 영역-->
                       <div id="realgrid" class="readgridwrap"></div>
 
                       <div class="flex mt-24">
                         <div class="ml-a">
-                          <a href="#" class="button gridbtn gray">등록</a>
-                          <a href="#" class="button gridbtn gray">삭제</a>
                           <a href="#" class="button gridbtn gray">저장</a>
                           <a href="#" class="button gridbtn gray-box">확정</a>
                         </div>
@@ -215,7 +180,42 @@
                         <a href="#">4</a>
                         <a href="#">5</a>
                         <a href="#" class="btn-next">다음</a>
-                      </div>-->                     
+                      </div>-->          
+                      
+                      <!-- 그리드에서 항목 선택시 노출 -->
+                      <div>
+                        <!-- 리얼그리드 소타이틀-->
+                        <div class="flex mt-40">
+                          <div class="col-2">
+                              <div class="w-p-50">
+                                <h2 class="tit-h2"><strong class="guide-line">Detail</strong></h2>
+                                <p class="inlin-block ml-10">총 <span class="grid_total_number">3</span> 개</p>
+                              </div>
+                          </div>                                
+                        </div>   
+
+                        <!--리얼그리드 영역-->
+                        <div id="realgrid2"  class="readgridwrap"></div>
+
+                        <div class="flex mt-24">
+                          <div class="ml-a">
+                            <a href="#" class="button gridbtn gray">삭제</a>
+                            <a href="#" class="button gridbtn gray">등록</a>                            
+                          </div>
+                        </div>
+                        <!-- 그리드 페이징
+                        <div class="paging mt-24">
+                        <a href="#" class="btn-prev">이전</a>
+                        <strong>1</strong>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#" class="btn-next">다음</a>
+                        </div>-->
+                      </div>
+                      <!-- //그리드에서 항목 선택시 노출 -->
+                      
                     </div>
                     <!-- //컨텐츠 영역 -->                
                   </div>
