@@ -7,7 +7,7 @@ THEME : Realgrid light(Default)
   font-size: 12px;
   color: #000000;
   background: #FFFFFF;
-  -webkit-appearance: none;
+/*  -webkit-appearance: none;*/
   outline: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
