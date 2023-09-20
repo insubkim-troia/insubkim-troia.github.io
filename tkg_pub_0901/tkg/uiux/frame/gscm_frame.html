@@ -138,77 +138,99 @@
   <div id="tkg-wrap">
 
     <!-- all wrap -->
-    <section id="tkg-all-wrap">
-     <!-- 상단 : GNB영역-->
-     <div class="tkg-nav" data-include="../include/guide_gnb.html">
-    </div>
+    <section id="tkg-all-wrap">     
+     <div class="tkg-nav" data-include="../include/guide_gnb.html"></div>
 
-    <!-- 다른버젼 GNB-->
-    <div id="headert">
-      <div class="" id="gnbt">
-        <div class="item">
-        <a href="#" class="oneD"><span>Site</span></a>
-          <div  class="twoD">
-          <a href="#">Company</a>
-          <a href="#">Factory</a>
-          <a href="#">Plant</a>
-          <a href="#">Operation</a>
-          <a href="#">Time</a>
-          <a href="#">Site Move</a>
+      <!-- GNB -->
+      <div id="headert">
+        <div class="" id="gnbt">
+          <div class="item">
+          <a href="#" class="oneD"><span>Order</span></a>
+            <div  class="twoD">
+              <a href="#">Order Analysis</a>
+              <a href="#">Order Allocation</a>
+            </div>
           </div>
-        </div>
 
-        <div class="item">
-        <a href="#" class="oneD"><span>Model</span></a>
-          <div class="twoD two">
-          <a href="#">ISP</a>
-          <a href="#">ERP</a>
-          <a href="#">MES</a>
-          <a href="#">CMMS</a>
-          <a href="#">BIG DATA</a>
+          <div class="item">
+          <a href="#" class="oneD"><span>Biz Plan</span></a>
+            <div class="twoD two">
+              <a href="#">Biz Plan Status</a>
+              <a href="#">Order FCST</a>          
+            </div>
           </div>
-        </div>
-        <div class="item">
-        <a href="#" class="oneD"><span>Reference</span></a>
-          <div  class="twoD">
-          <a href="#">Part Reference</a>
-          <a href="#">Size</a>
-          <a href="#">Gender</a>
-          <a href="#">UOM</a>
-          <a href="#">Color</a>
-          <a href="#">Defect</a>
-          <a href="#">MCS</a>
-          <a href="#">MOS</a>
-          </div>
-        </div>
 
-        <div class="item">
-          <a href="#" class="oneD"><span>Time</span></a>
-          <div  class="twoD fou">
-          <a href="#">USE CASE</a>
+          <div class="item">
+            <a href="#" class="oneD"><span>Sales Plan</span></a>
+            <div  class="twoD">
+              <a href="#">DPO/Demand</a>
+              <a href="#">Biz Plan Analysis(Sales)</a>
+              <a href="#">YoY Analysis</a>
+            </div>
           </div>
-        </div>
 
-        <div class="item">
-        <a href="#" class="oneD"><span>Partner</span></a>
-          <div  class="twoD">
-            <a href="#">USE CASE</a>
+          <div class="item">
+            <a href="#" class="oneD"><span>PSI</span></a>
+            <div  class="twoD fou">
+              <a href="#">PSI Result</a>
+              <a href="#">Biz Plan Analysis(PSI)</a>
+            </div>
           </div>
-        </div>
 
-        <div class="item">
-        <a href="#" class="oneD"><span>Governance</span></a>
-          <div  class="twoD">
-            <a href="#">USE CASE</a>
-            <a href="#">ERP</a>
-            <a href="#">MES</a>
+          <div class="item">
+            <a href="#" class="oneD"><span>Prod Plan</span></a>
+            <div  class="twoD">
+              <a href="#">Biz Plan Analysis(Prod)</a>
+              <a href="#">DPO/Demand Analysis</a>
+            </div>
           </div>
-        </div>
 
-      </div>
-      <div class="twoDbg"></div>
-    </div> 
-    <!-- //상단 : GNB영역-->
+          <div class="item">
+            <a href="#" class="oneD"><span>Short</span></a>
+            <div  class="twoD">
+              <a href="#">Short Status</a>            
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="#" class="oneD"><span>Inventory</span></a>
+            <div  class="twoD">
+              <a href="#">Inv. Status</a>  
+              <a href="#">Set Inv. Status</a>            
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="#" class="oneD"><span>Inventory</span></a>
+            <div  class="twoD">
+              <a href="#">Inv. Status</a>  
+              <a href="#">Set Inv. Status</a>            
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="#" class="oneD"><span>Cost</span></a>
+            <div  class="twoD">
+              <a href="#">Avg. Price</a>
+              <a href="#">Model Price</a>
+              <a href="#">Make Up</a>  
+              <a href="#">Make Up Cost</a>                 
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="#" class="oneD"><span>Profit</span></a>
+            <div  class="twoD">
+              <a href="#">Profit by Season</a>
+              <a href="#">Contributon Profit</a>
+              <a href="#">Profitability by Model</a>  
+              <a href="#">Profitability by New Model</a>                 
+            </div>
+          </div>        
+        </div>
+        <div class="twoDbg"></div>
+      </div> 
+      <!-- //GNB -->
 
       <!-- 컨텐츠 :  내가 클릭한 메뉴 열기탭 -->
       <div id="tkg-footer">
@@ -235,183 +257,79 @@
                 
                   <div class="lnb-wrap">
                     <div class="lnb-depth">
-                        <div class="tab-search" data-tab-tit>
-                            <a href="#tabCont1-1" class="on">Company</a>
-                            <a href="#tabCont1-2">Factory</a>
-                            <a href="#tabCont1-3">Plant</a>
+                      <!-- 공통검색 start -->
+                      <div class="search-box">
+                        <div class="input-box">
+                          <p>Search</p>
+                        </div>              
+                      </div>
+                      <!-- 공통검색 end -->
+
+                      <!-- 검색조건 start -->
+                      <div class="flex-search mt-25">
+                        <p>Company</p>
+                        <div>
+                          <div class="select-box">
+                            <select title="선택">
+                              <option value="All">All</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                            </select>
+                          </div> 
                         </div>
-                        
-                        <div class="tab-cont-wrap">
-                            <div id="tabCont1-1" class="tab-cont"  style="display: block">
-                                <!-- 검색조건_01 -->
-                                <div class="search-tree-wrap mt-10">
-                                    <ul class="depth1"> 
-                                    <li>
-                                        <div class="info">
-                                        <button class="tree-action">열림/닫기</button>
-                                        <div class="checkbox">
-                                            <input type="checkbox" id="check1" /><label for="check1"><i></i>체크박스</label>
-                                        </div>
-                                        <a href="#">텍스트1 - 링크</a>
-                                        </div>
-                                        <ul class="depth2">
-                                        <li>
-                                            <div class="info">
-                                            <button class="tree-action">열림/닫기</button>
-                                            <div class="checkbox">
-                                                <input type="checkbox" id="check1-1" /><label for="check1-1"><i></i>체크박스</label>
-                                            </div>
-                                            <a href="#">텍스트1-1 - 링크</a>
-                                            </div>
-                        
-                                            <ul class="depth3">
-                                            <li>
-                                                <div class="info">
-                                                <div class="checkbox">
-                                                    <input type="checkbox" id="check1-1-1" /><label for="check1-1-1"><i></i>체크박스</label>
-                                                </div>
-                                                <a href="#">텍스트1-1-1 - 링크</a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="info">
-                                                <a href="#">텍스트1-1-2 - 링크</a>
-                                                </div>
-                                            </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <div class="info">
-                                            <div class="checkbox">
-                                                <input type="checkbox" id="check1-2" /><label for="check1-2"><i></i>체크박스</label>
-                                            </div>
-                                            <a href="#">텍스트1-2 - 링크</a>
-                                            </div>
-                                        </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <div class="info">
-                                        <button class="tree-action">열림/닫기</button>
-                                        <div class="checkbox">
-                                            <input type="checkbox" id="check2" /><label for="check2"><i></i>체크박스</label>
-                                        </div>
-                                        <a href="#">텍스트2 - 링크</a>
-                                        </div>
-                                        <ul class="depth2">
-                                        <li>
-                                            <div class="info">
-                                            <button class="tree-action">열림/닫기</button>
-                                            <a href="#">텍스트2-1 - 링크</a>
-                                            </div>
-                        
-                                            <ul class="depth3">
-                                            <li>
-                                                <div class="info">
-                                                <div class="checkbox">
-                                                    <input type="checkbox" id="check2-1-1" /><label for="check2-1-1"><i></i>체크박스</label>
-                                                </div>
-                                                <a href="#">텍스트2-1-1 - 링크</a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="info">
-                                                <a href="#">텍스트2-1-2 - 링크</a>
-                                                </div>
-                                            </li>
-                                            </ul>
-                                        </li>
-                                        </ul>
-                                    </li>
-                                    </ul>
-                                </div>
-                                <!-- 검색조건_end -->
+                                                            
+                      </div>
 
-                                <!-- 공통검색 start -->
-                                <div class="search-box2 mt-20" style="width: 240px; display: inline-block;">
-                                  <span style="display: inline-block; font-size: 2.8rem;letter-spacing: .2rem; font-weight: 600; color:#89C8C8; width: 100%; text-align: left;">Filter</span>  
-                                       
-                                </div> 
-                                <!-- 공통검색 end -->
-                                
-
-                                <!-- 검색조건 start -->
-                                <div class="flex-search mt-5">
-                                    <div style="font-size: 1.6rem; padding-bottom:5px;opacity: .8;  font-weight: 400; color: #fff;">Company</div>
-                                    <div>
-                                      <div class="select-box">
-                                        <select title="날짜 선택">
-                                          <option value="">날짜 선택</option>
-                                          <option value="1">1일</option>
-                                          <option value="2">2일</option>
-                                          <option value="3">3일</option>
-                                        </select>
-                                      </div> 
-                                    </div>                             
-                                </div>
-
-                                <div class="flex-search mt-25">
-                                  <div style="font-size: 1.6rem; padding-bottom:5px;opacity: .8; font-weight: 400; color: #fff;">사용여부</div>
-                                    <div class="flex grap-4">
-                                      <div class="radio">
-                                        <input type="radio" id="radio1" name="radioG1"><label for="radio1"><i></i>All</label>
-                                      </div>
-                                      <div class="radio">
-                                        <input type="radio" id="radio2" name="radioG1"><label for="radio2"><i></i>Y</label>
-                                      </div>
-                                      <div class="radio">
-                                        <input type="radio" id="radio3" name="radioG1" disabled  checked><label for="radio3"><i></i>N</label>
-                                      </div>
-                                    </div>
-                                </div>
-
-                                <div class="flex-search mt-25">
-                                  <div style="font-size: 1.6rem; padding-bottom:5px;opacity: .8; font-weight: 400; color: #fff;">Filter Option</div>
-                                    <div class="flex grap-4">
-                                      <div class="checkbox">
-                                        <input type="checkbox" id="check1" name="radioG1" checked/><label for="check1"><i></i>All</label>
-                                      </div>
-                                      <div class="checkbox">
-                                        <input type="checkbox" id="check2" name="radioG1"/><label for="check2"><i></i>A</label>
-                                      </div>
-                                      <div class="checkbox">
-                                        <input type="checkbox" id="check3" name="radioG1"/><label for="check3"><i></i>P</label>
-                                      </div>
-                                    </div>
-                                </div>
-
-                                <div class="flex-search mt-25">
-                                  <div style="font-size: 1.6rem; padding-bottom:5px;opacity: .8; font-weight: 400; color: #fff;">Factory Option</div>
-                                  <div class="flex grap-4">
-                                    <div class="input-box"><input type="text" value="" /></div>
-                                    <button class="button small" style="width: 8rem;">검색</button>                                    
-                                  </div>
-                              </div>
-
-                              <!-- 검색조건 end -->
-                              <div class="flex-search-btn t-c">
-                                  <button class="button small line">조회</button>
-                              </div>
-
-                            </div>
-                            <div id="tabCont1-2" class="tab-cont">탭메뉴2 내용</div>
-                            <div id="tabCont1-3" class="tab-cont">탭메뉴3 내용</div>
+                      <div class="flex-search mt-25">
+                        <p>사용</p>
+                        <div class="flex grap-4">
+                          <div class="radio">
+                            <input type="radio" id="radio1" name="radioG1"><label for="radio1"><i></i>All</label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" id="radio2" name="radioG1" checked><label for="radio2"><i></i>Y</label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" id="radio3" name="radioG1"><label for="radio3"><i></i>N</label>
+                          </div>
                         </div>
+                      </div>
 
-                    </div>
-                    
+                      <div class="flex-search mt-25">
+                        <p>확정</p>
+                        <div class="flex grap-4">
+                          <div class="radio">
+                            <input type="radio" id="check4" name="radioG2" checked/><label for="check4"><i></i>All</label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" id="check5" name="radioG2"/><label for="check5"><i></i>P</label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" id="check6" name="radioG2"/><label for="check6"><i></i>Y</label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" id="check7" name="radioG2"/><label for="check7"><i></i>N</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- 검색조건 end -->
+                      <div class="flex-search-btn t-c">
+                        <button class="button small line">조회</button>
+                      </div>
+                    </div>                    
                   </div> 
       
                 </div>
                 <!--//검색영역 end-->
-
               </div> 
+
               <div id="splitter_r">
                 <div class="tkg-content-body">
                   <div class="tkg-content">
                     <!-- 컨텐츠 영역 -->
                     <div class="page-tit">
-                      <h1>Plant</h1>
+                      <h1>Order</h1>
                       <div class="ml-a">
                         <!-- 경로 -->
                         <div class="breadcrumb">
@@ -420,15 +338,11 @@
                               <span>Home</span>
                             </li>
                             <li>
-                              <i class="material-icons-round">chevron_right</i><span>Site</span>
+                              <i class="material-icons-round">chevron_right</i><span>Order</span>
                             </li>
                             <li>
                               <i class="material-icons-round">chevron_right</i>
-                              <a href="#none"><span>Plant</span></a>
-                            </li>
-                            <li>
-                              <!-- 버튼 선택시 icon-line-star on 추가-->
-                              <button><i class="icon-line-star on"></i></button>
+                              <a href="#none"><span>Order Analysis</span></a>
                             </li>
                           </ul>
                         </div>
@@ -445,15 +359,11 @@
                             <p class="inlin-block ml-10">총 <span class="grid_total_number">3</span> 개</p>
                           </div>
                         </div>
-                        <div class="ml-a">
-                          <a href="#" class="button small2 line blac">SQL Viewer</a>
-                          <a href="#" class="button small2 line blac">엑셀 다운로드</a>
-                        </div>
                       </div>
  
                     
                       <!--리얼그리드 영역-->
-                      <div id="realgrid"   class="readgridwrap"></div>
+                      <div id="realgrid" class="readgridwrap"></div>
 
                       <div class="flex mt-24">
                         <div class="ml-a">
@@ -472,17 +382,11 @@
                         <a href="#">4</a>
                         <a href="#">5</a>
                         <a href="#" class="btn-next">다음</a>
-                      </div>-->
-
-                     
+                      </div>-->                     
                     </div>
-                    <!-- //컨텐츠 영역 -->
-
-
-                
+                    <!-- //컨텐츠 영역 -->                
                   </div>
-                </div>
-                
+                </div>                
               </div>
             </div> <!-- end of #spiltter -->
             <div id="debug"></div>
