@@ -20740,7 +20740,7 @@ font {
   display: inline-flex;
   flex: 1 0 auto;
   line-height: 2.8rem;
-  padding: 0 4rem 0 0.2rem;
+  padding: 0 4rem 0 2.4rem;
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-all;
@@ -20775,10 +20775,19 @@ font {
   opacity: 0;
   transition: all 0.3s ease;
 }
+.tab-menu a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.1rem;
+  height: 100%;
+  background: #eee;
+}
 .tab-menu a.on {
   color: #262626;
   font-weight: bold;
-  padding: 0 4rem 0 0;
   transition: all 0.3s ease;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -20795,16 +20804,16 @@ font {
 }
 .tab-menu a + button.btn-delete {
   margin-right: 1rem;
-  width: 2.4rem;
-  height: 4.8rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 20rem;
-  border: 0px solid #eee;
+  border: 0.1rem solid #eee;
 }
 .tab-menu a + button.btn-delete i {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #eee;
-  line-height: 4.8rem;
+  line-height: 1.3;
 }
 .tab-menu a + button.btn-delete i:hover {
   color: var(--tab-close);
@@ -20823,6 +20832,7 @@ font {
 }
 .tab-menu button + button.arrow_right {
   float: right;
+  border-left: 0.1rem solid #eee;
 }
 .tab-menu button + button.tab_all_close {
   float: right;

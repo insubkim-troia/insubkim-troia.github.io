@@ -15636,6 +15636,7 @@ body.scrollLock {
 
 .readgridwrap {
   height: 57.9vh;
+  background: url("../images/common/gridsample.png") no-repeat center center/100%;
 }
 
 /* 전체 Wrap */

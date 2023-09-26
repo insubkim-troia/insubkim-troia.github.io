@@ -21950,6 +21950,7 @@ body.scrollLock {
 
 .readgridwrap {
   height: 57.9vh;
+  background: url("../images/common/gridsample.png") no-repeat center center/100%;
 }
 
 /* 전체 Wrap */
@@ -23474,7 +23475,7 @@ header.over #gnb .dep2 {
 }
 .lnb-close #tkg-all-wrap .tkg-nav .lnb-sidebar-btn i:before {
   transform: translate(-50%, -50%) rotate(0deg);
-  animation: 1s linear infinite rotate;
+  animation: 1s linear rotate;
 }
 .lnb-close #tkg-all-wrap .tkg-nav .lnb-sidebar-btn span {
   display: none;
