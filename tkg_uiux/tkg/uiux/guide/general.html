@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" /> -->
+    <title>TKG 퍼블리싱 가이드</title>
+    <link href="../../static/css/ui.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../static/js/common.js"></script>
+    <script type="text/javascript" src="../../static/js/ui.js"></script>
+    <!--[if lt IE 9]>
+      <script type="text/javascript">
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('footer');
+      </script>
+    <![endif]-->
+
+    <!-- 가이드 전용 -->
+    <link rel="stylesheet" href="../../static/css/a11y-dark.min.css">
+    <script src="../../static/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <!--
+      <pre><code class="language-xml"></code></pre>
+    -->
+    <!-- //가이드 전용 -->
+  </head>
+  <body>
+    <div id="tkg-wrap">
+      <!-- 헤더영역 -->
+      <header id="tkg-header-wrap" data-include="../include/header.html"></header>
+      <!-- //헤더영역 -->
+  
+      <!-- 컨텐츠 영역 -->
+      <section id="tkg-container">
+        <div class="left-nav" data-include="../include/nav.html"></div>
+        <div class="tkg-content-body">
+          <div class="tkg-content">
+            <div class="page-tit">
+              <h1>기본 코딩 가이드 - 작업전</h1>
+            </div>
+  
+            <h2 class="tit-h2"><strong class="guide-line">DocType & Meta - 공통관리</strong></h2>
+            <pre><code class="language-xml" style="height: 60px;">
+&lt;!doctype&quot;html&quot;&gt;</code>
+            </pre>
+
+            <h2 class="tit-h2"><strong class="guide-line">charset utf-8</strong></h2>
+            <div class="Gbox">
+              <div class="flex">
+                <!-- 설명 -->
+                <div class="Gbox_in">
+                  <ul >
+                    <li>- <span>html, css, js 관련파일</span>: utf-8 인코딩</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+            <h2 class="tit-h2"><strong class="guide-line">Font</strong></h2>
+            <div class="Gbox">
+              <div class="flex">
+                <!-- 설명 -->
+                <div class="Gbox_in">
+                  <ul >
+                    <li>- <span>Color </span>: #333333(default)</li>
+                    <li>- <span>point Color </span>: #4285f4, #f44336, #000000</li>
+                    <li>- <span>size (default) </span>: 13px</li>
+                    <li>- <span>font (Noto Sans : 3가지 사용) </span>: font-family:"NotoKR","맑은 고딕","돋움",dotum,sans-serif;<br />
+                      <span></span> (기본) NotoSansKR-Regular : font-family:"NotoKR";<br />
+                      <span></span> (bold) <em style="font-weight:bold">NotoSansKR-Medium</em> : font-weight:bold;<br />
+                      <span></span> (사용빈도수 적음) <em style="font-family:'NotoKR_D'">NotoSansKR-DemiLight</em> : font-family:"NotoKR_D";<br />
+                    </li>
+                </div>
+
+              </div>
+            </div>
+
+            <h2 class="tit-h2"><strong class="guide-line">Html File Name 규칙</strong></h2>
+            <div class="Gbox">
+              <div class="flex">
+                <!-- 설명 -->
+                <div  class="Gbox_in">
+                  <ul>
+                    <li>- Channel + 업무 디렉토리명 + 메뉴 기준 index + 용도</li>
+                </div>
+
+              </div>
+            </div>
+
+            
+            <h2 class="tit-h2"><strong class="guide-line">image -네이밍</strong></h2>
+            <div class="Gbox">
+              <div class="flex">
+                <!-- 설명 -->
+                <div class="Gbox_in">
+                  <ul >
+                    <li>* 자유롭게 네이밍 하되 특정 prefix등을 사용하여 그룹별로 묶일수 있는 네이밍 권장</li>
+                    <li>- <span>title</span>: _tit_</li>
+                    <li>- <span>background</span>: bg_</li>
+                    <li>- <span>icon</span>: ico_</li>
+                    <li>- <span>bullet</span>: dot_ , arr_ , bar_ </li>
+                    <li>- <span>button</span>: btn_</li>
+                    <li>- <span>tab</span>: _tab_</li>
+                </div>
+
+              </div>
+            </div>
+            
+            
+            <h2 class="tit-h2"><strong class="guide-line">class -네이밍 (camel 기법사용)</strong></h2>
+            <div class="Gbox">
+              <div class="flex">
+                <!-- 설명 -->
+                <div class="Gbox_in">
+                  <ul >
+                    <li>* 자유롭게 네이밍 하되 특정 prefix등을 사용하여 그룹별로 묶일수 있는 네이밍 권장</li>
+                    <li>- <span>wrap</span>: wrapInquery / wrapTabs / wrapDefualList</li>
+                    <li>- <span>title</span>: titPage / titForm / titCont</li>
+                    <li>- <span>txt</span>: txtStar / txtInfo</li>
+                    <li>- <span>list</span>: listDefault / listInputForm</li>
+                    <li>- <span>icon</span>: icoBank / icoWon</li>
+                    <li>- <span>bullet</span>: dotBlue / dotGray , arrUp / arrDown  </li>
+                    <li>- <span>button</span>: btnDefault / btnFormInner</li>
+                    <li>- <span>tab</span>: tabFull / tabLine</li>
+                </div>
+
+              </div>
+            </div>
+
+            <h2 class="tit-h2"><strong class="guide-line">directory 정보</strong></h2>
+            <div class="Gbox">
+              <div class="flex">
+                <!-- 설명 -->
+                <div>
+                  <table class="mlist" cellspacing="0" cellpadding="0">
+                    <thead>
+                      <tr>
+                        <th>directory</th>
+                        <th>folder</th>
+                        <th>file name</th>
+                        <th>용도</th>
+                      </tr>
+                    </thead>
+                    <tbody>						
+                      <tr>
+                        <td colspan="2">./css/</td>
+                        <td>common.css<br /></td>
+                        <td>공통ui 기본</td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">./fonts/</td>
+                        <td>
+                          NotoSansKR-Bold.eot<br />
+                          NotoSansKR-Bold.woff<br />
+                          NotoSansKR-DemiLight.eot<br />
+                          NotoSansKR-DemiLight.woff<br />
+                          NotoSansKR-Light.eot<br />
+                          NotoSansKR-Light.woff<br />
+                          NotoSansKR-Medium.eot<br />
+                          NotoSansKR-Medium.woff<br />
+                          NotoSansKR-Regular.eot<br />
+                          NotoSansKR-Regular.woff
+                        </td>
+                        <td>웹폰트</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="3">./html/</td>
+                        <td>/backing/</td>
+                        <td>
+                          system html
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>/fund/</td>
+                        <td>
+                          site html
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>...</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td rowspan="4">./images/</td>
+                        <td>/common/</td>
+                        <td>
+                          공통 UI 이미지
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>/backing/</td>
+                        <td>
+                          뱅크 관련 이미지
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>/fund/</td>
+                        <td>
+                          펀드 관련 이미지
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>...</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">./js/</td>
+                        <td>
+                          jquery-1.9.1.min.js<br />
+                          ui.js<br />
+                        </td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- //컨텐츠 영역 -->
+  
+      <!-- 하단 영역 -->
+      <footer id="tkg-footer-wrap" data-include="../include/footer.html"></footer>
+      <!-- //하단 영역 -->
+    </div>
+  </body>
+</html>

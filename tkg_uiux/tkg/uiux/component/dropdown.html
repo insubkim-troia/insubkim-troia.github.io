@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" /> -->
+    <title>TKG 퍼블리싱 가이드</title>
+    <link href="../../static/css/ui.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../static/js/common.js"></script>
+    <script type="text/javascript" src="../../static/js/ui.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+      
+    <!--[if lt IE 9]>
+      <script type="text/javascript">
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('footer');
+      </script>
+    <![endif]-->
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        const datepicker = document.querySelectorAll('.flatpickr');
+        datepicker.forEach(element => {
+          flatpickr(element,{
+            wrap: true
+          });
+        });
+      });
+    </script>
+
+    <!-- 가이드 전용 -->
+    <link rel="stylesheet" href="../../static/css/a11y-dark.min.css">
+    <script src="../../static/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <!--
+      <pre><code class="language-xml"></code></pre>
+    -->
+    <!-- //가이드 전용 -->
+  </head>
+  <body>
+    <div id="tkg-wrap">
+      <!-- 헤더영역 -->
+      <header id="tkg-header-wrap" data-include="../include/header.html"></header>
+      <!-- //헤더영역 -->
+  
+      <!-- 컨텐츠 영역 -->
+      <section id="tkg-container">
+        <div class="left-nav" data-include="../include/nav.html"></div>
+        <div class="tkg-content-body">
+          <div class="tkg-content">
+            <div class="page-tit">
+              <h1>Dropdown</h1>
+            </div>
+  
+            <h2 class="tit-h2 mt-20"><strong class="guide-line">Dropdown</strong></h2>
+            <div class="Gbox">
+              <div class="line-box-in">
+                <div class="form-box">
+                  <div class="select-box">
+                    <select title="날짜 선택">
+                      <option value="">날짜 선택</option>
+                      <option value="1">1일</option>
+                      <option value="2">2일</option>
+                      <option value="3">3일</option>
+                    </select>
+                  </div>
+                </div>
+    
+                <p class="mt-15 mb-5">disabled</p>
+                <div class="form-box">
+                  <div class="select-box">
+                    <select title="날짜 선택">
+                      <option value="">날짜 선택</option>
+                      <option value="1">1일</option>
+                      <option value="2">2일</option>
+                      <option value="3">3일</option>
+                    </select>
+                  </div>
+                </div>
+    
+                <p class="mt-15 mb-5">에러 및 성공</p>
+                <div class="flex grap-5 mb-10">
+                  <button class="button errorBtn2">에러 버튼</button>
+                  <button class="button successBtn2">성공 버튼</button>
+                </div>
+                <div class="form-box">
+                  <div class="select-box">
+                    <select title="날짜 선택"  id="errorTest2">
+                      <option value="">날짜 선택</option>
+                      <option value="1">1일</option>
+                      <option value="2">2일</option>
+                      <option value="3">3일</option>
+                    </select>
+                  </div>
+                </div>
+                <script>
+                  $(function(){
+                    $(document).on('click','.errorBtn2',function(){
+                      ui.FM.error('#errorTest2', '에러메시지 입니다.');
+                      return false;
+                    });
+                    $(document).on('click','.successBtn2',function(){
+                      ui.FM.success('#errorTest2', '성공메시지 입니다.');
+                      return false;
+                    });
+                  });
+                </script>
+              </div>
+            </div>
+            <pre><code class="language-xml">
+  &lt;div class=&quot;select-box&quot;&gt;
+    &lt;select title=&quot;날짜 선택&quot;&gt;
+      &lt;option value=&quot;&quot;&gt;날짜 선택&lt;/option&gt;
+      &lt;option value=&quot;1&quot;&gt;1일&lt;/option&gt;
+      &lt;option value=&quot;2&quot;&gt;2일&lt;/option&gt;
+      &lt;option value=&quot;3&quot;&gt;3일&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;form-box&quot;&gt;
+    &lt;div class=&quot;select-box&quot;&gt;
+      &lt;select title=&quot;날짜 선택&quot;  id=&quot;errorTest2&quot;&gt;
+        &lt;option value=&quot;&quot;&gt;날짜 선택&lt;/option&gt;
+        &lt;option value=&quot;1&quot;&gt;1일&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;2일&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;3일&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+            </code></pre>
+            <pre class="mt-10"><code class="language-javascript">
+  /* javascript */
+  $(function(){
+    $(document).on('click','.errorBtn2',function(){
+      ui.FM.error('#errorTest2', '에러메시지 입니다.');
+      return false;
+    });
+    $(document).on('click','.successBtn2',function(){
+      ui.FM.success('#errorTest2', '성공메시지 입니다.');
+      return false;
+    });
+  });
+            </code></pre>
+  
+          </div>
+        </div>        
+      </section>
+      <!-- //컨텐츠 영역 -->
+      
+      <!-- 하단 영역 -->
+      <footer id="tkg-footer-wrap" data-include="../include/footer.html"></footer>
+      <!-- //하단 영역 -->
+    </div>
+  </body>
+</html>
+ 

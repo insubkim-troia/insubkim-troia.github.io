@@ -1,0 +1,120 @@
+.tree-wrap {
+    > ul {
+        ul { display:none;}
+        li { position:relative; padding-left:2.1rem;
+            &:before { content:''; display:block; position:absolute; top:0; left:.8rem; bottom:0; width:.1rem; background:transparent;}
+            &:after { content:''; display:block; position:absolute; top:1.7rem; left:.8rem; width:1.3rem; height:.1rem; background:transparent;}
+
+            &:last-child { 
+                &:before { bottom:1.5rem;}
+            }
+            &:first-child:last-child {
+                &:before { bottom:auto; height:1.7rem;}
+            }
+        }
+        > li { padding-left:0;
+            &:after { display:none;}
+
+            &:first-child {
+                &:before { top:1.5rem;}
+            }
+            &:last-child { 
+                &:before { bottom:auto; height:1.5rem;}
+            }
+        }
+
+    }
+    .info { display:flex; align-items: center; padding: .4rem 0;
+        .tree-action { display:block; position:relative; width:1.6rem; height:1.6rem; border:.18rem solid #000; border-radius: .4rem; font-size:0; background:#fff;
+            &:before { content:''; display:block; position:absolute; top:50%; left:50%; width:50%; height:.2rem; background:#000; transform: translate(-50%, -50%);}
+            &:after { content:''; display:block; position:absolute; top:50%; left:50%; width:50%; height:.2rem; background:#000; transform: translate(-50%, -50%) rotate(90deg); transition: all .3s ease;}
+
+            &.on {border:.18px solid #159B97; 
+                &:after { transform: translate(-50%, -50%) rotate(0deg);background:#159B97;}
+            }
+        }
+        .checkbox { margin-left:.5rem;
+            label {
+                min-height: 1.6rem; padding-left: 2.4rem; line-height: 1;
+                i {width: 1.6rem; height: 1.6rem;}
+            }
+        }
+        a.link { margin-left:.5rem;}
+    }
+} 
+
+/* 검색영역 트리 */
+.search-tree-wrap {
+    > ul {
+        ul { display:none;}
+        li { position:relative; padding-left:2.1rem; margin-bottom: 1rem;
+            &:before { content:''; display:block; position:absolute; top:0; left:.8rem; bottom:0; width:.1rem; background:transparent;}
+            &:after { content:''; display:block; position:absolute; top:1.7rem; left:.8rem; width:1.3rem; height:.1rem; background:transparent;}
+
+            &:last-child { 
+                &:before { bottom:1.5rem;}
+            }
+            &:first-child:last-child {
+                &:before { bottom:auto; height:1.7rem;}
+            }
+        }
+        > li { padding-left:0; 
+            &:after { display:none;}
+
+            &:first-child {
+                &:before { top:1.5rem;}
+            }
+            &:last-child { 
+                &:before { bottom:auto; height:1.5rem;}
+            }
+
+            a { color:#fff;padding-left: .4rem;}
+            a:link { color:#fff;}
+            a:hover { color:red; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+            
+
+        }
+
+    }
+    .info { display:flex; align-items: center; padding: .4rem 0;  margin-bottom: 1rem;
+        .tree-action { display:block; position:relative; width:2rem; height:2rem; border:3px solid #fff; border-radius: .6rem; font-size:0; 
+            &:before { content:''; display:block; position:absolute; top:50%; left:50%; width:50%; height:.2rem; background:#fff; transform: translate(-50%, -50%);}
+            &:after { content:''; display:block; position:absolute; top:50%; left:50%; width:50%; height:.2rem; background:#fff; transform: translate(-50%, -50%) rotate(90deg); transition: all .3s ease;}
+
+            &.on {
+                &:after { transform: translate(-50%, -50%) rotate(0deg);}
+            }
+        }
+        /* search area checkbox 재정의 */
+        .checkbox { line-height:0; margin-left:.4rem;
+            > * { vertical-align: middle;}
+            input { position:absolute; top: 0; left: 0; width: 0; height: 0; opacity:0;
+                &:checked + label i { border-color:var(--color-white);  background-color: #fff;
+                    &:after { border-color:transparent transparent #05697a #05697a; transform:translate(-50%, -50%) rotate(-45deg) scale(1);}
+                }
+                &:checked + label:hover i { border-color:rgba(5, 105, 122, 1);}
+        
+                &:disabled + label i { border-color:#ddd; background:#f8f8f8;}
+                &:disabled:checked + label i { border-color:transparent; background:rgba(221, 221, 221, 1);}
+            }
+            label { position:relative; display:inline-block; min-height:2rem; margin-right:.2rem; padding-left:2.6rem; font-size:0rem; color:#fff; cursor: pointer; line-height:1.5;
+                i { display:block; position: absolute; background-color: transparent; top:0; left:0; width:2rem; height:2rem; border-radius:0.6rem; border:3px solid #87C5C6;  transition: all .3s ease;
+                    &:after { content:''; position:absolute; top:50%; left:50%; width:1rem; height:0.4rem; margin-top:-0.3rem; border:2px solid #fff; border-color:3px transparent #fff #fff; transform:translate(-50%, -50%) rotate(0deg) scale(0); transition: all .3s ease;;}
+                }
+        
+                &:hover {
+                    i { border-color:#fff;}
+                }
+            }
+            
+            // &.small label { min-height:0.2rem; padding-left:2.8rem; margin-right:1rem; font-size:1.4rem;}
+            // &.small label i { top:0.2rem; width:2rem; height:2rem;
+            //     &:after { width:0.8rem; height:0.3rem;}
+            // }
+            
+            & + .checkbox { margin-top:.5rem;}
+            
+            &.noText label { padding-left:2.4rem; margin-right:0;}
+        }
+    }
+} 

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" /> -->
+    <title>TKG All Wrap Frame</title>
+    <link href="../../static/css/mdm.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../static/js/common.js"></script>
+    <script type="text/javascript" src="../../static/js/ui.js"></script>
+    <!--[if lt IE 9]>
+      <script type="text/javascript">
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('footer');
+      </script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const datepicker = document.querySelectorAll('.flatpickr');
+            datepicker.forEach(element => {
+            flatpickr(element,{
+                wrap: true
+            });
+            });
+        });
+        </script>
+
+    <!--스플리트-->    
+    <script src="https://unpkg.com/jquery.splitter/js/jquery.splitter.js"></script>
+    <!--[if IE]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+      
+
+    <!-- RealGrid 개발시 삭제 (샘플용) -->
+    <link href="../../static/realgrid/realgrid-style.css" rel="stylesheet" />
+    <script src="../../static/realgrid/realgrid-lic.js"></script>
+    <script src="../../static/realgrid/realgrid.2.6.3.min.js"></script>
+    <script src="../../static/realgrid/libs/jszip.min.js"></script>
+
+    <!-- RealGrid Custom 개발시 삭제 -->
+    <script src="../../static/realgrid/index.js"></script>
+  </head>
+
+<body>
+
+  <!-- 팝업 -->
+  <div id="pop2" class="layer-pop-wrap" style="visibility: visible; opacity: 1;">   <!-- 화면보여주기 위해 style 넣어두었음, 개발 시 style 삭제 -->
+    <div class="bg"></div>
+    <div class="layer-pop-cont" tabindex="0">
+      <div class="pop_title">
+        <h1>확정 <p class="t2">UOM</p></h1>          
+      </div>       
+      <div class="pop-cont">
+        <div class="pop_title">
+          <h2>확정 목록 <p class="inlin-block">(총 <span>3</span>개)</p></h2>
+        </div>
+        <div class="Popgridwrap"> 리얼 그리드 영역</div>
+        <p class="mt-10">상기 항목을 확정 하시겠습니까?</p> 
+        <div class="layer-btn">
+          <button class="button line  btn-pop-close">취소</button>
+          <button class="button  btn-submit">확인</button>
+      </div>
+      </div>
+    </div>
+  </div>
+  <!-- //팝업 -->
+
+</body>
+</html>  

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+		  TKG PJ Path
+		</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<style type="text/css">
+			@charset "utf-8";
+	
+			/*20190326 서세원 새창일때 상단 여백 추가*/
+			.wrap_mysystem {
+				width:1340px;margin:0 auto !important;
+			}
+	
+			/* Reset */
+			body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,select,p,th,td {margin:0;padding:0;/*font-size:12px;*/font-size:13px;} /* 2018-10-12 김용완 수정 */
+			body{ line-height:18px; color:#333333;
+			background: url(03.jpg) repeat-x  0 0 #3b3b3b; 
+			 /*font-family: Malgun Gothic,"맑은 고딕", Arial, "宋体", "MS Song", Tahoma, dotum;*/} /* 2018-10-12 김용완 중복 속성 제거 */
+			body * { font-family: Malgun Gothic,"맑은 고딕", Arial, "宋体", "MS Song", Tahoma, dotum; }
+			html {scrollbar-face-color:#ffffff;scrollbar-3dlight-color:#ffffff;scrollbar-highlight-color:#cccccc;scrollbar-shadow-color:#cccccc;scrollbar-darkshadow-color:#ffffff;scrollbar-arrow-color:#cccccc;scrollbar-track-color:#ffffff;}
+			input, select, textarea, span {/*font-size:12px;*/  vertical-align:middle;} /* 2018-10-12 김용완 수정 */
+			img,fieldset,iframe{border:0 none; vertical-align:middle;}
+			li{list-style:none}
+			em,address{font-style:normal}
+			table {border-collapse:collapse; border-spacing:0;}
+			table caption{display:none;}
+			legend {font-size:0 ;height:0; left:0; line-height:0; overflow:hidden; position:absolute; top:0; visibility:hidden ; width:0;}
+			textarea {overflow:auto;padding:3px 3px 2px;border:1px solid #aaaaaa;border-right-color:#d5d5d5;border-bottom-color:#d5d5d5;}
+			input[type="text"] {padding:3px 3px 0; height:15px;border:1px solid #aaaaaa;border-right-color:#d5d5d5;border-bottom-color:#d5d5d5;}
+			select {height:19px\9;height:20px;}
+			*:first-child+html select {height:auto}
+			select[multiple="multiple"] {height:auto;}
+			*:first-child+html input {margin:-1px 0}
+			/*input.checkbox {width:13px;height:13px;vertical-align:top;}*/
+			label {/*padding:0 8px 0 0;*/ padding-left:8px} /* 2018-10-12 김용완 수정 */
+			a {text-decoration:none;color:inherit;}
+			a:link {color:#333333; text-decoration:none;}
+			a:visited {color:#333333; text-decoration:none;}
+			a:hover {color:#ffffff;text-decoration:underline;}
+			a:active{color:#155186;text-decoration:none;}
+			.underline {text-decoration:underline;}
+			.line_through {text-decoration: line-through;}
+			.fl_clear {clear:both;} /* 2011-09-01 정인 추가  */
+	
+	
+			/* 나의 업무 - 나의 시스템 */
+			.sub_top_txt{
+				text-align:left;
+				font-size:14px;
+				margin-bottom:38px;
+			}
+			.tit_system{
+				background: url(tit_bg.png) no-repeat left 0;
+				margin-bottom:20px;
+				padding-left:30px;
+				color:#000;
+				font-size:20px;
+				font-weight: 800;
+				display: block;
+				height: 20px;
+				overflow: hidden; /*20181212*/
+				clear: both; /*20181212*/
+			}
+			/*
+			.box_wrap{width:1072px}
+			.box_wrap::after{
+				content: '';
+				display: block;
+				clear: both
+			}
+			*/
+			.box_wrap{ width:auto; margin: 0 -6px; }/*20181203*/
+			.box_wrap .tit_system { margin-left: 15px; color:#fff;}/*20181203*/
+			.box_wrap, .box_wrap * { box-sizing: border-box; }/*20181114*/
+			.box_wrap::after{ content: ''; display: block; clear: both }/*20181114*/
+			.box_wrap + .box_wrap{margin-top:50px}
+			/*
+			.box_wrap .box_left{float:left}
+			.box_wrap .box_right{float:right}
+			.box_link{
+				width: 458px;
+				height: 76px;
+				border-top:1px solid #444;
+				border-bottom:1px solid #c9c9c9;
+				border-left:1px solid #c9c9c9;
+				border-right:1px solid #c9c9c9;
+				overflow: hidden;
+				padding: 35px 34px;
+			}
+			*/
+			.box_wrap .box_left, .box_wrap .box_right{ float:left; width: 24.9%; padding: 0 12px; }/*20181114*//*20190130*/
+	
+			.linkbg1{background-color: #a3a4e0; opacity: 80%;  }/*20181114*/
+			.linkbg2{background-color: #ffffff;  opacity: 80%; }/*20181114*/
+			.linkbg3{background-color: #dddddd; opacity: 80%; }/*20181114*/
+	
+			.box_link{ position: relative; width: 100%; height: 160px;  border-top:1px solid #444; border-bottom:1px solid #c9c9c9; border-left:1px solid #c9c9c9; border-right:1px solid #c9c9c9; overflow: hidden; padding: 35px 34px;}/*20181114*/
+			.box_link:hover { cursor: pointer; box-shadow: 1px 8px 12px rgba(0,0,0,.3); border : 2px solid red;}
+			.box_link:hover:after {content: "";display: block;position: absolute;right: 31px;top: 31px;width: 15px;height: 15px;background: url(inlifepoint_ov2.png) no-repeat 0 0;}
+			.box_link:hover .tit_box a { text-decoration: underline; color: #006ecd; } /* 20190605 추가 */
+	
+			.box_link:hover p {color: #006ecd;}
+			.box_link + .box_link{margin-top:20px}
+			.box_link p{
+				width:100%;
+				text-align: left
+			}
+			.box_link .tit_box a{
+				font-size:20px;
+				color:#000;
+				text-align: left;
+				margin-bottom: 10px;
+				font-weight: 800;
+				line-height: 16px;
+				border-bottom: 1px solid transparent
+			}/*20190130*/
+	
+			.box_link .tit_box .new_window{
+				background: url(../images/business/tit_icon01.png) no-repeat  right center;
+				display:inline-block;
+				width:15px;
+				height:15px;
+				cursor:pointer;
+				vertical-align: top;
+				margin-top: 1px;
+				margin-left: 5px;
+			} /*20181203*/
+	
+			.box_link .tit_box a:hover { text-decoration: underline; color: #006ecd; }/*20190220*/
+			.box_link .tit_box .new_window:hover { background: url(../images/business/tit_icon01_ov.png) no-repeat  right center; }/*20190220*/
+			/*
+			.box_link a:hover,
+			.box_link a:focus{
+				color: #006ecd;
+				border-bottom: 1px solid #006ecd;
+			}20190130*/
+			.box_link a:focus{
+				color: #006ecd;
+				border-bottom: 1px solid #006ecd;
+			}/*20190130*/
+			.box_link p{
+				font-size: 13px;
+				color: #444;
+				line-height: 20px;
+				margin-top:16px
+			}/*20190130*/
+	
+	
+			
+	/*직무소개*/
+	.job{padding-top:100px;}
+	.inner > p{font-size:20px;text-align: center;padding:15px 0 78px;color:#777;}
+	.department{position: relative; }
+	.department ul{display:inline-block;padding: 0px 0 14px}
+	.department ul li{width:248px;height:248px;float: left;text-align: left;  border: 1px solid #72d49d;margin-right: 26px;margin-bottom:26px;background:#fff;}
+	.department ul li:nth-child(4n){margin-right:10px;}
+	.department ul li .department_ico{position:relative;padding: 50px 0 0;display: block;z-index: 2;}
+	.department ul li .department_ico img{max-height: 120px;}
+	.department ul li .department_type{position:relative;font-size: 22px;font-weight: bold;line-height: 25px;padding: 10px 0 0 20px;color:#666666;z-index: 2;}
+	.department ul li .department_type2{position:relative;font-size: 14px;line-height: 18px;padding: 20px 0 0 20px;color:#b9b9b9;z-index: 2;}
+	.department ul li .department_type3{position:relative;font-size: 14px;line-height: 18px;padding: 5px 0 0 20px;color:#b9b9b9;z-index: 2;}
+	.department ul li .department_type4{position:relative;font-size: 18px;line-height: 24px;padding: 5px 0 0 20px;color:#70aa72;z-index: 2;}
+	
+	.department ul li.ma .department_type{color: #70aa72}
+	.department ul li.fs .department_type{color:#52a289;}
+	.department ul li.staff .department_type{color: #6f8caa;}
+	.department ul li a{display: block;position:relative;width: 100%;height:100%;padding: 3px;box-sizing: border-box;;
+		-webkit-transition: all 0.3s ease-out;
+		-moz-transition: all 0.3s ease-out;
+		-ms-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+	}
+	.department ul li a:hover{box-shadow: 0 15px 34px -2px rgba(0, 0, 0, 0.4);}
+	.department ul li a:hover:before{content: "";position: absolute;width:250px;height:250px;top:0;left:0;
+		background: #74c3cb;
+		background-image: -webkit-linear-gradient(39deg, #72d49d, #74c3cb);
+		background-image: -moz-linear-gradient(39deg, #72d49d, #74c3cb);
+		background-image: -o-linear-gradient(39deg, #72d49d, #74c3cb);
+		background-image: linear-gradient(39deg, #72d49d, #74c3cb);
+	}
+	.department ul li a:hover:after{content: "";position: absolute;width:230px;height:230px;top:10px;left:10px;background-color: #ffffff;}
+	
+	
+	
+	#contents .section_top{overflow: hidden;}
+	#contents .section .inner{max-width: 1080px; margin:0 auto;}
+	#contents .section h3{color:#6b9c51;font-size: 32px;text-align: center; font-weight:bold;}
+	_top .back_container{background-image:url(../images/recruit/top_bg.jpg); background-position: 50% 50%;}
+	
+	.department ul li.done a {background:#72d49d;}
+	
+	p.tt {font-size:14px; color:#ef6540;font-weight: bold;padding-bottom: 10px;}
+	
+	
+		</style>
+	
+	
+	</head>
+	<body onload="init()">
+	<div class="wrap_800 wrap_mysystem">
+	
+		<!-- Title First -->
+		<!--<h3 class="title_first"><span id="lbltitle">나의 시스템</span></h3>-->
+		<p style="font-size: 52px; letter-spacing:-1px; font-weight:bold; padding:80px 0 20px 0;color:#fff;">
+				TKG GSCM PJ  path
+		</p>
+		<!-- //Title First -->
+		<!-- Info Text -->
+		<div id="community_portal_txt" style="padding:5px 0 40px 0;font-size:14px;color:#fff;">
+				업무 관련 시스템들을 한 곳에서 통합하여 관리하며 바로 해당URL 이동 할 수 있습니다.
+		</div>
+		<!-- //Info Text -->
+	
+	   
+		<div id="divBody" class="box_wrap">
+	
+			<!-- 첫번재 항목-->
+			<div style="padding: 5px 0 0 12px;">   </div>      
+			<div class='box_wrap' style='display:block'>
+				<h2 class="tit_system">가이드</h2>
+				
+				<!--1 열 -->
+				<!-- <div class='box_left'>
+					<div class="department">						
+						<ul>
+							<li class="ma idx_8">
+								<a href="design/cyan_01.html" target="_blank">
+									<span class="department_ico">
+									</span>
+									<div class="department_type"> TKG <br /> 최종디자인</div>
+									<div class="department_type2"> 2023.08~09(100%)/진행중</div>
+									<div class="department_type3"> 최종 디자인 화면리뷰</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>       -->
+	
+				<div class='box_left'>
+					<div class="department">
+						<!-- 년도별 프로젝트 //-->
+						<ul>
+							<li class="ma idx_8">
+								<a href="uiux/component/accodion.html" target="_blank">
+									<span class="department_ico">
+									</span>
+									<div class="department_type"> TKG <br /> 공통퍼블가이드</div>
+									<div class="department_type2"> 2023.08~09(1M)/진행중</div>
+									<div class="department_type3"> 컴퍼넌트 요소에 대한 공통 WSG가이드</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>     
+			   
+				<div class='box_left'>
+					<div class="department">
+						<!-- 년도별 프로젝트 //-->
+						<ul>
+							<li class="ma idx_8">
+								<a href="uiux/guide/structure_html.html" target="_blank">
+									<span class="department_ico">
+									</span>
+									<div class="department_type"> Frame <br />  Layout (공통)</div>
+									<div class="department_type2"> 2023.08~09(1M)/진행중</div>
+									<div class="department_type3"> 전체 레이아웃 Sample</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div> 
+				<!--
+				<div class='box_right'>
+					<div class='box_link linkbg2'>
+						<div class='tit_box'><a href='html/pbscd.html' target='_blank'>퍼블작업내역(이전)</a>
+						</div>
+						<p>이전 버젼의 퍼블작업내역으로 참고만 할것.</p>
+					</div>
+				</div>     
+				--> 
+				<!-- 2열 공백-->
+				<div style="padding-top: 180px;">   </div>
+			</div>
+	
+			
+		</div>
+	
+	
+	</div>
+	
+	
+	</body>
+	</html> 

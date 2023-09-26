@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/* breadcrumb */
+.breadcrumb {
+    ul {
+        li {
+            display: inline-block; font-size: 1.4rem; color: #dddddd;
+            a {
+                color: #aaaaaa;
+                &:hover {
+                    color: #444444;
+                }
+            }
+            i {
+                font-size: 2rem; vertical-align: middle;
+            }            
+        }
+    }
+}

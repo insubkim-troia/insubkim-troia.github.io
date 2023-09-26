@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" /> -->
+    <title>TKG 퍼블리싱 가이드</title>
+    <link href="../../static/css/ui.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../static/js/common.js"></script>
+    <script type="text/javascript" src="../../static/js/ui.js"></script>
+    <!--[if lt IE 9]>
+      <script type="text/javascript">
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('footer');
+      </script>
+    <![endif]-->
+
+    <!-- 가이드 전용 -->
+    <link rel="stylesheet" href="../../static/css/a11y-dark.min.css">
+    <script src="../../static/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <!--
+      <pre><code class="language-xml"></code></pre>
+    -->
+    <!-- //가이드 전용 -->
+  </head>
+  <body>
+    <div id="tkg-wrap">
+      <!-- 헤더영역 -->
+      <header id="tkg-header-wrap" data-include="../include/header.html"></header>
+      <!-- //헤더영역 -->
+  
+      <!-- 컨텐츠 영역 -->
+      <section id="tkg-container">
+        <div class="left-nav" data-include="../include/nav.html"></div>
+        <div class="tkg-content-body">
+          <div class="tkg-content">
+            <div class="page-tit">
+              <h1>Tab</h1>
+            </div>
+  
+            <h2 class="tit-h2 mt-30"><strong class="guide-line">탭 메뉴</strong></h2> 
+            <h3 class="tit-h3">data-tab-tit</h3> 
+            <div class="line-box">
+              <div class="tab-list" data-tab-tit>
+                <a href="#tabCont1-1" class="on">탭메뉴1</a>
+                <a href="#tabCont1-2">탭메뉴2</a>
+                <a href="#tabCont1-3">탭메뉴3</a>
+              </div>
+      
+              <div class="tab-cont-wrap">
+                <div id="tabCont1-1" class="tab-cont" style="display: block">탭메뉴1 내용</div>
+                <div id="tabCont1-2" class="tab-cont">탭메뉴2 내용</div>
+                <div id="tabCont1-3" class="tab-cont">탭메뉴3 내용</div>
+              </div>
+            </div>
+            <pre><code class="language-xml">
+  &lt;div class=&quot;tab-list&quot; data-tab-tit&gt;
+    &lt;a href=&quot;#tabCont1-1&quot; class=&quot;on&quot;&gt;탭메뉴1&lt;/a&gt;
+    &lt;a href=&quot;#tabCont1-2&quot;&gt;탭메뉴2&lt;/a&gt;
+    &lt;a href=&quot;#tabCont1-3&quot;&gt;탭메뉴3&lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;tab-cont-wrap&quot;&gt;
+    &lt;div id=&quot;tabCont1-1&quot; class=&quot;tab-cont&quot; style=&quot;display: block&quot;&gt;탭메뉴1 내용&lt;/div&gt;
+    &lt;div id=&quot;tabCont1-2&quot; class=&quot;tab-cont&quot;&gt;탭메뉴2 내용&lt;/div&gt;
+    &lt;div id=&quot;tabCont1-3&quot; class=&quot;tab-cont&quot;&gt;탭메뉴3 내용&lt;/div&gt;
+  &lt;/div&gt;
+            </code></pre>
+  
+            <h3 class="tit-h3">data-tab-style="type2"</h3>
+            <div class="line-box">  
+              <div class="tab-list" data-tab-tit data-tab-style="type2">
+                <a href="#tabCont3-1">탭메뉴1</a>
+                <a href="#tabCont3-2" class="on">탭메뉴2</a>
+                <a href="#tabCont3-3">탭메뉴3</a>
+                <a href="#tabCont3-4">탭메뉴4</a>
+                <a href="#tabCont3-5">탭메뉴5</a>
+              </div>
+      
+              <div class="tab-cont-wrap" data-tab-cont>
+                <div id="tabCont3-1" class="tab-cont">탭메뉴1 내용</div>
+                <div id="tabCont3-2" class="tab-cont">탭메뉴2 내용</div>
+                <div id="tabCont3-3" class="tab-cont">탭메뉴3 내용</div>
+                <div id="tabCont3-4" class="tab-cont">탭메뉴4 내용</div>
+                <div id="tabCont3-5" class="tab-cont">탭메뉴5 내용</div>
+              </div>
+            </div>
+            <pre><code class="language-xml">
+  &lt;div class=&quot;tab-list&quot; data-tab-tit data-tab-style=&quot;type2&quot;&gt;
+    &lt;a href=&quot;#tabCont3-1&quot;&gt;탭메뉴1&lt;/a&gt;
+    &lt;a href=&quot;#tabCont3-2&quot; class=&quot;on&quot;&gt;탭메뉴2&lt;/a&gt;
+    &lt;a href=&quot;#tabCont3-3&quot;&gt;탭메뉴3&lt;/a&gt;
+    &lt;a href=&quot;#tabCont3-4&quot;&gt;탭메뉴4&lt;/a&gt;
+    &lt;a href=&quot;#tabCont3-5&quot;&gt;탭메뉴5&lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;tab-cont-wrap&quot; data-tab-cont&gt;
+    &lt;div id=&quot;tabCont3-1&quot; class=&quot;tab-cont&quot;&gt;탭메뉴1 내용&lt;/div&gt;
+    &lt;div id=&quot;tabCont3-2&quot; class=&quot;tab-cont&quot;&gt;탭메뉴2 내용&lt;/div&gt;
+    &lt;div id=&quot;tabCont3-3&quot; class=&quot;tab-cont&quot;&gt;탭메뉴3 내용&lt;/div&gt;
+    &lt;div id=&quot;tabCont3-4&quot; class=&quot;tab-cont&quot;&gt;탭메뉴4 내용&lt;/div&gt;
+    &lt;div id=&quot;tabCont3-5&quot; class=&quot;tab-cont&quot;&gt;탭메뉴5 내용&lt;/div&gt;
+  &lt;/div&gt;
+            </code></pre>
+  
+            <h3 class="tit-h3">swiper</h3>
+            <div class="line-box">
+              <div class="tab-list" data-tab-tit>
+                <a href="#tabCont2-1" class="on">탭메뉴1</a>
+                <a href="#tabCont2-2">탭메뉴2</a>
+                <a href="#tabCont2-3">탭메뉴3</a>
+              </div>
+      
+              <div class="tab-cont-wrap" data-tab-cont="swiper">
+                <div class="swiper-wrapper">
+                  <div id="tabCont2-1" class="swiper-slide">탭메뉴1 내용</div>
+                  <div id="tabCont2-2" class="swiper-slide">탭메뉴2 내용</div>
+                  <div id="tabCont2-3" class="swiper-slide">탭메뉴3 내용</div>
+                </div>
+              </div>
+            </div>
+            <pre><code class="language-xml">
+  &lt;div class=&quot;tab-list&quot; data-tab-tit&gt;
+    &lt;a href=&quot;#tabCont2-1&quot; class=&quot;on&quot;&gt;탭메뉴1&lt;/a&gt;
+    &lt;a href=&quot;#tabCont2-2&quot;&gt;탭메뉴2&lt;/a&gt;
+    &lt;a href=&quot;#tabCont2-3&quot;&gt;탭메뉴3&lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;tab-cont-wrap&quot; data-tab-cont=&quot;swiper&quot;&gt;
+    &lt;div class=&quot;swiper-wrapper&quot;&gt;
+      &lt;div id=&quot;tabCont2-1&quot; class=&quot;swiper-slide&quot;&gt;탭메뉴1 내용&lt;/div&gt;
+      &lt;div id=&quot;tabCont2-2&quot; class=&quot;swiper-slide&quot;&gt;탭메뉴2 내용&lt;/div&gt;
+      &lt;div id=&quot;tabCont2-3&quot; class=&quot;swiper-slide&quot;&gt;탭메뉴3 내용&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+            </code></pre>
+            
+          </div>
+        </div>
+      </section>
+      <!-- //컨텐츠 영역 -->
+      
+      <!-- 하단 영역 -->
+      <footer id="tkg-footer-wrap" data-include="../include/footer.html"></footer>
+      <!-- //하단 영역 -->
+    </div>
+  </body>
+</html>
+ 

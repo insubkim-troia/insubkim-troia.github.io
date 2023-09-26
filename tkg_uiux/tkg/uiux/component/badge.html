@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" /> -->
+    <title>TKG 퍼블리싱 가이드</title>
+    <link href="../../static/css/ui.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../static/js/common.js"></script>
+    <script type="text/javascript" src="../../static/js/ui.js"></script>
+    <!--[if lt IE 9]>
+      <script type="text/javascript">
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('footer');
+      </script>
+    <![endif]-->
+
+    <!-- 가이드 전용 -->
+    <link rel="stylesheet" href="../../static/css/a11y-dark.min.css">
+    <script src="../../static/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <!--
+      <pre><code class="language-xml"></code></pre>
+    -->
+    <!-- //가이드 전용 -->
+  </head>
+  <body>
+    <div id="tkg-wrap">
+      <!-- 헤더영역 -->
+      <header id="tkg-header-wrap" data-include="../include/header.html"></header>
+      <!-- //헤더영역 -->
+  
+      <!-- 컨텐츠 영역 -->
+      <section id="tkg-container">
+        <div class="left-nav" data-include="../include/nav.html"></div>
+        <div class="tkg-content-body">
+          <div class="tkg-content">
+            <div class="page-tit">
+              <h1>Etc Element (Badge, 툴팁, Breadcrumb, chip) </h1>
+            </div>
+            <h2 class="tit-h2"><strong class="guide-line">Plain Badge</strong></h2>
+            <div class="line-box">
+              <div class="sample-box">
+                  <span class="badge type1"></span>
+              </div>            
+            </div>
+            <pre><code class="language-xml"  style="height: 70px;">
+  &lt;span class=&quot;badge type1&quot;&gt;&lt;/span&gt;
+            </code></pre>
+            
+            <h2 class="tit-h2 mt-40"><strong class="guide-line">Standard Badge</strong></h2>
+            <div class="line-box">
+              <div class="sample-box">
+                  <span class="badge type2">2</span>
+              </div>
+              <div class="sample-box">
+                  <span class="badge type2">88</span>
+              </div>
+              <div class="sample-box">
+                  <span class="badge type2">999+</span>
+              </div>
+            </div>
+            <pre ><code class="language-xml" style="height: 70px;">
+  &lt;span class=&quot;badge type2&quot;&gt;&lt;/span&gt;          
+            </code></pre>
+  
+
+            <h2 class="tit-h2 mt-30"><strong class="guide-line">툴팁 - 레이어 버젼</strong></h2>
+            <div class="Gbox">
+              <div class="line-box-in">
+                <div class="tooltip-wrap">
+                  <a href="#none" class="tooltip" role="button">자세한 내용 확인</a>
+                  <div class="tooltip-pop">
+                    <p class="tit">툴팁 타이틀</p>
+                    툴팁 내용이 들어감툴팁 내용이 들어감툴팁 내용이 들어감툴팁 내용이 들어감
+                    <a href="#" class="btn-close">닫기</a>
+                  </div>
+                </div>
+                <div class="t-c">
+                  <div class="tooltip-wrap">
+                    <a href="#none" class="tooltip" role="button">자세한 내용 확인</a>
+                    <div class="tooltip-pop">
+                      <p class="tit">툴팁 타이틀</p>
+                      툴팁 내용이 들어감툴팁 내용이 들어감툴팁 내용이 들어감툴팁 내용이 들어감
+                      <a href="#" class="btn-close">닫기</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="t-r">
+                  <div class="tooltip-wrap">
+                    <a href="#none" class="tooltip" role="button">자세한 내용 확인</a>
+                    <div class="tooltip-pop">
+                      <p class="tit">툴팁 타이틀</p>
+                      툴팁 내용이 들어감툴팁 내용이 들어감툴팁 내용이 들어감툴팁 내용이 들어감
+                      <a href="#" class="btn-close">닫기</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <pre><code class="language-xml">
+  &lt;div class=&quot;tooltip-wrap&quot;&gt;
+    &lt;a href=&quot;#none&quot; class=&quot;tooltip&quot; role=&quot;button&quot;&gt;자세한 내용 확인&lt;/a&gt;
+    &lt;div class=&quot;tooltip-pop&quot;&gt;
+      &lt;p class=&quot;tit&quot;&gt;툴팁 타이틀&lt;/p&gt;
+      툴팁 내용이 들어감툴팁 내용이 들어감툴팁 내용이 들어감툴팁 내용이 들어감
+      &lt;a href=&quot;#&quot; class=&quot;btn-close&quot;&gt;닫기&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+            </code></pre>
+  
+            
+            <h2 class="tit-h2 mt-40"><strong class="guide-line">Breadcrumb</strong></h2>
+            <div class="Gbox">
+              <div class="line-box-in">
+                <div class="breadcrumb">
+                  <ul>
+                    <li>
+                      <span>Breadcrumb</span>
+                    </li>
+                    <li>
+                      <i class="material-icons-round">chevron_right</i><span>Breadcrumb</span>
+                    </li>
+                    <li>
+                      <i class="material-icons-round">chevron_right</i><span>Breadcrumb</span>
+                    </li>
+                    <li>
+                      <i class="material-icons-round">chevron_right</i>
+                      <a href="#none"><span>Breadcrumb</span></a>
+                    </li>
+                    <li>
+                      <!-- 버튼 선택시 icon-line-star on 추가-->
+                      <button><i class="icon-line-star"></i></button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <pre><code class="language-xml">
+&lt;div class=&quot;breadcrumb&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;span&gt;Breadcrumb&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;i class=&quot;material-icons-round&quot;&gt;chevron_right&lt;/i&gt;&lt;span&gt;Breadcrumb&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;i class=&quot;material-icons-round&quot;&gt;chevron_right&lt;/i&gt;&lt;span&gt;Breadcrumb&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;i class=&quot;material-icons-round&quot;&gt;chevron_right&lt;/i&gt;
+      &lt;a href=&quot;#none&quot;&gt;&lt;span&gt;Breadcrumb&lt;/span&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+            </code></pre>
+  
+
+            <!-- chip -->
+            <h2 class="tit-h2 mt-40"><strong class="guide-line">chip - 28 Size</strong></h2>
+            <div class="Gbox">
+              <div class="line-box-in">
+                <span class="chip"><a href="#none">플래그</a><button class="btn-delete"><i class="material-icons-round">close</i></button></span>
+                <span class="chip disabled"><a href="#none">플래그 disabled</a><button class="btn-delete"><i class="material-icons-round">close</i></button></span>
+  
+                <span class="chip line"><a href="#none">플래그 (line)</a><button class="btn-delete"><i class="material-icons-round">close</i></button></span>
+                <span class="chip line disabled"><a href="#none">플래그 (line) disabled</a><button class="btn-delete"><i class="material-icons-round">close</i></button></span>
+              </div>
+              
+            </div>
+            <pre><code class="language-xml">
+&lt;span class=&quot;chip&quot;&gt;&lt;a href=&quot;#none&quot;&gt;&#54540;&#47000;&#44536;&lt;/a&gt;&lt;button class=&quot;btn-delete&quot;&gt;&lt;i class=&quot;material-icons-round&quot;&gt;close&lt;/i&gt;&lt;/button&gt;&lt;/span&gt;
+&lt;span class=&quot;chip disabled&quot;&gt;&lt;a href=&quot;#none&quot;&gt;&#54540;&#47000;&#44536; disabled&lt;/a&gt;&lt;button class=&quot;btn-delete&quot;&gt;&lt;i class=&quot;material-icons-round&quot;&gt;close&lt;/i&gt;&lt;/button&gt;&lt;/span&gt;
+
+&lt;span class=&quot;chip line&quot;&gt;&lt;a href=&quot;#none&quot;&gt;&#54540;&#47000;&#44536; (line)&lt;/a&gt;&lt;button class=&quot;btn-delete&quot;&gt;&lt;i class=&quot;material-icons-round&quot;&gt;close&lt;/i&gt;&lt;/button&gt;&lt;/span&gt;
+&lt;span class=&quot;chip line disabled&quot;&gt;&lt;a href=&quot;#none&quot;&gt;&#54540;&#47000;&#44536; (line) disabled&lt;/a&gt;&lt;button class=&quot;btn-delete&quot;&gt;&lt;i class=&quot;material-icons-round&quot;&gt;close&lt;/i&gt;&lt;/button&gt;&lt;/span&gt;
+            </code></pre>
+
+            <h2 class="tit-h2 mt-40"><strong class="guide-line">chip - 22 Size</strong></h2>
+            <div class="Gbox">
+              <div class="line-box-in">  
+                <span class="chip small"><a href="#none">플래그</a><button class="btn-delete"><i class="material-icons-round">close</i></button></span>
+                <span class="chip small disabled"><a href="#none">플래그</a><button class="btn-delete"><i class="material-icons-round">close</i></button></span>
+                
+                <span class="chip line small"><a href="#none">플래그 (line)</a><button class="btn-delete"><i class="material-icons-round">close</i></button></span>
+                <span class="chip line small disabled"><a href="#none">플래그 (line) disabled</a><button class="btn-delete"><i class="material-icons-round">close</i></button></span>
+              </div>
+            </div>
+            <pre><code class="language-xml">
+&lt;span class=&quot;chip small&quot;&gt;&lt;a href=&quot;#none&quot;&gt;&#54540;&#47000;&#44536;&lt;/a&gt;&lt;button class=&quot;btn-delete&quot;&gt;&lt;i class=&quot;material-icons-round&quot;&gt;close&lt;/i&gt;&lt;/button&gt;&lt;/span&gt;
+&lt;span class=&quot;chip small disabled&quot;&gt;&lt;a href=&quot;#none&quot;&gt;&#54540;&#47000;&#44536;&lt;/a&gt;&lt;button class=&quot;btn-delete&quot;&gt;&lt;i class=&quot;material-icons-round&quot;&gt;close&lt;/i&gt;&lt;/button&gt;&lt;/span&gt;
+
+&lt;span class=&quot;chip line small&quot;&gt;&lt;a href=&quot;#none&quot;&gt;&#54540;&#47000;&#44536; (line)&lt;/a&gt;&lt;button class=&quot;btn-delete&quot;&gt;&lt;i class=&quot;material-icons-round&quot;&gt;close&lt;/i&gt;&lt;/button&gt;&lt;/span&gt;
+&lt;span class=&quot;chip line small disabled&quot;&gt;&lt;a href=&quot;#none&quot;&gt;&#54540;&#47000;&#44536; (line) disabled&lt;/a&gt;&lt;button class=&quot;btn-delete&quot;&gt;&lt;i class=&quot;material-icons-round&quot;&gt;close&lt;/i&gt;&lt;/button&gt;&lt;/span&gt;
+            </code></pre>
+
+
+
+          </div>
+        </div>
+      </section>
+      <!-- //컨텐츠 영역 -->
+  
+      <!-- 하단 영역 -->
+      <footer id="tkg-footer-wrap" data-include="../include/footer.html"></footer>
+      <!-- //하단 영역 -->
+    </div>
+  </body>
+</html>

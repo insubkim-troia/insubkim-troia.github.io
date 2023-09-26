@@ -1,0 +1,194 @@
+<!-- 좌측 메뉴-->
+<!-- <button type="button" class="lnb-sidebar-btn">
+    <i class="icon-left-open"></i>
+    <span class="hidden">좌측 메뉴 닫기</span>
+</button> -->
+
+
+
+<div class="lnb-wrap">
+    <div class="lnb-depth">
+        <div class="tab-search" data-tab-tit>
+            <a href="#tabCont1-1" class="on">Company</a>
+            <a href="#tabCont1-2">Factory</a>
+            <a href="#tabCont1-3">Plant</a>
+        </div>
+        
+        <div class="tab-cont-wrap">
+            <div id="tabCont1-1" class="tab-cont"  style="display: block">
+                <!-- 검색조건_01 -->
+                <div class="tree-wrap">
+                    <ul class="depth1">
+                    <li>
+                        <div class="info">
+                        <button class="tree-action">열림/닫기</button>
+                        <div class="checkbox">
+                            <input type="checkbox" id="check1" /><label for="check1"><i></i>체크박스</label>
+                        </div>
+                        <a href="#">텍스트1 - 링크</a>
+                        </div>
+                        <ul class="depth2">
+                        <li>
+                            <div class="info">
+                            <button class="tree-action">열림/닫기</button>
+                            <div class="checkbox">
+                                <input type="checkbox" id="check1-1" /><label for="check1-1"><i></i>체크박스</label>
+                            </div>
+                            <a href="#">텍스트1-1 - 링크</a>
+                            </div>
+        
+                            <ul class="depth3">
+                            <li>
+                                <div class="info">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="check1-1-1" /><label for="check1-1-1"><i></i>체크박스</label>
+                                </div>
+                                <a href="#">텍스트1-1-1 - 링크</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                <a href="#">텍스트1-1-2 - 링크</a>
+                                </div>
+                            </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="info">
+                            <div class="checkbox">
+                                <input type="checkbox" id="check1-2" /><label for="check1-2"><i></i>체크박스</label>
+                            </div>
+                            <a href="#">텍스트1-2 - 링크</a>
+                            </div>
+                        </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="info">
+                        <button class="tree-action">열림/닫기</button>
+                        <div class="checkbox">
+                            <input type="checkbox" id="check2" /><label for="check2"><i></i>체크박스</label>
+                        </div>
+                        <a href="#">텍스트2 - 링크</a>
+                        </div>
+                        <ul class="depth2">
+                        <li>
+                            <div class="info">
+                            <button class="tree-action">열림/닫기</button>
+                            <a href="#">텍스트2-1 - 링크</a>
+                            </div>
+        
+                            <ul class="depth3">
+                            <li>
+                                <div class="info">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="check2-1-1" /><label for="check2-1-1"><i></i>체크박스</label>
+                                </div>
+                                <a href="#">텍스트2-1-1 - 링크</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                <a href="#">텍스트2-1-2 - 링크</a>
+                                </div>
+                            </li>
+                            </ul>
+                        </li>
+                        </ul>
+                    </li>
+                    </ul>
+                </div>
+                <!-- 검색조건_end -->
+
+                <!-- 공통검색 start -->
+                <div class="search-box">
+                    <div class="input-box">
+                    <label class="label" for="inp1">Title</label>
+                    <input type="text" id="inp1" placeholder="Insert" />
+                    <button class="btn-search">
+                        <span class="material-icons-round">search</span>
+                    </button>
+                    </div>              
+                </div> 
+                <!-- 공통검색 end -->
+
+                <!-- 검색조건 start -->
+                <div>
+                    <p>Company</p>
+                    <div class="form-box">
+                        <div class="select-box">
+                          <select title="날짜 선택">
+                            <option value="">날짜 선택</option>
+                            <option value="1">1일</option>
+                            <option value="2">2일</option>
+                            <option value="3">3일</option>
+                          </select>
+                        </div>
+                    </div>
+                    <script>
+                        $(function(){
+                          $(document).on('click','.errorBtn2',function(){
+                            ui.FM.error('#errorTest2', '에러메시지 입니다.');
+                            return false;
+                          });
+                          $(document).on('click','.successBtn2',function(){
+                            ui.FM.success('#errorTest2', '성공메시지 입니다.');
+                            return false;
+                          });
+                        });
+                      </script>
+                      
+                </div>
+
+                <div class="flex-search">
+                    <p>사용여부</p>
+                    <div class="flex grap-4">
+                      <div class="radio">
+                        <input type="radio" id="radio1" name="radioG1"><label for="radio1"><i></i>All</label>
+                      </div>
+                      <div class="radio">
+                        <input type="radio" id="radio2" name="radioG1"><label for="radio2"><i></i>Y</label>
+                      </div>
+                      <div class="radio">
+                        <input type="radio" id="radio3" name="radioG1" disabled  checked><label for="radio3"><i></i>N</label>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="flex-search mt-25">
+                    <p>확정여부</p>
+                    <div class="flex grap-4">
+                      <div class="radio">
+                        <input type="radio" id="radio4" name="radioG1"><label for="radio4"><i></i>All</label>
+                      </div>
+                      <div class="radio">
+                        <input type="radio" id="radio5" name="radioG1"><label for="radio5"><i></i>Y</label>
+                      </div>
+                      <div class="radio">
+                        <input type="radio" id="radio6" name="radioG1"><label for="radio6"><i></i>N</label>
+                      </div>
+                    </div>
+                </div>
+                <!-- 검색조건 end -->
+               
+                <div class="flex-search-btn t-c">
+                    <button class="button small line">적용</button>
+                </div>
+
+            </div>
+            <div id="tabCont1-2" class="tab-cont">탭메뉴2 내용</div>
+            <div id="tabCont1-3" class="tab-cont">탭메뉴3 내용</div>
+        </div>
+
+    </div>
+     
+</div> 
+<!-- -->
+<button type="button" class="lnb-sidebar-btn">
+    <i></i>
+    <span class="">Menu Close</span> 
+</button>  
+
+<script>
+</script>
+<!-- //좌측 메뉴-->

@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/* ========== 컨텐츠 공통 ============ */
+
+.page-tit { display:flex; padding:0 0 1rem; border-bottom:.1rem solid #dee2e6; margin-bottom:2rem; align-items: center;
+  h1 { font-size:2.3rem}
+}
+
+[class*=tit-h] { margin-bottom:1rem;}
+.tit-h1 { font-size:2.2rem;}
+.tit-h2 { font-size:1.8rem;
+  + .tit-h3 { margin-top:0; margin-left:2rem;}
+}
+.tit-h3 { margin-top:3rem; font-size:1.6rem;}
+.tit-h4 { font-size:1.5rem;}
+.tit-h5 { font-size:1.4rem;}
+
+.guide-line { position:relative; padding-left: 2rem; color: var(--guide-title);
+  &:before { content:''; display:block; position: absolute; width:1.4rem; top:.4rem; left:0rem; height:1.4rem; background:var(--guide-title)}
+}
+
+.line-box { padding:1rem; margin:1rem 0; border:1px solid #dee2e6; border-radius:.5rem;}
+.line-box-in { padding:1rem;}
+
+
+.guide-text { font-weight: bold;}
+.guide-text + .guide-text { margin-top:.5rem;}
+
+// @media screen and (max-width:1024px) {
+//   .tkg-content { flex:1 1 auto; padding:3rem 2rem;}
+// }
+
+/* ========== //컨텐츠 공통 ============ */
