@@ -305,3 +305,30 @@ function changeCSS(cssFile, cssLinkIndex) {
 
   document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
 }
+
+function setDropCallback() {
+  var checked = document.getElementById("checkbox_DropCallback").checked;
+  if (checked) {
+    gridView._view.dataDropOptions.callback = function (source, sourceItems, target, targetItem) {
+      for (var i = 0; i < sourceItems.length ; i++) {
+          var r = source.getDataRow(sourceItems[0]);
+          var ds = source.getDataSource();
+          var row = ds.getJsonRow(r);
+          if (targetItem >= target.getItemCount()) {
+              target.getDataSource().addRow(row);
+          } else {
+              r = target.getDataRow(targetItem);
+              target.getDataSource().insertRow(r, row);
+          }
+      }
+    }
+  } else {
+      gridView._view.dataDropOptions.callback = null;
+  }
+}
+
+function setDropMode(){
+  var dropMode = document.getElementById("dropMode").value
+  gridView.dataDropOptions.dropMode = dropMode;
+  
+}
