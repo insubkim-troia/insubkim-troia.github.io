@@ -38,6 +38,8 @@
     <![endif]-->
 
 
+      
+
     <!-- RealGrid 개발시 삭제 -->
     <link href="../../static/realgrid/realgrid-style.css" rel="stylesheet" />
     <script src="../../static/realgrid/realgrid-lic.js"></script>
@@ -45,8 +47,10 @@
     <script src="../../static/realgrid/libs/jszip.min.js"></script>
 
     <!-- RealGrid Custom 개발시 삭제 -->
-    <script src="../../static/realgrid/index.js"></script>   
+    <script src="../../static/realgrid/index.js"></script>
 
+    <script src="../../static/js/header_ui.js"></script>
+    <script src="../../static/js/header_template.js"></script>
   </head>
   <body>
   
@@ -54,7 +58,13 @@
 
     <!-- all wrap -->
     <section id="tkg-all-wrap">
-      <nav class="new-header" data-include="../include/mdm_header.html"></nav>
+     <!-- 상단 : GNB영역-->
+     <div class="tkg-nav" data-include="../include/guide_gnb.html">
+    </div>
+
+     <div data-include="../include/guide_menu.html">
+    </div>
+    <!-- //상단 : GNB영역-->
 
       <!-- 컨텐츠 :  내가 클릭한 메뉴 열기탭 -->
       <div id="tkg-footer">
@@ -68,7 +78,7 @@
             <a href="#tabCont3-5">Operation</a><button class="btn-delete"><i class="material-icons-round">close</i></button>
             <button class="arrow_right"><i class="icon-caret-next"></i></button>
           </div>
-          <div class="tab-cont-wrap">
+          <div>
             <div id="tabCont3-1" class="tab-cont">
              <!-- 내용 : splitter영역 (검색 + 그리드 영역)-->
 
@@ -76,12 +86,13 @@
             <div id="tkg-container">
               <div id="splitter_l">
                 <!-- 검색영역 left-nav-->
-                <div class="left-search">                
+                <div class="left-search">
+                
                   <div class="lnb-wrap">
                     <div class="lnb-depth">
                           <!-- 공통검색 start -->
                           <div class="search-box">
-                            <div class="input-box"> 
+                            <div class="input-box">
                               <p>Search</p>
                             </div>              
                         </div> 
@@ -133,6 +144,15 @@
                             </div>
                         </div>
 
+                        <div class="flex-search mt-25">
+                          <p>input + 검색</p>
+                          <div class="flex grap-4">
+                            <div class="input-box"><input type="text" value="" /></div>
+                            <button class="button small" style="width: 8rem;">검색</button>
+                            
+                          </div>
+                      </div>
+
                       <!-- 검색조건 end -->
                       <div class="flex-search-btn t-c">
                           <button class="button small line">조회</button>
@@ -142,9 +162,8 @@
       
                 </div>
                 <!--//검색영역 end-->
+
               </div> 
-
-
               <div id="splitter_r">
                 <div class="tkg-content-body">
                   <div class="tkg-content">
@@ -305,7 +324,7 @@
             <div id="debug"></div>
              <!-- //내용 : splitter영역 (검색 + 그리드 영역)-->
             </div>
-            <div id="tabCont3-2" class="tab-cont">내가 클릭한 메뉴3 내용</div>
+            <div id="tabCont3-2" class="tab-cont">내가 클릭한 메뉴2 내용</div>
             <div id="tabCont3-3" class="tab-cont">내가 클릭한 메뉴3 내용</div>
             <div id="tabCont3-4" class="tab-cont">내가 클릭한 메뉴4 내용</div>
             <div id="tabCont3-5" class="tab-cont">내가 클릭한 메뉴5 내용</div>
@@ -317,10 +336,6 @@
       <!-- //컨텐츠 :  내가 클릭한 메뉴 열기탭 -->
     </section>
   </div>
-
-
-
-
 
 </body>
 </html>
