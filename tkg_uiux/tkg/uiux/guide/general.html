@@ -66,17 +66,19 @@
                 <!-- 설명 -->
                 <div class="Gbox_in">
                   <ul >
-                    <li>- <span>Color </span>: #333333(default)</li>
-                    <li>- <span>point Color </span>: #4285f4, #f44336, #000000</li>
+                    <li>- <span>Color </span>: #000000(default)</li>
+                    <li>- <span>point Color </span>: #159B97, #6BD5DD , #FF8585 </li>
                     <li>- <span>size (default) </span>: 13px</li>
-                    <li>- <span>font (Noto Sans : 3가지 사용) </span>: font-family:"NotoKR","맑은 고딕","돋움",dotum,sans-serif;<br />
+                    <li>- <span>'Pretendard' font 사용 </span>: font-family: "Pretendard",sans-serif;<br />
                       <span></span> (기본) NotoSansKR-Regular : font-family:"NotoKR";<br />
-                      <span></span> (bold) <em style="font-weight:bold">NotoSansKR-Medium</em> : font-weight:bold;<br />
-                      <span></span> (사용빈도수 적음) <em style="font-family:'NotoKR_D'">NotoSansKR-DemiLight</em> : font-family:"NotoKR_D";<br />
+                      <span></span> (Light) <em style="font-weight:300">Pretendard Light</em> : font-weight:300;<br />
+                      <span></span> (Medium) <em style="font-weight:500">Pretendard Medium</em> : font-weight:500;<br />
+                      <span></span> (Bold) <em style="font-weight:700">Pretendard Bold</em> : font-weight:700;<br />
+                      <span></span> (Extra Bold) <em style="font-weight:800">Pretendard Extra Bold</em> : font-weight:800;<br />
                     </li>
                 </div>
 
-              </div>
+              </div> 
             </div>
 
             <h2 class="tit-h2"><strong class="guide-line">Html File Name 규칙</strong></h2>
@@ -85,7 +87,7 @@
                 <!-- 설명 -->
                 <div  class="Gbox_in">
                   <ul>
-                    <li>- Channel + 업무 디렉토리명 + 메뉴 기준 index + 용도</li>
+                    <li>- 기획에서 정의해준 화면ID + .html</li>
                 </div>
 
               </div>
@@ -98,7 +100,8 @@
                 <!-- 설명 -->
                 <div class="Gbox_in">
                   <ul >
-                    <li>* 자유롭게 네이밍 하되 특정 prefix등을 사용하여 그룹별로 묶일수 있는 네이밍 권장</li>
+                    <li>1. SVG사용, google material icon</li>
+                    <li>2. 자유롭게 네이밍 하되 특정 prefix등을 사용하여 그룹별로 묶일수 있는 네이밍 권장</li>
                     <li>- <span>title</span>: _tit_</li>
                     <li>- <span>background</span>: bg_</li>
                     <li>- <span>icon</span>: ico_</li>
@@ -111,123 +114,26 @@
             </div>
             
             
-            <h2 class="tit-h2"><strong class="guide-line">class -네이밍 (camel 기법사용)</strong></h2>
+            <h2 class="tit-h2"><strong class="guide-line">class 네이밍 (대시 기법사용)</strong></h2>
             <div class="Gbox">
               <div class="flex">
                 <!-- 설명 -->
                 <div class="Gbox_in">
                   <ul >
-                    <li>* 자유롭게 네이밍 하되 특정 prefix등을 사용하여 그룹별로 묶일수 있는 네이밍 권장</li>
-                    <li>- <span>wrap</span>: wrapInquery / wrapTabs / wrapDefualList</li>
-                    <li>- <span>title</span>: titPage / titForm / titCont</li>
-                    <li>- <span>txt</span>: txtStar / txtInfo</li>
-                    <li>- <span>list</span>: listDefault / listInputForm</li>
-                    <li>- <span>icon</span>: icoBank / icoWon</li>
-                    <li>- <span>bullet</span>: dotBlue / dotGray , arrUp / arrDown  </li>
-                    <li>- <span>button</span>: btnDefault / btnFormInner</li>
-                    <li>- <span>tab</span>: tabFull / tabLine</li>
+                    <li>1. 클래스명은 기본 “대시”표기법으로 사용한다.</li>
+                    <li>- input-box, title-box</li>
+                    <li>2. 클래스명명 규칙은 다음과 같다.</li>
+                    <li>- “구조명-상태(변화값)” : lnb-link</li>
+                    <li>- “css명-변화값” : mt-20</li>
+                    <li>3. 하나에 태그에 여러 개의 클래스 사용할 수 있다.</li>
+                    <li>4. Css에 제공하는 스타일 클래스의 경우 퍼블에서 제공하는 guide 페이지를 참고하여 작업한다.</li>
                 </div>
 
               </div>
             </div>
 
-            <h2 class="tit-h2"><strong class="guide-line">directory 정보</strong></h2>
-            <div class="Gbox">
-              <div class="flex">
-                <!-- 설명 -->
-                <div>
-                  <table class="mlist" cellspacing="0" cellpadding="0">
-                    <thead>
-                      <tr>
-                        <th>directory</th>
-                        <th>folder</th>
-                        <th>file name</th>
-                        <th>용도</th>
-                      </tr>
-                    </thead>
-                    <tbody>						
-                      <tr>
-                        <td colspan="2">./css/</td>
-                        <td>common.css<br /></td>
-                        <td>공통ui 기본</td>
-                      </tr>
-                      <tr>
-                        <td colspan="2">./fonts/</td>
-                        <td>
-                          NotoSansKR-Bold.eot<br />
-                          NotoSansKR-Bold.woff<br />
-                          NotoSansKR-DemiLight.eot<br />
-                          NotoSansKR-DemiLight.woff<br />
-                          NotoSansKR-Light.eot<br />
-                          NotoSansKR-Light.woff<br />
-                          NotoSansKR-Medium.eot<br />
-                          NotoSansKR-Medium.woff<br />
-                          NotoSansKR-Regular.eot<br />
-                          NotoSansKR-Regular.woff
-                        </td>
-                        <td>웹폰트</td>
-                      </tr>
-                      <tr>
-                        <td rowspan="3">./html/</td>
-                        <td>/backing/</td>
-                        <td>
-                          system html
-                        </td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>/fund/</td>
-                        <td>
-                          site html
-                        </td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>...</td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td rowspan="4">./images/</td>
-                        <td>/common/</td>
-                        <td>
-                          공통 UI 이미지
-                        </td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>/backing/</td>
-                        <td>
-                          뱅크 관련 이미지
-                        </td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>/fund/</td>
-                        <td>
-                          펀드 관련 이미지
-                        </td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>...</td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td colspan="2">./js/</td>
-                        <td>
-                          jquery-1.9.1.min.js<br />
-                          ui.js<br />
-                        </td>
-                        <td></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-              </div>
-            </div>
+          
+            
 
           </div>
         </div>

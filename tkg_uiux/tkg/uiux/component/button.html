@@ -72,15 +72,15 @@
 
             <h2 class="tit-h2 mt-40"><strong class="guide-line">버튼 정의</strong></h2>
             <div class="line-box">
+              <p class="mb-5">Light Mode</p>
               <div class="flex grap-4">
                 <a href="#" class="button">.button 정의 : a태그</a>
                 <button class="button">.button 정의 : button태그</button>
              
                 <a href="#" class="button line">.button.line : a태그</a>
-                <button class="button line">.button.line : button태그</button>
-                
+                <button class="button line">.button.line : button태그</button>                
               </div>
-            </div>
+            </div>            
             <pre><code class="language-xml" style="height: 70px;">
   &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;.button 정의 : a태그&lt;/a&gt;
   &lt;button class=&quot;button&quot;&gt;.button 정의 : button태그&lt;/button&gt;
@@ -88,9 +88,30 @@
   &lt;a href=&quot;#&quot; class=&quot;button line&quot;&gt;.button.line : a태그&lt;/a&gt;
   &lt;button class=&quot;button line&quot;&gt;.button.line : button태그&lt;/button&gt;
             </code></pre>
+
+            <div class="line-box">
+              <p class="mb-5">Dark Mode</p>
+              <!-- dark mode -->
+              <div class="flex grap-4" style="background: #05697A;">
+                <a href="#" class="button wh">.button 정의 : a태그</a>
+                <button class="button wh">.button 정의 : button태그</button>
+             
+                <a href="#" class="button wh line">.button.line : a태그</a>
+                <button class="button wh line">.button.line : button태그</button>                
+              </div>
+              <!-- //dark mode -->
+            </div>
+            <pre><code class="language-xml" style="height: 70px;">
+  &lt;a href=&quot;#&quot; class=&quot;button wh&quot;&gt;.button &#51221;&#51032; : a&#53468;&#44536;&lt;/a&gt;
+  &lt;button class=&quot;button wh&quot;&gt;.button &#51221;&#51032; : button&#53468;&#44536;&lt;/button&gt;
+
+  &lt;a href=&quot;#&quot; class=&quot;button wh line&quot;&gt;.button.line : a&#53468;&#44536;&lt;/a&gt;
+  &lt;button class=&quot;button wh line&quot;&gt;.button.line : button&#53468;&#44536;&lt;/button&gt;
+            </code></pre>
   
             <h2 class="tit-h2 mt-40"><strong class="guide-line">버튼 속성 정의 : disabled</strong></h2>
             <div class="line-box">
+              <p class="mb-5">Light Mode</p>
               <div class="flex grap-4">
                 <a href="#" class="button disabled">.disabled : a태그의 disabled</a>
                 <button class="button" disabled="disabled">:disabled : button태그의 disabled</button>
@@ -105,6 +126,24 @@
   
   &lt;a href=&quot;#&quot; class=&quot;button line disabled&quot;&gt;.disabled : a태그의 disabled&lt;/a&gt;
   &lt;button class=&quot;button line&quot; disabled=&quot;disabled&quot;&gt;:disabled : button태그의 disabled&lt;/button&gt;
+            </code></pre>
+
+            <div class="line-box">
+              <p class="mb-5">Dakr Mode</p>
+              <div class="flex grap-4" style="background: #05697A;">
+                <a href="#" class="button wh disabled">.disabled : a태그의 disabled</a>
+                <button class="button wh" disabled="disabled">:disabled : button태그의 disabled</button>
+
+                <a href="#" class="button wh line disabled">.disabled : a태그의 disabled</a>
+                <button class="button wh line" disabled="disabled">:disabled : button태그의 disabled</button>
+              </div>
+            </div>
+            <pre><code class="language-xml" style="height: 70px;">
+  &lt;a href=&quot;#&quot; class=&quot;button wh disabled&quot;&gt;.disabled : a&#53468;&#44536;&#51032; disabled&lt;/a&gt;
+  &lt;button class=&quot;button wh&quot; disabled=&quot;disabled&quot;&gt;:disabled : button&#53468;&#44536;&#51032; disabled&lt;/button&gt;
+
+  &lt;a href=&quot;#&quot; class=&quot;button wh line disabled&quot;&gt;.disabled : a&#53468;&#44536;&#51032; disabled&lt;/a&gt;
+  &lt;button class=&quot;button wh line&quot; disabled=&quot;disabled&quot;&gt;:disabled : button&#53468;&#44536;&#51032; disabled&lt;/button&gt;
             </code></pre>
   
             <h2 class="tit-h2 mt-40"><strong class="guide-line">버튼 사이즈 정의</strong></h2>

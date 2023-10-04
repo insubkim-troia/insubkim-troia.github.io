@@ -48,91 +48,6 @@
     <!-- RealGrid Custom 개발시 삭제 -->
     <script src="../../static/realgrid/index.js"></script>
 
-    
-    <script  rel="stylesheet">
-      jQuery(document).ready(function(){
-       //gnb
-       jQuery("#gnbt").hover(function(){
-         jQuery("#headert .twoDbg").stop(true, true).slideDown(200);
-         jQuery("#gnbt .twoD").stop(true, true).slideDown(200);
-         jQuery("#headert").addClass("bbshow");
-         jQuery(this).addClass("on");
-       }, function(){
-         jQuery("#headert .twoDbg").stop(true, true).slideUp(200);
-         jQuery("#gnbt .twoD").stop(true, true).slideUp(200);
-         jQuery("#headert").removeClass("bbshow");
-         jQuery(this).removeClass("on");
-       });
-     
-       jQuery("#gnbt").focusin(function(){
-         jQuery("#headert .twoDbg").stop(true, true).slideDown(200);
-         jQuery("#gnbt .twoD").stop(true, true).slideDown(200);
-         jQuery("#headert").addClass("bbshow");
-         jQuery(this).addClass("on");
-       });
-     
-       jQuery("#gnbt").focusout(function(){
-         jQuery("#headert .twoDbg").stop(true, true).slideUp(200);
-         jQuery("#gnbt .twoD").stop(true, true).slideUp(200);
-         jQuery("#headert").removeClass("bbshow");
-         jQuery(this).removeClass("on");
-       });
-       
-       jQuery("#gnbt .oneD").hover(function(){
-         jQuery(this).addClass("on");
-         jQuery(this).next().addClass("on");
-       }, function(){
-         jQuery(this).removeClass("on");
-         jQuery(this).next().removeClass("on");
-       });
-     
-       jQuery("#gnbt .oneD").focusin(function(){
-         jQuery(this).addClass("on");
-         jQuery(this).next().addClass("on");
-       });
-     
-       jQuery("#gnbt .oneD").focusout(function(){
-         jQuery(this).removeClass("on");
-         jQuery(this).next().removeClass("on");
-       });
-     
-       jQuery("#gnbt .twoD").hover(function(){
-         jQuery(this).addClass("on");
-         jQuery(this).prev().addClass("on");
-       }, function(){
-         jQuery(this).removeClass("on");
-         jQuery(this).prev().removeClass("on");
-       });
-     
-       jQuery("#gnbt .twoD").focusin(function(){
-         jQuery(this).addClass("on");
-         jQuery(this).prev().addClass("on");
-       });
-     
-       jQuery("#gnbt .twoD").focusout(function(){
-         jQuery(this).removeClass("on");
-         jQuery(this).prev().removeClass("on");
-       });
-     
-       jQuery("#gnbt .twoD a").hover(function(){
-         jQuery(this).addClass("on");
-       }, function(){
-         jQuery(this).removeClass("on");
-       });
-     
-       jQuery("#gnbt .twoD a").focusin(function(){
-         jQuery(this).addClass("on");
-       });
-     
-       jQuery("#gnbt .twoD a").focusout(function(){
-         jQuery(this).removeClass("on");
-       });
-     
-     
-     
-     });
-         </script>
-
   </head>
   <body>
   
@@ -140,118 +55,7 @@
 
     <!-- all wrap -->
     <section id="tkg-all-wrap">
-      <!-- 상단 : GNB영역-->
-      <div class="tkg-nav">
-        <div class="lnb-wrap">
-          <div class="header-top">
-            <h1>TKG</h1>
-            <div class="header-info">
-              <!--언어선택-->
-                <div class="lang">
-                  <ul class="user-menu">
-                    <li class="user-language">
-                        <a><i class="icon-global "></i> <span>KOR</span></a>
-                        <div class="user-language-lyr">
-                            <ul>
-                                <li data-locale="en_US">
-                                    <a href="#" class="">ENG</a>
-                                </li>
-                                <li data-locale="ko_KR">
-                                    <a href="#" class="active">KOR</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                  </ul>
-                </div>
-                 <!--사용자정보-->
-                <div class="user">
-                  <i></i>
-                    <a href="#none"><span class="img"></span></a>
-                    <a href="#none"><span class="name">홍 길동 님</span></a> 
-                </div>
-                <div class="hiddenbutton">
-                  <!--영역 show&hide-->
-                  <button type="button" class="lnb-sidebar-btn" style="z-index: 99999999 !important;">
-                    <i></i>
-                  </button>  
-                </div>               
-            </div>
-          </div> 
-        </div>
-        
-        
-      </div>
-      
-      <div class="tkgheader">
-        <!-- 다른버젼 GNB-->
-    <div id="headert">
-      <div class="" id="gnbt">
-        <div class="item">
-        <a href="#" class="oneD"><span>Site</span></a>
-          <div  class="twoD">
-          <a href="#">Company</a>
-          <a href="#">Factory</a>
-          <a href="#">Plant</a>
-          <a href="#">Operation</a>
-          <a href="#">Time</a>
-          <a href="#">Site Move</a>
-          </div>
-        </div>
-
-        <div class="item">
-        <a href="#" class="oneD"><span>Model</span></a>
-          <div class="twoD two">
-          <a href="#">ISP</a>
-          <a href="#">ERP</a>
-          <a href="#">MES</a>
-          <a href="#">CMMS</a>
-          <a href="#">BIG DATA</a>
-          </div>
-        </div>
-        <div class="item">
-        <a href="#" class="oneD"><span>Reference</span></a>
-          <div  class="twoD">
-          <a href="#">Part Reference</a>
-          <a href="#">Size</a>
-          <a href="#">Gender</a>
-          <a href="#">UOM</a>
-          <a href="#">Color</a>
-          <a href="#">Defect</a>
-          <a href="#">MCS</a>
-          <a href="#">MOS</a>
-          </div>
-        </div>
-
-        <div class="item">
-          <a href="#" class="oneD"><span>Time</span></a>
-          <div  class="twoD fou">
-          <a href="#">USE CASE</a>
-          </div>
-        </div>
-
-        <div class="item">
-        <a href="#" class="oneD"><span>Partner</span></a>
-          <div  class="twoD">
-            <a href="#">USE CASE</a>
-          </div>
-        </div>
-
-        <div class="item">
-        <a href="#" class="oneD"><span>Governance</span></a>
-          <div  class="twoD">
-            <a href="#">USE CASE</a>
-            <a href="#">ERP</a>
-            <a href="#">MES</a>
-          </div>
-        </div>
-
-      </div>
-      <div class="twoDbg"></div>
-    </div> 
-    <!-- //상단 : GNB영역-->
-      </div>
-      <!-- //상단 : GNB영역-->
+      <nav class="new-header" data-include="../include/mdm_header.html"></nav>
 
       <!-- 컨텐츠 :  내가 클릭한 메뉴 열기탭 -->
       <div id="tkg-footer">
@@ -263,8 +67,7 @@
             <a href="#tabCont3-3">Part</a><button class="btn-delete"><i class="material-icons-round">close</i></button>
             <a href="#tabCont3-4">UOM</a><button class="btn-delete"><i class="material-icons-round">close</i></button>
             <a href="#tabCont3-5">Operation</a><button class="btn-delete"><i class="material-icons-round">close</i></button>
-            <button class="tab_all_close"><i class="icon-allclose"></i></button>
-            <button class="arrow_right"><i class="icon-caret-next"></i></button>
+            <button class="tab_all_close"><i class="icon-allclose"></i></button>           
           </div>
           <div class="tab-cont-wrap">
             <div id="tabCont3-1" class="tab-cont">
@@ -341,20 +144,21 @@
 
                       <!-- 검색조건 end -->
                       <div class="flex-search-btn t-c">
-                          <button class="button small line">Apply</button>
+                          <button class="button small line">조회</button>
                       </div>
                     </div>                    
                   </div> 
       
                 </div>
                 <!--//검색영역 end-->
-
               </div> 
+
               <div id="splitter_r">
                 <div class="tkg-content-body">
                   <div class="tkg-content">
                     <!-- 컨텐츠 영역 -->
                     <div class="page-tit">
+                      <a href="#none" class="btn-favorites">즐겨찾기</a>  <!-- 활성화시 .on 추가 -->
                       <h1>Plant</h1>
                       <div class="ml-a">
                         <!-- 경로 -->
@@ -369,10 +173,6 @@
                             <li>
                               <i class="material-icons-round">chevron_right</i>
                               <a href="#none"><span>Plant</span></a>
-                            </li>
-                            <li>
-                              <!-- 버튼 선택시 icon-line-star on 추가-->
-                              <button><i class="icon-line-star on"></i></button>
                             </li>
                           </ul>
                         </div>
@@ -398,32 +198,17 @@
                     
                       <!--리얼그리드 영역-->
                       <div id="realgrid"  class="readgridwrap"></div>
-                      <div class="w-p-50">
-                        <p class="inlin-block mt-5">Total : <span class="grid_total_number">3</span> </p>
-                      </div>
-
+                      
                       <div class="flex mt-24">
                         <div class="ml-a">
-                          <button data-href="#pop1" class="button gridbtn gray pop-open">등록- 누르면 팝업</button>
-                          <button data-href="#pop3" class="pop3 button gridbtn gray">삭제 - Alrt 메시지 나옴</button>
+                          <button data-href="#pop1" class="button gridbtn gray pop-open">등록</button>
+                          <button data-href="#pop3" class="pop3 button gridbtn gray">삭제</button>
                           <button class="button gridbtn gray">저장</button>
                           <button class="button gridbtn gray-box">확정</button>
                         </div>
-                      </div>
-                      <!-- 그리드 페이징
-                      <div class="paging mt-24">
-                        <a href="#" class="btn-prev">이전</a>
-                        <strong>1</strong>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a href="#" class="btn-next">다음</a>
-                      </div>-->
+                      </div>                      
                     </div>
                     <!-- //컨텐츠 영역 -->
-
-
                 
                   </div>
                 </div>
@@ -614,8 +399,7 @@
           <button class="button line  btn-pop-close">취소</button>
           <button class="button  btn-submit">확인</button>
       </div>
-      <!-- popup close-->
-      <a href="#" class="btn-close btn-pop-close">팝업닫기</a>
+      
   </div>
 </div>
 <!-- //팝업 -->

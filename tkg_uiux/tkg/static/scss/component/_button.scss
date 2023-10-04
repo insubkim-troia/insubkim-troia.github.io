@@ -34,6 +34,12 @@
     &.gridbtn { height:3.6rem; border-radius: .6rem; padding:0 2rem; font-size:1.6rem; --font-size:calc(1.6rem * 1.5); }
 
     &.full { width:100%;}
+
+    /* dark mode btn */
+    &.wh {background: #fff; color: #159B97; border-color: #fff;
+        &.disabled, &:disabled {background: var(--point-color); opacity: .5;}   
+        &.line {border: .3rem solid #fff; color: #fff; background: transparent;}    
+    }
 }
 
 :not(.mobile) {
@@ -41,6 +47,7 @@
         .text-over > div { transform:translateY(-100%);}
 
         &.line { --font-color:#05697A; color:#05697A; background-color: transparent;}
+        &.wh {position: relative; border: .3rem solid #eee; background: #fff; color: #085D70; box-sizing: border-box;}
     } 
     
     .button:disabled:hover .text-over > div,
@@ -62,8 +69,15 @@
     .button.disabled:hover,
     .button:disabled:hover { border-color:#e3e3e3; color:#c1c1c1; background:#e3e3e3; transform:none; box-shadow:none;}
 
+    .button.wh.disabled:hover,
+    .button.wh:disabled:hover {border: none;}   
+
     .button.line.disabled:hover,
     .button.line:disabled:hover { background:none; transform:none; box-shadow:none;}
+
+    .button.wh.line.disabled:hover,
+    .button.wh.line:disabled:hover {border: .3rem solid #fff;} 
+    
 } 
 
 

@@ -211,9 +211,9 @@
         &:disabled + label i { border-color:#ddd; background:#f8f8f8;}
         &:disabled:checked + label i { border-color:transparent; background:rgba(221, 221, 221, 1);}
     }
-    label { position:relative; display:inline-block; min-height:2.4rem; margin-right:.2rem; padding-left:3.2rem; font-size:01.4rem; color:#000; cursor: pointer; line-height:1.5;
+    label { position:relative; display:inline-block; min-height:2.4rem; margin-right:.2rem; padding-left:3.2rem; font-size:1.4rem; color:#000; cursor: pointer; line-height:1.5;
         i { display:block; position: absolute; top:0; left:0; width:2.0rem; height:2.0rem; border-radius:0.4rem; border:1px solid rgba(238, 238, 238, 1); background:#fff; transition: all .3s ease;
-            &:after { content:''; position:absolute; top:50%; left:50%; width:.8rem; height:0.3rem; margin-top:-0.2rem; border:2px solid #fff; border-color:transparent transparent #cccccc #cccccc; transform:translate(-50%, -50%) rotate(0deg) scale(0); transition: all .3s ease;;}
+            &:after { content:''; position:absolute; top:50%; left:50%; width:.8rem; height:0.3rem; margin-top:-0.2rem; border:2px solid #fff; border-color:transparent transparent #cccccc #cccccc; transform:translate(-50%, -50%) rotate(0deg) scale(0); transition: all .3s ease;}
         }
 
         &:hover {
@@ -229,6 +229,24 @@
     & + .checkbox { margin-top:.5rem;}
     
     &.noText label { padding-left:2.4rem; margin-right:0;}
+    
+    &.dark {
+        input {
+            &:checked + label i { border-color:var(--color-white); background:var(--color-white);
+                &:after { border-color:transparent transparent #05697A #05697A; transform:translate(-50%, -50%) rotate(-45deg) scale(1);}
+            }
+            &:checked + label:hover i { border-color:rgba(238, 238, 238, 1)}
+    
+            &:disabled + label i { border-color:rgba(255, 255, 255, 1); background:transparent; opacity: .5;}
+            &:disabled:checked + label i { border-color:transparent; background:rgba(221, 221, 221, 1);}
+        }
+        label { color: #fff; 
+            i {border: .2rem solid rgba(255, 255, 255, .5); background: transparent;}
+            &:hover {
+                i { border-color:rgba(255, 255, 255, 1); opacity: .8;}
+            }
+        }
+    }
 }
 
 /* ========================================================= */
@@ -237,7 +255,7 @@
 
 .radio {
     input { position:absolute; opacity:0;
-        &:checked + label i { border-color:transparent; background:var(--point-color);
+        &:checked + label i { border-color:transparent; background:transparent;
             &:after { width:.9rem; height:.9rem; background:#fff;}
         }
         &:checked + label:hover i { border-color:rgba(5, 105, 122, 1)}
@@ -252,6 +270,24 @@
 
         &:hover {
             i { border-color:rgba(170, 170, 170, 1);}
+        }
+    }
+
+    &.dark {
+        input {
+            &:checked + label i { border-color:#fff; 
+                &:after { }
+            }
+            &:checked + label:hover i { border-color:rgba(238, 238, 238, 1)}
+    
+            &:disabled + label i { border-color:rgba(255, 255, 255, 1); background:transparent; opacity: .5;}
+            &:disabled:checked + label i { border-color:transparent; background:rgba(221, 221, 221, 1);}
+        }
+        label { color: #fff; 
+            i {border: .2rem solid rgba(255, 255, 255, .5); background: transparent;}
+            &:hover {
+                i { border-color:rgba(255, 255, 255, 1); opacity: .8;}
+            }
         }
     }
 }

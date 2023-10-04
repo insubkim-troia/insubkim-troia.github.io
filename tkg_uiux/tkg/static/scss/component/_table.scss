@@ -31,14 +31,18 @@
 /* 페이징 */
 .paging { display:flex; justify-content: center;
     a,
-    strong { display:inline-flex; width:3rem; height:3rem; margin:0 .4rem; font-size:1.3rem; color:#555; align-items: center; justify-content: center;}
-    strong { color:#fff; background:#111;}
-    a[class*=btn] { position:relative; margin:0 .4rem; font-size:0; opacity:0.3; border:0rem solid #111; transition: all .3s ease;
-        &:hover { opacity:1;}
-        &:before { display: block; position:absolute; top:50%; left:50%; font-family: "fontello"; font-size:1.5rem; transform: translate(-50%, -50%);}
+    strong { display:inline-flex; width:3rem; height:3rem; margin:0 .4rem; font-size:1.4rem; color:#444; align-items: center; justify-content: center;}
+    strong { color:#000; font-weight: 700; background:#ECF7F7; border-radius: 50%;}
+    a[class*=btn] { position:relative; margin:0 .4rem; font-size:0; border:0rem solid #111; transition: all .3s ease;
+        &:before { content: ''; display: block; position:absolute; top:50%; left:50%; width: 2.4rem; height: 2.4rem; transform: translate(-50%, -50%); font-size:1.4rem;}
     }
-    a.btn-prev:before { content: '\e805'; margin-left:-.1rem;}
-    a.btn-next:before { content: '\e806'; margin-left:.1rem;}
+    a:hover {background: #EEE; border-radius: 50%;}
+    // a.btn-prev:before { content: '\e805'; margin-left:-.1rem;}
+    // a.btn-next:before { content: '\e806'; margin-left:.1rem;}
+    a.btn-first:before {}
+    a.btn-prev:before {background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M14.5 7.5L9.5 12.5L14.5 17.5" stroke="%23444444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');}
+    a.btn-next:before {background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9.5 17.5L14.5 12.5L9.5 7.5" stroke="%23444444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');}
+    a.btn-last:before {}
 }
 
 

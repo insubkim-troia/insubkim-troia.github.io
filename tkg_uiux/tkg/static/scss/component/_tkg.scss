@@ -30,6 +30,7 @@ body.scrollLock { overflow:hidden;}
 // }
 
 .new-header {position: relative;}
+
 .gnb-wrap {position: relative; padding:0 4.4rem;
     > .gnb-dep01 {margin-left: -1.5rem;
         > li {display: inline-block;  padding: 0 0 2.4rem;             
@@ -43,9 +44,13 @@ body.scrollLock { overflow:hidden;}
                     &:before {content: ''; position: absolute; bottom: 0; left: 15px; width: calc(100% - 30px); height: 2px; background: #000;}
                 }                
             }           
-        }
+        } 
     }
 } 
+
+.lnb-close {
+    .gnb-wrap {padding: 1rem 4.4rem 0;}
+}
 
 .sub-depth-layer {display: none;
     .sub-layer-inner {position: absolute; top: 6rem; left: 0; right: 0; padding: 4rem 7.4rem; border-top: .2rem solid #159B97; background: #fff; box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.15);; z-index:99;}

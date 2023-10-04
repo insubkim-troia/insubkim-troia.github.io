@@ -173,7 +173,7 @@ input[type=text]::-ms-clear {
 }
 @font-face {
   font-family: "Pretendard";
-  font-weight: 400;
+  font-weight: 500;
   font-weight: normal;
   font-display: swap;
   src: local("Pretendard Medium"), url("../fonts/Pretendard-Medium.woff2") format("woff2"), url("../fonts/Pretendard-Medium.woff") format("woff");
@@ -18713,6 +18713,34 @@ font {
   z-index: 20;
 }
 
+/* divider */
+.line-v {
+  height: 100%;
+  width: 0.1rem;
+  background: #DDD;
+  border: 0;
+}
+.line-v.dashed {
+  background: none;
+}
+.line-v.dashed:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  border: 0.1rem dashed #ddd;
+}
+
+.line-h {
+  width: 100%;
+  height: 0.1rem;
+  background: #ddd;
+  border: 0;
+}
+.line-h.dashed {
+  background: none;
+  border-top: 0.1rem dashed #ddd;
+}
+
 /* ===== 모션 ===== */
 /* loading */
 .loading-box .text {
@@ -19846,6 +19874,37 @@ font {
   padding-left: 2.4rem;
   margin-right: 0;
 }
+.checkbox.dark input:checked + label i {
+  border-color: var(--color-white);
+  background: var(--color-white);
+}
+.checkbox.dark input:checked + label i:after {
+  border-color: transparent transparent #05697A #05697A;
+  transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+}
+.checkbox.dark input:checked + label:hover i {
+  border-color: rgb(238, 238, 238);
+}
+.checkbox.dark input:disabled + label i {
+  border-color: rgb(255, 255, 255);
+  background: transparent;
+  opacity: 0.5;
+}
+.checkbox.dark input:disabled:checked + label i {
+  border-color: transparent;
+  background: rgb(221, 221, 221);
+}
+.checkbox.dark label {
+  color: #fff;
+}
+.checkbox.dark label i {
+  border: 0.2rem solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+}
+.checkbox.dark label:hover i {
+  border-color: rgb(255, 255, 255);
+  opacity: 0.8;
+}
 
 /* ========================================================= */
 /* radio */
@@ -19856,7 +19915,7 @@ font {
 }
 .radio input:checked + label i {
   border-color: transparent;
-  background: var(--point-color);
+  background: transparent;
 }
 .radio input:checked + label i:after {
   width: 0.9rem;
@@ -19911,6 +19970,32 @@ font {
 }
 .radio label:hover i {
   border-color: rgb(170, 170, 170);
+}
+.radio.dark input:checked + label i {
+  border-color: #fff;
+}
+.radio.dark input:checked + label:hover i {
+  border-color: rgb(238, 238, 238);
+}
+.radio.dark input:disabled + label i {
+  border-color: rgb(255, 255, 255);
+  background: transparent;
+  opacity: 0.5;
+}
+.radio.dark input:disabled:checked + label i {
+  border-color: transparent;
+  background: rgb(221, 221, 221);
+}
+.radio.dark label {
+  color: #fff;
+}
+.radio.dark label i {
+  border: 0.2rem solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+}
+.radio.dark label:hover i {
+  border-color: rgb(255, 255, 255);
+  opacity: 0.8;
 }
 
 /* ========================================================= */
@@ -20048,6 +20133,7 @@ font {
   background: var(--point-color);
   /* 색상 */
   /* 사이즈 */
+  /* dark mode btn */
 }
 .button.disabled, .button:disabled {
   border-color: #ddd !important;
@@ -20141,6 +20227,20 @@ font {
 .button.full {
   width: 100%;
 }
+.button.wh {
+  background: #fff;
+  color: #159B97;
+  border-color: #fff;
+}
+.button.wh.disabled, .button.wh:disabled {
+  background: var(--point-color);
+  opacity: 0.5;
+}
+.button.wh.line {
+  border: 0.3rem solid #fff;
+  color: #fff;
+  background: transparent;
+}
 
 :not(.mobile) .button:hover {
   border-color: #05697A;
@@ -20153,6 +20253,13 @@ font {
   --font-color:#05697A;
   color: #05697A;
   background-color: transparent;
+}
+:not(.mobile) .button:hover.wh {
+  position: relative;
+  border: 0.3rem solid #eee;
+  background: #fff;
+  color: #085D70;
+  box-sizing: border-box;
 }
 :not(.mobile) .button:disabled:hover .text-over > div,
 :not(.mobile) .button.disabled:hover .text-over > div {
@@ -20205,11 +20312,19 @@ font {
   transform: none;
   box-shadow: none;
 }
+:not(.mobile) .button.wh.disabled:hover,
+:not(.mobile) .button.wh:disabled:hover {
+  border: none;
+}
 :not(.mobile) .button.line.disabled:hover,
 :not(.mobile) .button.line:disabled:hover {
   background: none;
   transform: none;
   box-shadow: none;
+}
+:not(.mobile) .button.wh.line.disabled:hover,
+:not(.mobile) .button.wh.line:disabled:hover {
+  border: 0.3rem solid #fff;
 }
 
 .btn-plus {
@@ -21137,44 +21252,45 @@ font {
   width: 3rem;
   height: 3rem;
   margin: 0 0.4rem;
-  font-size: 1.3rem;
-  color: #555;
+  font-size: 1.4rem;
+  color: #444;
   align-items: center;
   justify-content: center;
 }
 .paging strong {
-  color: #fff;
-  background: #111;
+  color: #000;
+  font-weight: 700;
+  background: #ECF7F7;
+  border-radius: 50%;
 }
 .paging a[class*=btn] {
   position: relative;
   margin: 0 0.4rem;
   font-size: 0;
-  opacity: 0.3;
   border: 0rem solid #111;
   transition: all 0.3s ease;
 }
-.paging a[class*=btn]:hover {
-  opacity: 1;
-}
 .paging a[class*=btn]:before {
+  content: "";
   display: block;
   position: absolute;
   top: 50%;
   left: 50%;
-  font-family: "fontello";
-  font-size: 1.5rem;
+  width: 2.4rem;
+  height: 2.4rem;
   transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+}
+.paging a:hover {
+  background: #EEE;
+  border-radius: 50%;
 }
 .paging a.btn-prev:before {
-  content: "\e805";
-  margin-left: -0.1rem;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M14.5 7.5L9.5 12.5L14.5 17.5" stroke="%23444444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
 }
 .paging a.btn-next:before {
-  content: "\e806";
-  margin-left: 0.1rem;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9.5 17.5L14.5 12.5L9.5 7.5" stroke="%23444444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
 }
-
 /* dl 형태 */
 .dl-info-box {
   border-top: 0.1rem solid #bbb;
