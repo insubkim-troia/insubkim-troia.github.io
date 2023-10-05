@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" /> -->
+    <title>TKG 퍼블리싱 가이드</title>
+    <link href="../../static/css/ui.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../static/js/common.js"></script>
+    <script type="text/javascript" src="../../static/js/ui.js"></script>
+    <!--[if lt IE 9]>
+      <script type="text/javascript">
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('footer');
+      </script>
+    <![endif]-->
+
+    <!-- 가이드 전용 -->
+    <link rel="stylesheet" href="../../static/css/a11y-dark.min.css">
+    <script src="../../static/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <!--
+      <pre><code class="language-xml"></code></pre>
+    -->
+    <!-- //가이드 전용 -->
+  </head>
+  <body>
+    <div id="tkg-wrap">
+      <!-- 헤더영역 -->
+      <header id="tkg-header-wrap" data-include="../include/header.html"></header>
+      <!-- //헤더영역 -->
+  
+      <!-- 컨텐츠 영역 -->
+      <section id="tkg-container" class="right-box">
+        <div class="left-nav" data-include="../include/nav.html"></div>
+        <div class="tkg-content-body">
+          <div class="tkg-content">
+            <div class="page-tit">
+              <h1>List</h1>
+            </div>
+
+            <h2 class="tit-h2"><strong class="guide-line">Simple Text List</strong></h2>
+            <div class="line-box">
+              <div class="list-wrap">
+                <p class="title">Title</p>
+                <table class="tbl-list">
+                  <colgroup>
+                    <col width="5%" />
+                    <col width="5%" />
+                    <col width="*" />
+                    <col width="15%" />
+                    <col width="15%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        <div class="checkbox">
+                          <input type="checkbox" id="all"><label for="all"><i></i></label>
+                        </div>
+                      </th>
+                      <th scope="col">Num</th>
+                      <th scope="col">제품명</th>
+                      <th scope="col">제품코드</th>
+                      <th scope="col">등록일</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="checkbox">
+                          <input type="checkbox" id="check1"><label for="check1"><i></i></label>
+                        </div>
+                      </td>
+                      <td>10</td>
+                      <td class="t-l">
+                        <div class="items">
+                          <div class="img">
+                            <img src="../../static/images/common/img_list_ex.png" alt="">
+                          </div>
+                          <div class="desc">
+                            <p class="tit">신규모델 시험 생산 및 해외 생산지원</p>
+                            <p class="txt">하위 텍스트가 입력됩니다. 하위 텍스트가 입력됩니다. 하위 텍스트가 입력됩니다.</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>a1234b8c20</td>
+                      <td>2023.07.01</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="checkbox">
+                          <input type="checkbox" id="check3"><label for="check3"><i></i></label>
+                        </div>
+                      </td>
+                      <td>9</td>
+                      <td class="t-l">
+                        <div class="items">
+                          <div class="img">
+                            <img src="../../static/images/common/img_list_ex.png" alt="">
+                          </div>
+                          <div class="desc">
+                            <p class="tit">신규모델 시험 생산 및 해외 생산지원</p>
+                            <p class="txt">하위 텍스트가 입력됩니다. 하위 텍스트가 입력됩니다. 하위 텍스트가 입력됩니다.</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>a1234b8c20</td>
+                      <td>2023.07.01</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="checkbox">
+                          <input type="checkbox" id="check2"><label for="check2"><i></i></label>
+                        </div>
+                      </td>
+                      <td>8</td>
+                      <td class="t-l">
+                        <div class="items">
+                          <div class="img">
+                            <img src="../../static/images/common/img_list_ex.png" alt="">
+                          </div>
+                          <div class="desc">
+                            <p class="tit">신규모델 시험 생산 및 해외 생산지원</p>
+                            <p class="txt">하위 텍스트가 입력됩니다. 하위 텍스트가 입력됩니다. 하위 텍스트가 입력됩니다.</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>a1234b8c20</td>
+                      <td>2023.07.01</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <pre><code class="language-xml">
+&lt;div class=&quot;list-wrap&quot;&gt;
+  &lt;p class=&quot;title&quot;&gt;Title&lt;/p&gt;
+  &lt;table class=&quot;tbl-list&quot;&gt;
+    &lt;colgroup&gt;
+      &lt;col width=&quot;5%&quot; /&gt;
+      &lt;col width=&quot;5%&quot; /&gt;
+      &lt;col width=&quot;*&quot; /&gt;
+      &lt;col width=&quot;15%&quot; /&gt;
+      &lt;col width=&quot;15%&quot; /&gt;
+    &lt;/colgroup&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th scope=&quot;col&quot;&gt;
+          &lt;div class=&quot;checkbox&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; id=&quot;all&quot;&gt;&lt;label for=&quot;all&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Num&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;&#51228;&#54408;&#47749;&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;&#51228;&#54408;&#53076;&#46300;&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;&#46321;&#47197;&#51068;&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;div class=&quot;checkbox&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; id=&quot;check1&quot;&gt;&lt;label for=&quot;check1&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td&gt;10&lt;/td&gt;
+        &lt;td class=&quot;t-l&quot;&gt;
+          &lt;div class=&quot;items&quot;&gt;
+            &lt;div class=&quot;img&quot;&gt;
+              &lt;img src=&quot;../../static/images/common/img_list_ex.png&quot; alt=&quot;&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;desc&quot;&gt;
+              &lt;p class=&quot;tit&quot;&gt;&#49888;&#44508;&#47784;&#45944; &#49884;&#54744; &#49373;&#49328; &#48143; &#54644;&#50808; &#49373;&#49328;&#51648;&#50896;&lt;/p&gt;
+              &lt;p class=&quot;txt&quot;&gt;&#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;. &#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;. &#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;.&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td&gt;a1234b8c20&lt;/td&gt;
+        &lt;td&gt;2023.07.01&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;div class=&quot;checkbox&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; id=&quot;check3&quot;&gt;&lt;label for=&quot;check3&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td&gt;9&lt;/td&gt;
+        &lt;td class=&quot;t-l&quot;&gt;
+          &lt;div class=&quot;items&quot;&gt;
+            &lt;div class=&quot;img&quot;&gt;
+              &lt;img src=&quot;../../static/images/common/img_list_ex.png&quot; alt=&quot;&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;desc&quot;&gt;
+              &lt;p class=&quot;tit&quot;&gt;&#49888;&#44508;&#47784;&#45944; &#49884;&#54744; &#49373;&#49328; &#48143; &#54644;&#50808; &#49373;&#49328;&#51648;&#50896;&lt;/p&gt;
+              &lt;p class=&quot;txt&quot;&gt;&#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;. &#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;. &#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;.&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td&gt;a1234b8c20&lt;/td&gt;
+        &lt;td&gt;2023.07.01&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;div class=&quot;checkbox&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; id=&quot;check2&quot;&gt;&lt;label for=&quot;check2&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td&gt;8&lt;/td&gt;
+        &lt;td class=&quot;t-l&quot;&gt;
+          &lt;div class=&quot;items&quot;&gt;
+            &lt;div class=&quot;img&quot;&gt;
+              &lt;img src=&quot;../../static/images/common/img_list_ex.png&quot; alt=&quot;&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;desc&quot;&gt;
+              &lt;p class=&quot;tit&quot;&gt;&#49888;&#44508;&#47784;&#45944; &#49884;&#54744; &#49373;&#49328; &#48143; &#54644;&#50808; &#49373;&#49328;&#51648;&#50896;&lt;/p&gt;
+              &lt;p class=&quot;txt&quot;&gt;&#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;. &#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;. &#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;.&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td&gt;a1234b8c20&lt;/td&gt;
+        &lt;td&gt;2023.07.01&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+            </code></pre>
+
+            <h2 class="tit-h2 mt-30"><strong class="guide-line">Image Grid List</strong></h2>
+            <div class="line-box">
+              <div class="list-wrap type2">
+                <p class="title">Title</p>
+                <ul class="lists">
+                  <li>
+                    <img src="../../static/images/common/img_big_ex.png" alt="">
+                    <div class="desc">
+                      <p class="tit">제목입니다</p>
+                      <p class="txt">하위 텍스트가 입력됩니다. 하위 텍스트가 입력됩니다. 하위 텍스트가 입력됩니다.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="../../static/images/common/img_big_ex.png" alt="">
+                    <div class="desc">
+                      <p class="tit">제목입니다</p>
+                      <p class="txt">하위 텍스트가 입력됩니다. 하위 텍스트가 입력됩니다. 하위 텍스트가 입력됩니다.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="../../static/images/common/img_big_ex.png" alt="">
+                    <div class="desc">
+                      <p class="tit">제목입니다</p>
+                      <p class="txt">하위 텍스트가 입력됩니다. 하위 텍스트가 입력됩니다. 하위 텍스트가 입력됩니다.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="../../static/images/common/img_big_ex.png" alt="">
+                    <div class="desc">
+                      <p class="tit">제목입니다</p>
+                      <p class="txt">하위 텍스트가 입력됩니다. 하위 텍스트가 입력됩니다. 하위 텍스트가 입력됩니다.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="../../static/images/common/img_big_ex.png" alt="">
+                    <div class="desc">
+                      <p class="tit">제목입니다</p>
+                      <p class="txt">하위 텍스트가 입력됩니다. 하위 텍스트가 입력됩니다. 하위 텍스트가 입력됩니다.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <pre><code class="language-xml">
+&lt;div class=&quot;list-wrap type2&quot;&gt;
+  &lt;p class=&quot;title&quot;&gt;Title&lt;/p&gt;
+  &lt;ul class=&quot;lists&quot;&gt;
+    &lt;li&gt;
+      &lt;img src=&quot;../../static/images/common/img_big_ex.png&quot; alt=&quot;&quot;&gt;
+      &lt;div class=&quot;desc&quot;&gt;
+        &lt;p class=&quot;tit&quot;&gt;&#51228;&#47785;&#51077;&#45768;&#45796;&lt;/p&gt;
+        &lt;p class=&quot;txt&quot;&gt;&#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;. &#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;. &#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;img src=&quot;../../static/images/common/img_big_ex.png&quot; alt=&quot;&quot;&gt;
+      &lt;div class=&quot;desc&quot;&gt;
+        &lt;p class=&quot;tit&quot;&gt;&#51228;&#47785;&#51077;&#45768;&#45796;&lt;/p&gt;
+        &lt;p class=&quot;txt&quot;&gt;&#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;. &#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;. &#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;img src=&quot;../../static/images/common/img_big_ex.png&quot; alt=&quot;&quot;&gt;
+      &lt;div class=&quot;desc&quot;&gt;
+        &lt;p class=&quot;tit&quot;&gt;&#51228;&#47785;&#51077;&#45768;&#45796;&lt;/p&gt;
+        &lt;p class=&quot;txt&quot;&gt;&#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;. &#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;. &#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;img src=&quot;../../static/images/common/img_big_ex.png&quot; alt=&quot;&quot;&gt;
+      &lt;div class=&quot;desc&quot;&gt;
+        &lt;p class=&quot;tit&quot;&gt;&#51228;&#47785;&#51077;&#45768;&#45796;&lt;/p&gt;
+        &lt;p class=&quot;txt&quot;&gt;&#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;. &#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;. &#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;img src=&quot;../../static/images/common/img_big_ex.png&quot; alt=&quot;&quot;&gt;
+      &lt;div class=&quot;desc&quot;&gt;
+        &lt;p class=&quot;tit&quot;&gt;&#51228;&#47785;&#51077;&#45768;&#45796;&lt;/p&gt;
+        &lt;p class=&quot;txt&quot;&gt;&#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;. &#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;. &#54616;&#50948; &#53581;&#49828;&#53944;&#44032; &#51077;&#47141;&#46121;&#45768;&#45796;.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+            </code></pre>
+
+
+          </div>
+        </div>        
+      </section>
+      <!-- //컨텐츠 영역 -->
+  
+      <!-- 하단 영역 -->
+      <footer id="tkg-footer-wrap" data-include="../include/footer.html"></footer>
+      <!-- //하단 영역 -->
+    </div>
+  </body>
+</html>

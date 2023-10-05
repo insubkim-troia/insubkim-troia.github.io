@@ -21265,7 +21265,7 @@ font {
 }
 .paging a[class*=btn] {
   position: relative;
-  margin: 0 0.4rem;
+  margin: 0 0.2rem;
   font-size: 0;
   border: 0rem solid #111;
   transition: all 0.3s ease;
@@ -21285,12 +21285,19 @@ font {
   background: #EEE;
   border-radius: 50%;
 }
+.paging a.btn-first:before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="%23000000"><g><rect fill="none" height="24" width="24"/><rect fill="none" height="24" width="24"/></g><g><g><path d="M18.29,17.29L18.29,17.29c0.39-0.39,0.39-1.02,0-1.41L14.42,12l3.88-3.88c0.39-0.39,0.39-1.02,0-1.41l0,0 c-0.39-0.39-1.02-0.39-1.41,0l-4.59,4.59c-0.39,0.39-0.39,1.02,0,1.41l4.59,4.59C17.27,17.68,17.9,17.68,18.29,17.29z"/><path d="M11.7,17.29L11.7,17.29c0.39-0.39,0.39-1.02,0-1.41L7.83,12l3.88-3.88c0.39-0.39,0.39-1.02,0-1.41l0,0 c-0.39-0.39-1.02-0.39-1.41,0l-4.59,4.59c-0.39,0.39-0.39,1.02,0,1.41l4.59,4.59C10.68,17.68,11.31,17.68,11.7,17.29z"/></g></g></svg>');
+}
 .paging a.btn-prev:before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M14.5 7.5L9.5 12.5L14.5 17.5" stroke="%23444444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
 }
 .paging a.btn-next:before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9.5 17.5L14.5 12.5L9.5 7.5" stroke="%23444444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
 }
+.paging a.btn-last:before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="%23000000"><g><rect fill="none" height="24" width="24"/><rect fill="none" height="24" width="24"/></g><g><g><path d="M5.7,6.71L5.7,6.71c-0.39,0.39-0.39,1.02,0,1.41L9.58,12L5.7,15.88c-0.39,0.39-0.39,1.02,0,1.41l0,0 c0.39,0.39,1.02,0.39,1.41,0l4.59-4.59c0.39-0.39,0.39-1.02,0-1.41L7.12,6.71C6.73,6.32,6.09,6.32,5.7,6.71z"/><path d="M12.29,6.71L12.29,6.71c-0.39,0.39-0.39,1.02,0,1.41L16.17,12l-3.88,3.88c-0.39,0.39-0.39,1.02,0,1.41l0,0 c0.39,0.39,1.02,0.39,1.41,0l4.59-4.59c0.39-0.39,0.39-1.02,0-1.41l-4.59-4.59C13.32,6.32,12.68,6.32,12.29,6.71z"/></g></g></svg>');
+}
+
 /* dl 형태 */
 .dl-info-box {
   border-top: 0.1rem solid #bbb;
@@ -21495,6 +21502,102 @@ tr.active td, .active th {
 .termsTit {
   font-size: 14px;
   color: #333;
+}
+
+/* List*/
+.list-wrap .title {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 2.4rem;
+  font-size: 2rem;
+  color: #000;
+  font-weight: 700;
+}
+.list-wrap .title:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url(../images/common/icon_title2.png) no-repeat;
+}
+.list-wrap .tbl-list {
+  border-top: 0.1rem solid #000;
+}
+.list-wrap .tbl-list thead th {
+  padding: 1.6rem 0;
+  font-size: 1.4rem;
+  color: #aaa;
+  font-weight: 700;
+  border-right: 0.1rem solid #eee;
+  text-align: center;
+}
+.list-wrap .tbl-list thead th:last-child {
+  border-right: none;
+}
+.list-wrap .tbl-list tbody td {
+  padding: 1.2rem 2rem;
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+  border: 0.1rem solid #eee;
+  border-left: none;
+}
+.list-wrap .tbl-list tbody td:last-child {
+  border-right: none;
+}
+.list-wrap .tbl-list .items {
+  display: flex;
+  align-items: center;
+}
+.list-wrap .tbl-list .items .img {
+  width: 8rem;
+  height: 8rem;
+  margin-right: 1.6rem;
+}
+.list-wrap .tbl-list .items .desc .txt {
+  padding-top: 0.4rem;
+  color: #aaa;
+}
+.list-wrap .tbl-list .checkbox label {
+  padding-left: 2rem;
+}
+.list-wrap.type2 .lists {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1.6rem;
+}
+.list-wrap.type2 .lists li {
+  width: calc(25% - 3.2rem);
+  padding: 1.6rem;
+}
+.list-wrap.type2 .lists li img {
+  max-width: 20rem;
+  height: 20rem;
+  background-color: #eee;
+}
+.list-wrap.type2 .lists li .desc {
+  margin-top: 1.6rem;
+  max-width: 20rem;
+}
+.list-wrap.type2 .lists li .desc .tit {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #000;
+}
+.list-wrap.type2 .lists li .desc .txt {
+  padding-top: 0.4rem;
+  font-size: 1.4rem;
+  color: #aaa;
+  word-break: break-word;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 /* 아코디언 */
